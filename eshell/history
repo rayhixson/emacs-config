@@ -1,0 +1,36 @@
+cd
+(let (x (current-time-string)) x)
+(let ((x (current-time-string))) x)
+(x)
+(let ((x (current-time-string))) x)
+(let ())
+exit
+ll
+ls
+ls -l
+ls -a
+ls -1
+?
+h
+history
+grep
+grep "foo" .
+grep -R"foo" .
+grep -R "foo" .
+cd
+env
+cd go/src/github.com/treetopllc/gonoble/
+giv
+go install -v
+ll
+la
+ls
+ls -la
+giv
+go install -v
+go install -v; gonoble -config=r.json
+go install -v; gonoble -config=r.json
+ls
+ll
+alias ll 'ls -la $*'
+ll

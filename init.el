@@ -1,3 +1,4 @@
+;; yoshi-theme and paganini-theme was what I was using???
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -6,80 +7,88 @@
 (package-initialize)
 
 (require 'package)
- (add-to-list
-   'package-archives
-   '("melpa" . "http://melpa.org/packages/") t)
- (add-to-list
-   'package-archives
-   '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list
+ 'package-archives
+ '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list
+ 'package-archives
+ '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
-(require 'better-defaults)
+;(require 'better-defaults)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(blink-cursor-mode nil)
- '(column-number-mode t)
+ '(cgs-find-project-functions (quote (cgs-root)))
+ '(cgs-step-search-path "cucumber/**/*.rb")
+ '(column-number-mode nil)
+ '(custom-enabled-themes (quote (deeper-blue)))
  '(custom-safe-themes
    (quote
-    ("6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" "ec6fc99e90a4826af95c53fc1af2fed94f3e164a5041282183f5b89a01f4c001" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
+	("6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" default)))
  '(egg-enable-tooltip t)
- '(erc-autojoin-channels-alist (quote (("irc.rizon.net" "moochiken"))))
- '(erc-nick "ray")
- '(erc-server "10.22.11.250:6667")
+ '(fci-rule-color "#3f1a1a")
  '(global-font-lock-mode t)
  '(gud-gdb-command-name "gdb --annotate=1")
  '(ibuffer-saved-filter-groups
    (quote
-    (("programming-mode"
-      ("Go"
-       (used-mode . go-mode))
-      ("Test"
-       (or
-        (filename . ".*.feature")
-        (filename . ".*.rb")))
-      ("Text"
-       (used-mode . text-mode))
-      ("Javascript"
-       (used-mode . js2-mode))
-      ("HTML"
-       (used-mode . html-mode))
-      ("Shells"
-       (used-mode . shell-mode))
-      ("Star Buffers"
-       (name . "^\\*"))))))
+	(("programming-mode"
+	  ("Go"
+	   (used-mode . go-mode))
+	  ("Test"
+	   (or
+		(filename . ".*.feature")
+		(filename . ".*.rb")))
+	  ("Text"
+	   (used-mode . text-mode))
+	  ("HTML"
+	   (or
+		(used-mode . html-mode)
+		(used-mode . js-mode)
+		(used-mode . js2-mode)))
+	  ("Shells"
+	   (used-mode . shell-mode))
+	  ("Star Buffers"
+	   (name . "^\\*"))))))
  '(ibuffer-saved-filters
    (quote
-    (("crown"
-      ((filename . ".*/crown/*")))
-     ("collab"
-      (filename . ".*/collaboratory-www/*"))
-     ("gonoble-models"
-      ((filename . ".*/gonoble/models/*")))
-     ("No Star Files"
-      ((not name . "^*$*")))
-     ("gnus"
-      ((or
-        (mode . message-mode)
-        (mode . mail-mode)
-        (mode . gnus-group-mode)
-        (mode . gnus-summary-mode)
-        (mode . gnus-article-mode))))
-     ("programming"
-      ((or
-        (mode . emacs-lisp-mode)
-        (mode . cperl-mode)
-        (mode . c-mode)
-        (mode . java-mode)
-        (mode . idl-mode)
-        (mode . lisp-mode)))))))
+	(("crown"
+	  ((filename . ".*/crown/*")))
+	 ("collab"
+	  (filename . ".*/collaboratory-www/*"))
+	 ("gonoble-models"
+	  ((filename . ".*/gonoble/models/*")))
+	 ("No Star Files"
+	  ((not name . "^*$*")))
+	 ("gnus"
+	  ((or
+		(mode . message-mode)
+		(mode . mail-mode)
+		(mode . gnus-group-mode)
+		(mode . gnus-summary-mode)
+		(mode . gnus-article-mode))))
+	 ("programming"
+	  ((or
+		(mode . emacs-lisp-mode)
+		(mode . cperl-mode)
+		(mode . c-mode)
+		(mode . java-mode)
+		(mode . idl-mode)
+		(mode . lisp-mode)))))))
  '(large-file-warning-threshold nil)
- '(load-home-init-file t t)
+ '(org-fontify-whole-heading-line t)
  '(package-selected-packages
    (quote
-    (ido-ubiquitous ido-better-flex smex ag ido-vertical-mode go-eldoc flycheck-yamllint yaml-mode magit magithub yoshi-theme go-guru go-autocomplete go-complete go-mode go-playground go-rename go-stacktracer golint paganini-theme better-defaults)))
- '(tool-bar-mode nil))
+	(lexbind-mode yoshi-theme sx browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode go-eldoc flycheck-yamllint yaml-mode magit magithub go-guru go-autocomplete go-complete go-mode go-playground go-rename go-stacktracer golint paganini-theme)))
+ '(tool-bar-mode nil)
+ '(window-divider-default-right-width 1)
+ '(window-divider-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -88,6 +97,10 @@
  )
 
 ; miscellaneous stuff I like
+(setq tab-always-indent 'complete)
+(add-to-list 'completion-styles 'initials t)
+
+(setq menu-bar-mode t)
 (setq ring-bell-function 'ignore)
 (desktop-save-mode 1)
 (setq-default indicate-empty-lines t)
@@ -139,6 +152,9 @@
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
+;; IELM Mode
+(add-hook 'ielm-mode-hook '(lambda () (set (make-local-variable 'company-backends) '(company-elisp))))
+
 ;; Go Lang ---------------------
 
 (defun my-go-mode-hook ()
@@ -146,14 +162,11 @@
   (setq gofmt-command "goimports")
   ; Call Gofmt before saving
   (add-hook 'before-save-hook 'gofmt-before-save)
-  
-  ; Customize compile command to run go build
-  (if (not (string-match "go" compile-command))
-      (set (make-local-variable 'compile-command)
-           "go build -v && go test -v && go vet"))
-
   (go-eldoc-setup))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
+
+;; Customize compile command to run go build
+(setq compile-command "/usr/local/go/bin/go install -ldflags=-s -v")
 
 ;; Auto complete of Go seems to be a pig - at least in Vagrant
 (defun auto-complete-for-go ()
@@ -164,6 +177,9 @@
   (require 'go-autocomplete))
 
 ;; End Go Lang -------------------
+
+;; Ruby etal support for finding definitions
+(dumb-jump-mode)
 
 ;; hl-line-mode - highlight the cursor line
 (global-hl-line-mode t)
@@ -219,6 +235,10 @@ your recently and most frequently used commands.")
 
 (global-set-key (kbd "M-x") 'smex)
 
+;; trying to get feature-mode to work
+;; don't think this is needed; (setq feature-default-i18n-file "./gems/ruby-2.2.5/gems/gherkin-2.11.8/lib/gherkin/i18n.json")
+(setq feature-step-search-path "*/**/*.rb")
+
 ;; ido-better-flex is being used to have a 'better' fuzzy match algorithm for smex. Uninstall if not likey.
 
 ;; ido-ubiquitous is being used - how is that showing up?
@@ -248,6 +268,7 @@ your recently and most frequently used commands.")
   '(("~/go/src/github.com/treetopllc/" . "[ttc]")
 	("/$" . "")
 	("~/go/src/github.com/treetopllc/gonoble/" . "[gonoble]/")
+	("~/go/src/github.com/treetopllc/batch-svc/" . "[batch-svc]/")
 	("~/go/src/github.com/treetopllc/gonoble/ext/cucumber/" . "[go-cuc]/")
 	("~/go/src/github.com/treetopllc/collaboratory-www/" . "[collaboratory-www]/")
 	("~/go/src/github.com/treetopllc/nobleweb/" . "[nobleweb]/")
@@ -345,13 +366,14 @@ your recently and most frequently used commands.")
 
 (setq mac-command-modifier 'meta) ;; Sets the command (Apple) key as Meta
 
-(global-set-key [\M-up] 'scroll-one-line-behind)
-(global-set-key [\M-down] 'scroll-one-line-ahead)
+(global-set-key [\M-up] 'scroll-down-line)
+(global-set-key [\M-down] 'scroll-up-line)
 
 ; Function key bindings
 (global-set-key [f2] 'compile)
 (global-set-key [f3] 'revert-buffer)
 (global-set-key [f4] 'menu-bar-next-tag)
+(global-set-key [f6] 'go-guru-referrers)
 (global-set-key [\S-f7] 'previous-error)
 (global-set-key [f7] 'next-error)
 (global-set-key [f8] 'shell)

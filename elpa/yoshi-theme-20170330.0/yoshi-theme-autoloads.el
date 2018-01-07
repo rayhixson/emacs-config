@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "yoshi-theme" "yoshi-theme.el" (22990 59558
+;;;### (autoloads nil "yoshi-theme" "yoshi-theme.el" (22999 62099
 ;;;;;;  0 0))
 ;;; Generated autoloads from yoshi-theme.el
 
