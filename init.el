@@ -1,4 +1,4 @@
-;; yoshi-theme and paganini-theme was what I was using???
+;; historically I liked: yoshi-theme and paganini-theme was what I was using???
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -9,10 +9,10 @@
 (require 'package)
 (add-to-list
  'package-archives
- '("melpa" . "http://melpa.org/packages/") t)
+ '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list
  'package-archives
- '("marmalade" . "http://marmalade-repo.org/packages/") t)
+ '("marmalade" . "https://marmalade-repo.org/packages/") t)
 
 ;(require 'better-defaults)
 (custom-set-variables
@@ -20,20 +20,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(ansi-color-names-vector
-   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(blink-cursor-mode nil)
  '(cgs-find-project-functions (quote (cgs-root)))
  '(cgs-step-search-path "cucumber/**/*.rb")
  '(column-number-mode nil)
- '(custom-enabled-themes (quote (deeper-blue)))
- '(custom-safe-themes
-   (quote
-	("6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" default)))
  '(egg-enable-tooltip t)
  '(fci-rule-color "#3f1a1a")
+ '(frame-background-mode (quote dark))
  '(global-font-lock-mode t)
  '(gud-gdb-command-name "gdb --annotate=1")
  '(ibuffer-saved-filter-groups
@@ -46,7 +39,9 @@
 		(filename . ".*.feature")
 		(filename . ".*.rb")))
 	  ("Text"
-	   (used-mode . text-mode))
+	   (or
+		(used-mode . text-mode)
+		(used-mode . fundamental-mode)))
 	  ("HTML"
 	   (or
 		(used-mode . html-mode)
@@ -82,10 +77,13 @@
 		(mode . idl-mode)
 		(mode . lisp-mode)))))))
  '(large-file-warning-threshold nil)
+ '(magit-stash-arguments (quote ("--include-untracked")))
  '(org-fontify-whole-heading-line t)
  '(package-selected-packages
    (quote
-	(lexbind-mode yoshi-theme sx browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode go-eldoc flycheck-yamllint yaml-mode magit magithub go-guru go-autocomplete go-complete go-mode go-playground go-rename go-stacktracer golint paganini-theme)))
+	(use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode sx browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode go-eldoc flycheck-yamllint yaml-mode go-guru go-autocomplete go-complete go-mode go-playground go-rename go-stacktracer golint)))
+ '(solarized-contrast (quote normal))
+ '(split-height-threshold 100)
  '(tool-bar-mode nil)
  '(window-divider-default-right-width 1)
  '(window-divider-mode t))
@@ -94,7 +92,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:height 130)))))
 
 ; miscellaneous stuff I like
 (setq tab-always-indent 'complete)
@@ -109,11 +107,6 @@
 (recentf-mode 1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq-default tab-width 4)
-
-;; open file to last known location
-(setq save-place-file "~/.emacs.d/saveplace")
-(setq-default save-place t)
-(require 'saveplace)
 
 ;; browse-kill-ring
 (when (require 'browse-kill-ring nil 'noerror)
@@ -144,7 +137,8 @@
     try-complete-file-name))
 
 ;; match parenthesis
-(global-set-key "%" 'match-paren)
+(show-paren-mode t)
+;;(global-set-key "%" 'match-paren)
 (defun match-paren (arg)
   "Go to the matching parenthesis if on parenthesis otherwise insert %."
   (interactive "p")
@@ -166,7 +160,7 @@
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
 ;; Customize compile command to run go build
-(setq compile-command "/usr/local/go/bin/go install -ldflags=-s -v")
+(setq compile-command "/usr/local/go/bin/go install -v")
 
 ;; Auto complete of Go seems to be a pig - at least in Vagrant
 (defun auto-complete-for-go ()
@@ -182,9 +176,9 @@
 (dumb-jump-mode)
 
 ;; hl-line-mode - highlight the cursor line
-(global-hl-line-mode t)
-(set-face-foreground 'hl-line nil)
-(set-face-background 'hl-line "gray13")
+;(global-hl-line-mode t)
+;(set-face-foreground 'hl-line nil)
+;(set-face-background 'hl-line "gray13")
 
 ;; performance improvment that breaks some of vc?
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
@@ -366,8 +360,10 @@ your recently and most frequently used commands.")
 
 (setq mac-command-modifier 'meta) ;; Sets the command (Apple) key as Meta
 
-(global-set-key [\M-up] 'scroll-down-line)
-(global-set-key [\M-down] 'scroll-up-line)
+(require 'bind-key)
+(bind-key* "C-M-b" 'ido-switch-buffer)
+(bind-key* "M-up" 'scroll-down-line)
+(bind-key* "M-down" 'scroll-up-line)
 
 ; Function key bindings
 (global-set-key [f2] 'compile)
@@ -405,7 +401,7 @@ your recently and most frequently used commands.")
 (global-set-key "\M-*" 'pop-tag-mark)
 
 (global-unset-key (kbd "C-M-b"))
-(global-set-key (kbd "C-M-b") 'switch-to-buffer)
+(global-set-key (kbd "C-M-b") 'ido-switch-buffer)
 (global-unset-key (kbd "C-M-f"))
 (global-set-key (kbd "C-M-f") 'find-file)
 
@@ -413,13 +409,55 @@ your recently and most frequently used commands.")
 
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 
+;; most useless function ever
+(global-unset-key (kbd "C-t"))
+
+;; paganini is ok but a little too harsh in contrasts
+;;(load-theme 'paganini :no-confirm)
+;;(load-theme 'yoshi :no-confirm)
+
+;;;;;;;;;  Solarized:
+;; make the fringe stand out from the background
+(setq solarized-distinct-fringe-background t)
+
+;; Don't change the font for some headings and titles
+;;(setq solarized-use-variable-pitch nil)
+
+;; make the modeline high contrast
+(setq solarized-high-contrast-mode-line t)
+
+;; Use less bolding
+;;(setq solarized-use-less-bold t)
+
+;; Use more italics
+(setq solarized-use-more-italic t)
+
+;; Use less colors for indicators such as git:gutter, flycheck and similar
+(setq solarized-emphasize-indicators nil)
+
+;; Don't change size of org-mode headlines (but keep other size-changes)
+;;(setq solarized-scale-org-headlines nil)
+
+;; Avoid all font-size changes
+;;(setq solarized-height-minus-1 1.0)
+;;(setq solarized-height-plus-1 1.0)
+;;(setq solarized-height-plus-2 1.0)
+;;(setq solarized-height-plus-3 1.0)
+;;(setq solarized-height-plus-4 1.0)
+
+;;(load-theme 'solarized-dark t)
+;;;;;;;;;;;;;;;;;;;; End Solarized
+
+;; open file to last known location
+(require 'saveplace)
+(setq save-place-file "~/.emacs.d/saveplace")
+(setq-default save-place-mode t)
+
 (defun start-treetop()
   "Do the things"
   (interactive)
   (split-window-right)
   (shell "shell-run")
-  (shell "shell-web")
-  (shell "shell-collab")
   (shell "shell-log")
   (shell "shell-test")
   (shell "shell-main"))

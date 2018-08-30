@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "paganini-theme" "paganini-theme.el" (22999
-;;;;;;  61841 0 0))
+;;;### (autoloads nil "paganini-theme" "paganini-theme.el" (23272
+;;;;;;  33566 239000 136000))
 ;;; Generated autoloads from paganini-theme.el
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
