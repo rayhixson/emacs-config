@@ -361,53 +361,43 @@ your recently and most frequently used commands.")
 (setq mac-command-modifier 'meta) ;; Sets the command (Apple) key as Meta
 
 (require 'bind-key)
-(bind-key* "C-M-b" 'ido-switch-buffer)
-(bind-key* "M-up" 'scroll-down-line)
-(bind-key* "M-down" 'scroll-up-line)
+(bind-keys*
+  ("C-M-b" . ido-switch-buffer)
+  ([\M-up] . scroll-down-line)
+  ([\M-down] . scroll-up-line)
 
-; Function key bindings
-(global-set-key [f2] 'compile)
-(global-set-key [f3] 'revert-buffer)
-(global-set-key [f4] 'menu-bar-next-tag)
-(global-set-key [f6] 'go-guru-referrers)
-(global-set-key [\S-f7] 'previous-error)
-(global-set-key [f7] 'next-error)
-(global-set-key [f8] 'shell)
-(global-set-key [\S-f8] 'rename-buffer)
+  ;; Function key bindings
+  ([f2] . compile)
+  ([f3] . revert-buffer)
+  ([f4] . menu-bar-next-tag)
+  ([f6] . go-guru-referrers)
+  ([\S-f7] . previous-error)
+  ([f7] . next-error)
+  ([f8] . shell)
+  ([\S-f8] . rename-buffer)
 
-(global-unset-key "\C-j")
-(global-set-key "\C-j" 'goto-line)
-;; iBuffer is subborn about this key:
-(define-key ibuffer-mode-map (kbd "M-o") nil)
-(global-unset-key "\M-o")
-(global-set-key "\M-o" 'other-window)
-(global-unset-key "\M-m")
-(global-set-key "\M-m" 'ag-regexp)
-(global-unset-key "\M-p")
-(global-set-key "\M-p" 'split-window-below)
-(global-unset-key "\C-o")
-(global-set-key "\C-o" 'recentf-open-files)
-(global-unset-key "\M-i")
-(global-set-key "\M-i" 'ibuffer)
+  ("C-j" . goto-line)
+  ;; iBuffer is subborn about this key:
+  ;;(define-key ibuffer-mode-map (kbd "M-o") nil)
+  ("M-o" . other-window)
+  ("M-m" . ag-regexp)
+  ("M-p" . split-window-below)
+  ("C-o" . recentf-open-files)
+  ("M-i" . ibuffer)
 
-(global-set-key "\M-`" 'other-frame)
+  ("M-`" . other-frame)
 
-(global-unset-key (kbd "<M-right>"))
-(global-set-key (kbd "<M-right>") 'next-buffer)
-(global-unset-key (kbd "<M-left>"))
-(global-set-key (kbd "<M-left>") 'previous-buffer)
+  ((kbd "<M-right>") . next-buffer)
+  ((kbd "<M-left>") . previous-buffer)
 
-;; this used to be default
-(global-set-key "\M-*" 'pop-tag-mark)
+  ;; this used to be default
+  ("M-*" . pop-tag-mark)
 
-(global-unset-key (kbd "C-M-b"))
-(global-set-key (kbd "C-M-b") 'ido-switch-buffer)
-(global-unset-key (kbd "C-M-f"))
-(global-set-key (kbd "C-M-f") 'find-file)
+  ((kbd "C-M-f") . find-file)
 
-(global-set-key (kbd "C-x g") 'magit-status)
+  ((kbd "C-x g") . magit-status)
 
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
+  ((kbd "C-x k") . kill-this-buffer))
 
 ;; most useless function ever
 (global-unset-key (kbd "C-t"))
