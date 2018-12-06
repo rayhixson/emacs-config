@@ -81,7 +81,7 @@
  '(org-fontify-whole-heading-line t)
  '(package-selected-packages
    (quote
-	(use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode sx browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode go-eldoc flycheck-yamllint yaml-mode go-guru go-autocomplete go-complete go-mode go-playground go-rename go-stacktracer golint)))
+	(git-link go-autocomplete go-complete go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode sx browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode)))
  '(solarized-contrast (quote normal))
  '(split-height-threshold 100)
  '(tool-bar-mode nil)
@@ -93,6 +93,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:height 130)))))
+
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+(ac-config-default)
 
 ; miscellaneous stuff I like
 (setq tab-always-indent 'complete)
@@ -162,13 +166,8 @@
 ;; Customize compile command to run go build
 (setq compile-command "/usr/local/go/bin/go install -v")
 
-;; Auto complete of Go seems to be a pig - at least in Vagrant
-(defun auto-complete-for-go ()
-  (auto-complete-mode 1))
-(add-hook 'go-mode-hook 'auto-complete-for-go)
-
-(with-eval-after-load 'go-mode
-  (require 'go-autocomplete))
+;;(with-eval-after-load 'go-mode
+;;  (require 'go-autocomplete))
 
 ;; End Go Lang -------------------
 
@@ -176,9 +175,9 @@
 (dumb-jump-mode)
 
 ;; hl-line-mode - highlight the cursor line
-;(global-hl-line-mode t)
-;(set-face-foreground 'hl-line nil)
-;(set-face-background 'hl-line "gray13")
+(global-hl-line-mode t)
+(set-face-foreground 'hl-line nil)
+(set-face-background 'hl-line "gray13")
 
 ;; performance improvment that breaks some of vc?
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
@@ -381,7 +380,6 @@ your recently and most frequently used commands.")
   ;;(define-key ibuffer-mode-map (kbd "M-o") nil)
   ("M-o" . other-window)
   ("M-m" . ag-regexp)
-  ("M-p" . split-window-below)
   ("C-o" . recentf-open-files)
   ("M-i" . ibuffer)
 
@@ -438,6 +436,8 @@ your recently and most frequently used commands.")
 ;;(load-theme 'solarized-dark t)
 ;;;;;;;;;;;;;;;;;;;; End Solarized
 
+(require 'git-link)
+
 ;; open file to last known location
 (require 'saveplace)
 (setq save-place-file "~/.emacs.d/saveplace")
@@ -454,3 +454,6 @@ your recently and most frequently used commands.")
 
 (cd "~/go/src/github.com/treetopllc/gonoble/")
 (start-treetop)
+
+;; this is not working, what if we do it last?
+(setq-default save-place-mode t)

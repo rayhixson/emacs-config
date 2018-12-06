@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("storage_service.go"
+(("users_submissions.rb"
+ (filename . "~/go/src/github.com/treetopllc/gonoble/ext/cucumber/step_definitions/users_submissions.rb")
+ (front-context-string . "    expect(@subm")
+ (rear-context-string . ", @submissions)\n")
+ (position . 1741))
+("storage_service.go"
  (filename . "~/go/src/github.com/treetopllc/gonoble/graph/opportunity/storage_service.go")
  (front-context-string . "	_, err = s.Subm")
  (rear-context-string . "ls.HostEdgeType\n")
