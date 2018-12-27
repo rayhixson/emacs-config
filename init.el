@@ -6,6 +6,8 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
 (require 'package)
 (add-to-list
  'package-archives
@@ -20,14 +22,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(blink-cursor-mode nil)
  '(cgs-find-project-functions (quote (cgs-root)))
  '(cgs-step-search-path "cucumber/**/*.rb")
- '(column-number-mode nil)
+ '(custom-safe-themes
+   (quote
+	("8562ff25d5632615d70f96c31fbbd6122f28d69f67a9c67436d18224ce6bd621" default)))
  '(egg-enable-tooltip t)
  '(fci-rule-color "#3f1a1a")
  '(frame-background-mode (quote dark))
- '(global-font-lock-mode t)
  '(gud-gdb-command-name "gdb --annotate=1")
  '(ibuffer-saved-filter-groups
    (quote
@@ -82,11 +84,7 @@
  '(package-selected-packages
    (quote
 	(git-link go-autocomplete go-complete go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode sx browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode)))
- '(solarized-contrast (quote normal))
- '(split-height-threshold 100)
- '(tool-bar-mode nil)
- '(window-divider-default-right-width 1)
- '(window-divider-mode t))
+ '(solarized-contrast (quote normal)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
