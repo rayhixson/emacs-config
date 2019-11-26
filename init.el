@@ -16,6 +16,11 @@
  'package-archives
  '("marmalade" . "https://marmalade-repo.org/packages/") t)
 
+;; hl-line-mode - highlight the cursor line
+;(global-hl-line-mode t)
+;(set-face-foreground 'hl-line nil)
+;(set-face-background 'hl-line "gray13")
+
 ;(require 'better-defaults)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -24,81 +29,119 @@
  ;; If there is more than one, they won't work right.
  '(cgs-find-project-functions (quote (cgs-root)))
  '(cgs-step-search-path "cucumber/**/*.rb")
+ '(column-number-mode nil)
+ '(custom-enabled-themes (quote (yoshi)))
  '(custom-safe-themes
-   (quote
-	("8562ff25d5632615d70f96c31fbbd6122f28d69f67a9c67436d18224ce6bd621" default)))
+	 (quote
+		("1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" "6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "26d49386a2036df7ccbe802a06a759031e4455f07bda559dcf221f53e8850e69" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(egg-enable-tooltip t)
- '(fci-rule-color "#3f1a1a")
- '(frame-background-mode (quote dark))
+ '(global-guess-style-info-mode t)
  '(gud-gdb-command-name "gdb --annotate=1")
+ '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
+ '(highlight-tail-colors
+	 (quote
+		(("#073642" . 0)
+		 ("#546E00" . 20)
+		 ("#00736F" . 30)
+		 ("#00629D" . 50)
+		 ("#7B6000" . 60)
+		 ("#8B2C02" . 70)
+		 ("#93115C" . 85)
+		 ("#073642" . 100))))
  '(ibuffer-saved-filter-groups
-   (quote
-	(("programming-mode"
-	  ("Go"
-	   (used-mode . go-mode))
-	  ("Test"
-	   (or
-		(filename . ".*.feature")
-		(filename . ".*.rb")))
-	  ("Text"
-	   (or
-		(used-mode . text-mode)
-		(used-mode . fundamental-mode)))
-	  ("HTML"
-	   (or
-		(used-mode . html-mode)
-		(used-mode . js-mode)
-		(used-mode . js2-mode)))
-	  ("Shells"
-	   (used-mode . shell-mode))
-	  ("Star Buffers"
-	   (name . "^\\*"))))))
+	 (quote
+		(("programming-mode"
+			("Go"
+			 (used-mode . go-mode))
+			("Test"
+			 (or
+				(filename . ".*.feature")
+				(filename . ".*.rb")))
+			("Text"
+			 (or
+				(used-mode . text-mode)
+				(used-mode . fundamental-mode)))
+			("HTML"
+			 (or
+				(used-mode . html-mode)
+				(used-mode . js-mode)
+				(used-mode . js2-mode)))
+			("Shells"
+			 (used-mode . shell-mode))
+			("Star Buffers"
+			 (name . "^\\*"))))))
  '(ibuffer-saved-filters
-   (quote
-	(("crown"
-	  ((filename . ".*/crown/*")))
-	 ("collab"
-	  (filename . ".*/collaboratory-www/*"))
-	 ("gonoble-models"
-	  ((filename . ".*/gonoble/models/*")))
-	 ("No Star Files"
-	  ((not name . "^*$*")))
-	 ("gnus"
-	  ((or
-		(mode . message-mode)
-		(mode . mail-mode)
-		(mode . gnus-group-mode)
-		(mode . gnus-summary-mode)
-		(mode . gnus-article-mode))))
-	 ("programming"
-	  ((or
-		(mode . emacs-lisp-mode)
-		(mode . cperl-mode)
-		(mode . c-mode)
-		(mode . java-mode)
-		(mode . idl-mode)
-		(mode . lisp-mode)))))))
+	 (quote
+		(("crown"
+			((filename . ".*/crown/*")))
+		 ("collab"
+			(filename . ".*/collaboratory-www/*"))
+		 ("gonoble-models"
+			((filename . ".*/gonoble/models/*")))
+		 ("No Star Files"
+			((not name . "^*$*")))
+		 ("gnus"
+			((or
+				(mode . message-mode)
+				(mode . mail-mode)
+				(mode . gnus-group-mode)
+				(mode . gnus-summary-mode)
+				(mode . gnus-article-mode))))
+		 ("programming"
+			((or
+				(mode . emacs-lisp-mode)
+				(mode . cperl-mode)
+				(mode . c-mode)
+				(mode . java-mode)
+				(mode . idl-mode)
+				(mode . lisp-mode)))))))
+ '(js-indent-level 2)
  '(large-file-warning-threshold nil)
- '(magit-stash-arguments (quote ("--include-untracked")))
- '(org-fontify-whole-heading-line t)
+ '(magit-stash-arguments nil)
  '(package-selected-packages
-   (quote
-	(git-link go-autocomplete go-complete go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode sx browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode)))
- '(solarized-contrast (quote normal)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:height 130)))))
+	 (quote
+		(restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme zoom sublimity swiper all-the-icons-dired all-the-icons git-link go-autocomplete go-complete go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode)))
+ '(solarized-contrast (quote normal))
+ '(split-height-threshold 100)
+ '(sql-mode-hook (quote (sqlind-minor-mode)))
+ '(sublimity-mode t)
+ '(tool-bar-mode nil)
+ '(vc-annotate-background "#93a1a1")
+ '(vc-annotate-color-map
+	 (quote
+		((20 . "#990A1B")
+		 (40 . "#FF6E64")
+		 (60 . "#cb4b16")
+		 (80 . "#7B6000")
+		 (100 . "#b58900")
+		 (120 . "#DEB542")
+		 (140 . "#546E00")
+		 (160 . "#859900")
+		 (180 . "#B4C342")
+		 (200 . "#3F4D91")
+		 (220 . "#6c71c4")
+		 (240 . "#9EA0E5")
+		 (260 . "#2aa198")
+		 (280 . "#69CABF")
+		 (300 . "#00629D")
+		 (320 . "#268bd2")
+		 (340 . "#69B7F0")
+		 (360 . "#d33682"))))
+ '(vc-annotate-very-old-color "#93115C")
+ '(window-divider-default-right-width 1)
+ '(window-divider-mode t)
+ '(zoom-mode t nil (zoom))
+ '(zoom-size (quote (0.618 . 0.618))))
 
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
 
-; miscellaneous stuff I like
+;miscellaneous stuff I like
 (setq tab-always-indent 'complete)
 (add-to-list 'completion-styles 'initials t)
+;; don't insert tabs for spaces
+(setq indent-tabs-mode nil)
 
 (setq menu-bar-mode t)
 (setq ring-bell-function 'ignore)
@@ -108,7 +151,8 @@
 (auto-save-mode -1)
 (recentf-mode 1)
 (fset 'yes-or-no-p 'y-or-n-p)
-(setq-default tab-width 4)
+;; default tabs display width
+;; (setq-default tab-width 8)
 
 ;; browse-kill-ring
 (when (require 'browse-kill-ring nil 'noerror)
@@ -171,11 +215,6 @@
 
 ;; Ruby etal support for finding definitions
 (dumb-jump-mode)
-
-;; hl-line-mode - highlight the cursor line
-(global-hl-line-mode t)
-(set-face-foreground 'hl-line nil)
-(set-face-background 'hl-line "gray13")
 
 ;; performance improvment that breaks some of vc?
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
@@ -393,7 +432,10 @@ your recently and most frequently used commands.")
 
   ((kbd "C-x g") . magit-status)
 
-  ((kbd "C-x k") . kill-this-buffer))
+  ((kbd "C-x k") . kill-this-buffer)
+
+										;  ((kbd "C-s") . swiper))
+  ((kbd "C-s") . isearch-forward))
 
 ;; most useless function ever
 (global-unset-key (kbd "C-t"))
@@ -404,22 +446,22 @@ your recently and most frequently used commands.")
 
 ;;;;;;;;;  Solarized:
 ;; make the fringe stand out from the background
-(setq solarized-distinct-fringe-background t)
+;(setq solarized-distinct-fringe-background t)
 
 ;; Don't change the font for some headings and titles
 ;;(setq solarized-use-variable-pitch nil)
 
 ;; make the modeline high contrast
-(setq solarized-high-contrast-mode-line t)
+;(setq solarized-high-contrast-mode-line t)
 
 ;; Use less bolding
 ;;(setq solarized-use-less-bold t)
 
 ;; Use more italics
-(setq solarized-use-more-italic t)
+;(setq solarized-use-more-italic t)
 
 ;; Use less colors for indicators such as git:gutter, flycheck and similar
-(setq solarized-emphasize-indicators nil)
+; (setq solarized-emphasize-indicators nil)
 
 ;; Don't change size of org-mode headlines (but keep other size-changes)
 ;;(setq solarized-scale-org-headlines nil)
@@ -431,15 +473,60 @@ your recently and most frequently used commands.")
 ;;(setq solarized-height-plus-3 1.0)
 ;;(setq solarized-height-plus-4 1.0)
 
-;;(load-theme 'solarized-dark t)
+;(load-theme 'solarized-dark t)
 ;;;;;;;;;;;;;;;;;;;; End Solarized
 
 (require 'git-link)
 
+;; smooth scrolling ala Sublime
+(require 'sublimity)
+(require 'sublimity-scroll)
+;; Sublime style minimap
+;; (require 'sublimity-map) ;; experimental
+;; Distraction free mode: Removes modelines, etc
+;; (require 'sublimity-attractive)
+
+;; zoom config
+
+
+
 ;; open file to last known location
 (require 'saveplace)
 (setq save-place-file "~/.emacs.d/saveplace")
-(setq-default save-place-mode t)
+(save-place-mode)
+
+;;
+(require 'window-purpose)
+(purpose-mode)
+
+;; Need these two lines to get aliases working with M-x !
+(setq shell-file-name "zsh")
+(setq shell-command-switch "-ic")
+
+;; Kill colorized cucumber output in compile output mode
+;(require 'ansi-color)
+;(defun colorize-compilation-buffer ()
+;  (let ((inhibit-read-only t))
+;    (ansi-color-apply-on-region (point-min) (point-max))))
+;(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+
+;; guess-style configs
+(autoload 'guess-style-set-variable "guess-style" nil t)
+(autoload 'guess-style-guess-variable "guess-style")
+(autoload 'guess-style-guess-all "guess-style" nil t)
+;(global-guess-style-info-mode)
+
+(add-hook 'c-mode-common-hook 'guess-style-guess-all)
+(add-hook 'javascript-mode-hook 'guess-style-guess-all)
+(add-hook 'mhtml-mode-hook 'guess-style-guess-all)
+(add-hook 'html-mode-hook 'guess-style-guess-all)
+(add-hook 'js-mode-hook 'guess-style-guess-all)
+(add-hook 'ruby-mode-hook 'guess-style-guess-all)
+(add-hook 'feature-mode-hook 'guess-style-guess-all)
+
+(use-package restclient
+    :ensure t
+    :mode (("\\.http\\'" . restclient-mode)))
 
 (defun start-treetop()
   "Do the things"
@@ -455,3 +542,14 @@ your recently and most frequently used commands.")
 
 ;; this is not working, what if we do it last?
 (setq-default save-place-mode t)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; Custom macros
+(fset 'go-err-block
+   [?i ?f ?  ?e ?r ?r ?  ?! ?= ?  ?n ?i ?l ?  ?\{ return ?r ?e ?t ?u ?r ?n ?  ?e ?r ?r return ?\} return])
+

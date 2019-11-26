@@ -1,9 +1,9 @@
-;; -*- emacs-lisp -*- <17/11/09 15:18:05 /Users/ray/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <19/11/21 11:27:03 /Users/ray/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["sudo" "root" "impact.local" nil nil]
-  ("uname" "Darwin 16.7.0")
+(((tramp-file-name "sudo" "root" nil "impact" nil nil nil)
+  ("uname" "Darwin 19.0.0")
   ("locale" "LC_ALL=en_US.UTF-8")
   ("test" "test")
   ("remote-path"
@@ -17,6 +17,10 @@
   ("id" "/usr/bin/id")
   ("gid-integer" 0)
   ("file-exists" "test -e")
+  ("case-insensitive" t)
   ("gid-string" "wheel")
   ("uid-integer" 0)
-  ("git" "\\git")))
+  ("git" "\\git")
+  ("tmpdir" "/sudo:root@impact:/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")))
