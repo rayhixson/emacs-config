@@ -27,115 +27,155 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
  '(cgs-find-project-functions (quote (cgs-root)))
  '(cgs-step-search-path "cucumber/**/*.rb")
  '(column-number-mode nil)
+ '(compilation-message-face (quote default))
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
  '(custom-enabled-themes (quote (yoshi)))
  '(custom-safe-themes
-	 (quote
-		("1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" "6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "26d49386a2036df7ccbe802a06a759031e4455f07bda559dcf221f53e8850e69" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+   (quote
+    ("c221703cc604312f6f72349704f7329f80ccc6a261af769332ec80171b728cc0" "e61752b5a3af12be08e99d076aedadd76052137560b7e684a8be2f8d2958edc3" "ae65ccecdcc9eb29ec29172e1bfb6cadbe68108e1c0334f3ae52414097c501d2" "1a5e62d03a1c0c0c1ff46e00acf9d3d42be0f43481f01faef752b5d309d82080" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "4318c8136e18752719d5df209ec2576f0559dd02b9bef6be334c2e6aff57a1e4" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" "6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "26d49386a2036df7ccbe802a06a759031e4455f07bda559dcf221f53e8850e69" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(egg-enable-tooltip t)
+ '(fci-rule-color "#073642")
+ '(flycheck-posframe-border-width 5)
+ '(frame-background-mode (quote dark))
+ '(global-font-lock-mode t)
  '(global-guess-style-info-mode t)
  '(gud-gdb-command-name "gdb --annotate=1")
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
+ '(highlight-symbol-colors
+   (quote
+    ("#3b6b40f432d6" "#07b9463c4d36" "#47a3341e358a" "#1d873c3f56d5" "#2d86441c3361" "#43b7362d3199" "#061d417f59d7")))
+ '(highlight-symbol-foreground-color "#93a1a1")
  '(highlight-tail-colors
-	 (quote
-		(("#073642" . 0)
-		 ("#546E00" . 20)
-		 ("#00736F" . 30)
-		 ("#00629D" . 50)
-		 ("#7B6000" . 60)
-		 ("#8B2C02" . 70)
-		 ("#93115C" . 85)
-		 ("#073642" . 100))))
+   (quote
+    (("#073642" . 0)
+     ("#546E00" . 20)
+     ("#00736F" . 30)
+     ("#00629D" . 50)
+     ("#7B6000" . 60)
+     ("#8B2C02" . 70)
+     ("#93115C" . 85)
+     ("#073642" . 100))))
+ '(hl-bg-colors
+   (quote
+    ("#866300" "#992700" "#a7020a" "#a00559" "#243e9b" "#0061a8" "#007d76" "#5b7300")))
+ '(hl-fg-colors
+   (quote
+    ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
+ '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
+ '(hydra-posframe-show-params
+   (quote
+    (:poshandler posframe-poshandler-frame-bottom-center :internal-border-width 15 :internal-border-color "#222222" :background-color "#222222")))
  '(ibuffer-saved-filter-groups
-	 (quote
-		(("programming-mode"
-			("Go"
-			 (used-mode . go-mode))
-			("Test"
-			 (or
-				(filename . ".*.feature")
-				(filename . ".*.rb")))
-			("Text"
-			 (or
-				(used-mode . text-mode)
-				(used-mode . fundamental-mode)))
-			("HTML"
-			 (or
-				(used-mode . html-mode)
-				(used-mode . js-mode)
-				(used-mode . js2-mode)))
-			("Shells"
-			 (used-mode . shell-mode))
-			("Star Buffers"
-			 (name . "^\\*"))))))
+   (quote
+    (("programming-mode"
+      ("Go"
+       (used-mode . go-mode))
+      ("Test"
+       (or
+	(filename . ".*.feature")
+	(filename . ".*.rb")))
+      ("Text"
+       (or
+	(used-mode . text-mode)
+	(used-mode . fundamental-mode)))
+      ("HTML"
+       (or
+	(used-mode . html-mode)
+	(used-mode . js-mode)
+	(used-mode . js2-mode)))
+      ("Shells"
+       (used-mode . shell-mode))
+      ("Star Buffers"
+       (name . "^\\*"))))))
  '(ibuffer-saved-filters
-	 (quote
-		(("crown"
-			((filename . ".*/crown/*")))
-		 ("collab"
-			(filename . ".*/collaboratory-www/*"))
-		 ("gonoble-models"
-			((filename . ".*/gonoble/models/*")))
-		 ("No Star Files"
-			((not name . "^*$*")))
-		 ("gnus"
-			((or
-				(mode . message-mode)
-				(mode . mail-mode)
-				(mode . gnus-group-mode)
-				(mode . gnus-summary-mode)
-				(mode . gnus-article-mode))))
-		 ("programming"
-			((or
-				(mode . emacs-lisp-mode)
-				(mode . cperl-mode)
-				(mode . c-mode)
-				(mode . java-mode)
-				(mode . idl-mode)
-				(mode . lisp-mode)))))))
+   (quote
+    (("crown"
+      ((filename . ".*/crown/*")))
+     ("collab"
+      (filename . ".*/collaboratory-www/*"))
+     ("gonoble-models"
+      ((filename . ".*/gonoble/models/*")))
+     ("No Star Files"
+      ((not name . "^*$*")))
+     ("gnus"
+      ((or
+	(mode . message-mode)
+	(mode . mail-mode)
+	(mode . gnus-group-mode)
+	(mode . gnus-summary-mode)
+	(mode . gnus-article-mode))))
+     ("programming"
+      ((or
+	(mode . emacs-lisp-mode)
+	(mode . cperl-mode)
+	(mode . c-mode)
+	(mode . java-mode)
+	(mode . idl-mode)
+	(mode . lisp-mode)))))))
+ '(ivy-posframe-border-width 15)
+ '(ivy-posframe-style (quote frame-bottom-window-center))
  '(js-indent-level 2)
  '(large-file-warning-threshold nil)
+ '(lsp-ui-doc-border "#93a1a1")
  '(magit-stash-arguments nil)
+ '(nrepl-message-colors
+   (quote
+    ("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4")))
+ '(org-fontify-whole-heading-line t)
  '(package-selected-packages
-	 (quote
-		(restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme zoom sublimity swiper all-the-icons-dired all-the-icons git-link go-autocomplete go-complete go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode)))
+   (quote
+    (multi-term let-alist company-go restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme zoom swiper all-the-icons-dired all-the-icons git-link go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode)))
+ '(pos-tip-background-color "#073642")
+ '(pos-tip-foreground-color "#93a1a1")
+ '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(solarized-contrast (quote normal))
  '(split-height-threshold 100)
  '(sql-mode-hook (quote (sqlind-minor-mode)))
  '(sublimity-mode t)
+ '(term-default-bg-color "#002b36")
+ '(term-default-fg-color "#839496")
  '(tool-bar-mode nil)
  '(vc-annotate-background "#93a1a1")
+ '(vc-annotate-background-mode nil)
  '(vc-annotate-color-map
-	 (quote
-		((20 . "#990A1B")
-		 (40 . "#FF6E64")
-		 (60 . "#cb4b16")
-		 (80 . "#7B6000")
-		 (100 . "#b58900")
-		 (120 . "#DEB542")
-		 (140 . "#546E00")
-		 (160 . "#859900")
-		 (180 . "#B4C342")
-		 (200 . "#3F4D91")
-		 (220 . "#6c71c4")
-		 (240 . "#9EA0E5")
-		 (260 . "#2aa198")
-		 (280 . "#69CABF")
-		 (300 . "#00629D")
-		 (320 . "#268bd2")
-		 (340 . "#69B7F0")
-		 (360 . "#d33682"))))
+   (quote
+    ((20 . "#990A1B")
+     (40 . "#FF6E64")
+     (60 . "#cb4b16")
+     (80 . "#7B6000")
+     (100 . "#b58900")
+     (120 . "#DEB542")
+     (140 . "#546E00")
+     (160 . "#859900")
+     (180 . "#B4C342")
+     (200 . "#3F4D91")
+     (220 . "#6c71c4")
+     (240 . "#9EA0E5")
+     (260 . "#2aa198")
+     (280 . "#69CABF")
+     (300 . "#00629D")
+     (320 . "#268bd2")
+     (340 . "#69B7F0")
+     (360 . "#d33682"))))
  '(vc-annotate-very-old-color "#93115C")
+ '(weechat-color-list
+   (quote
+    (unspecified "#002b36" "#073642" "#a7020a" "#dc322f" "#5b7300" "#859900" "#866300" "#b58900" "#0061a8" "#268bd2" "#a00559" "#d33682" "#007d76" "#2aa198" "#839496" "#657b83")))
  '(window-divider-default-right-width 1)
  '(window-divider-mode t)
+ '(xterm-color-names
+   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#eee8d5"])
+ '(xterm-color-names-bright
+   ["#002b36" "#cb4b16" "#586e75" "#657b83" "#839496" "#6c71c4" "#93a1a1" "#fdf6e3"])
  '(zoom-mode t nil (zoom))
  '(zoom-size (quote (0.618 . 0.618))))
-
-(require 'go-autocomplete)
-(require 'auto-complete-config)
-(ac-config-default)
 
 ;miscellaneous stuff I like
 (setq tab-always-indent 'complete)
@@ -197,19 +237,27 @@
 
 ;; Go Lang ---------------------
 
+(require 'company)
+(require 'company-go)
+
 (defun my-go-mode-hook ()
-  ; Use goimports instead of gofmt
+  (set (make-local-variable 'company-backends) '(company-go))
+  (company-mode)
+  
+  ;; Use goimports instead of go-fmt
   (setq gofmt-command "goimports")
-  ; Call Gofmt before saving
+  ;; Call Gofmt before saving
   (add-hook 'before-save-hook 'gofmt-before-save)
+  ;; Customize compile command to run go build
+  (if (not (string-match "go" compile-command))
+      (set (make-local-variable 'compile-command)
+           ;;"go build -v && go test -v && go vet"))
+           "go install -v"))
   (go-eldoc-setup))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
 ;; Customize compile command to run go build
 (setq compile-command "/usr/local/go/bin/go install -v")
-
-;;(with-eval-after-load 'go-mode
-;;  (require 'go-autocomplete))
 
 ;; End Go Lang -------------------
 
@@ -477,14 +525,6 @@ your recently and most frequently used commands.")
 ;;;;;;;;;;;;;;;;;;;; End Solarized
 
 (require 'git-link)
-
-;; smooth scrolling ala Sublime
-(require 'sublimity)
-(require 'sublimity-scroll)
-;; Sublime style minimap
-;; (require 'sublimity-map) ;; experimental
-;; Distraction free mode: Removes modelines, etc
-;; (require 'sublimity-attractive)
 
 ;; zoom config
 
