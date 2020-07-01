@@ -34,3 +34,92 @@ ls
 ll
 alias ll 'ls -la $*'
 ll
+ls
+ll
+bit.heartlandcommerce.com
+drwxr-xr-x   6 ray            1152374831   192 2020-06-12 16:24 terradir
+pwd
+ll
+use-themes
+use-theme
+use-theme
+use-theme powerline
+ll
+ls
+cd terraform/
+ll
+ll
+pwd
+cd xen-org-test/
+h
+history
+use-theme
+use-theme
+ll
+use-theme powerline
+use-them 
+use-theme
+use-theme robbyrussell
+ls
+ls
+ls
+ls
+cd
+cd dev
+ls
+history
+60  use-them 
+use-theme
+cd chockstone
+ll
+fish-completion-mode 
+ls
+cat pig > foo
+rm foo 
+cd
+cd demo/
+ls
+ll
+kubectl
+kubectl apply helm-consul-values.yaml 
+kubectl get pods
+curl https://shipyard.run/apply | bash -s github.com/shipyard-run/blueprints//learn-consul-service-mesh
+kubectl
+kubectl get
+kubectl get pod
+kubectl get pods
+kubectl run
+kubectl options
+echo $KUBECONFIG
+ls ~/.shipyard/
+ls
+kubectl version --client
+ll
+ls
+ls df
+cat /fdsadf
+cd chockstone
+ls
+ls
+ll
+ls
+ls
+pwd
+git status
+eshell-git-prompt--git-root-dir
+$
+concat "a" "b " "c"
+cmake
+brew install cmake
+cd
+cd dev/cho
+cd dev
+ll
+cd
+eshell-git-prompt--collect-status
+cd dev/chockstone
+eshell-git-prompt--collect-status
+h
+ll
+cd bit.heartlandcommerce.com/terraform/ACE/chockstone-dev/
+ll

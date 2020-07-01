@@ -1,1 +1,8 @@
+alias h history
+alias f bar
 alias ll ls -la $*
+alias ff find-file $*
+alias d dired $*
+alias tf terraform $*
+alias tg terragrunt $*
+alias clean find . \( -name "\.#*" -o -name "*~" \) -exec rm {} \;
