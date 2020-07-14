@@ -1,66 +1,3 @@
-cd
-(let (x (current-time-string)) x)
-(let ((x (current-time-string))) x)
-(x)
-(let ((x (current-time-string))) x)
-(let ())
-exit
-ll
-ls
-ls -l
-ls -a
-ls -1
-?
-h
-history
-grep
-grep "foo" .
-grep -R"foo" .
-grep -R "foo" .
-cd
-env
-cd go/src/github.com/treetopllc/gonoble/
-giv
-go install -v
-ll
-la
-ls
-ls -la
-giv
-go install -v
-go install -v; gonoble -config=r.json
-go install -v; gonoble -config=r.json
-ls
-ll
-alias ll 'ls -la $*'
-ll
-ls
-ll
-bit.heartlandcommerce.com
-drwxr-xr-x   6 ray            1152374831   192 2020-06-12 16:24 terradir
-pwd
-ll
-use-themes
-use-theme
-use-theme
-use-theme powerline
-ll
-ls
-cd terraform/
-ll
-ll
-pwd
-cd xen-org-test/
-h
-history
-use-theme
-use-theme
-ll
-use-theme powerline
-use-them 
-use-theme
-use-theme robbyrussell
-ls
 ls
 ls
 ls
@@ -123,3 +60,69 @@ h
 ll
 cd bit.heartlandcommerce.com/terraform/ACE/chockstone-dev/
 ll
+cd do
+cd 
+cd dotfiles/
+ls
+cd ../.emacs.d/
+ll elpa/vterm-20200613.1457/
+rm -rf elpa/vterm-20200613.1457/build/
+git unstage
+git status
+git restore --staged .cache
+gs
+git status
+git push
+cd terra
+cd ..
+cd bit-terraform/
+ls
+ll
+cd ACE/
+ls
+type f
+which f
+find . "OMNI"
+find . "OMNI*"
+cd ..
+find . "OMNI*"
+find . -name "OMNI*" 
+zsh
+find . "OMNI*"
+find . -name "OMNI*" 
+cd XENIAL/OMNI/OMNI-dev/
+ll
+ls ..
+ls ../..
+cd ../bit-terraform/ACE/chockstone-dev/pub/
+rm -rf .terraform/
+tf init
+tf apply
+tf apply
+cd ../app/
+ls
+cd
+cd ../bit-terraform/XENIAL/OMNI/OMNI-dev
+ll
+cd
+cd dev/chockstone
+cd
+cd -
+cd ..
+ls
+ll
+cd chockstone-linux-ubuntu/
+vagrant destroy
+git co -branch mono-xenial
+git co -b mono-xenial
+vagrant up
+cd ../chockstone
+ls
+ll
+ll
+ls
+ll
+pwd
+cd ../chockstone-linux-ubuntu/
+groovy version
+type groovy

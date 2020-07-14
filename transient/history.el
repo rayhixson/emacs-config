@@ -9,8 +9,11 @@
  (magit-log
   ("-n256" "--graph" "--decorate"))
  (magit-pull nil)
- (magit-push nil
-	     ("--force-with-lease"))
+ (magit-push
+  ("--force-with-lease")
+  nil)
  (magit-rebase nil)
  (magit-reset nil)
- (magit-stash nil))
+ (magit-stash
+  ("--include-untracked")
+  nil))

@@ -78,25 +78,35 @@
  '(ibuffer-saved-filter-groups
    (quote
     (("programming-mode"
-      ("Go"
-       (used-mode . go-mode))
-      ("Test"
-       (or
-	(filename . ".*.feature")
-	(filename . ".*.rb")))
+      ("Terraform"
+       (filename . ".*.tf"))
+      ("Scripts"
+       (filename . ".*.sh"))
       ("Text"
        (or
 	(used-mode . text-mode)
 	(used-mode . fundamental-mode)))
-      ("HTML"
+      ("HTML / JSON"
        (or
 	(used-mode . html-mode)
 	(used-mode . js-mode)
-	(used-mode . js2-mode)))
+	(used-mode . js2-mode)
+	(filename . ".*.json")))
       ("Shells"
-       (used-mode . shell-mode))
+       (or
+	(used-mode . shell-mode)
+	(used-mode . eshell-mode)))
+      ("Magit"
+       (name . ".*magit.*"))
       ("Star Buffers"
        (name . "^\\*"))))))
+ ;; these groupings are not used currently
+;      ("Go"
+;       (used-mode . go-mode))
+;      ("Test"
+;       (or
+;	(filename . ".*.feature")
+;	(filename . ".*.rb")))
  '(ibuffer-saved-filters
    (quote
     (("crown"
@@ -132,9 +142,10 @@
    (quote
     ("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4")))
  '(org-fontify-whole-heading-line t)
+ '(org-startup-truncated nil)
  '(package-selected-packages
    (quote
-    (powerline vterm eshell-git-prompt eshell-prompt-extras fuzzy fuzzy-match fzf esh-autosuggest esh-buf-stack esh-help eshell-autojump eshell-fringe-status eshell-toggle fish-completion load-bash-alias multi-eshell starter-kit-eshell smart-mode-line smart-mode-line-powerline-theme unicode-fonts meghanada groovy-imports groovy-mode gradle-mode company-terraform terraform-doc terraform-mode multi-term let-alist company-go restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme swiper all-the-icons-dired all-the-icons git-link go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode)))
+    (ido-at-point ac-helm company-fuzzy company-web helm-company powerline vterm eshell-git-prompt eshell-prompt-extras fuzzy fuzzy-match fzf esh-autosuggest esh-buf-stack esh-help eshell-autojump eshell-fringe-status eshell-toggle fish-completion load-bash-alias multi-eshell starter-kit-eshell smart-mode-line smart-mode-line-powerline-theme unicode-fonts meghanada groovy-imports groovy-mode gradle-mode company-terraform terraform-doc terraform-mode multi-term let-alist company-go restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme swiper all-the-icons-dired all-the-icons git-link go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
@@ -769,6 +780,8 @@
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
+(global-company-mode t)
+
 ;; IELM Mode
 (add-hook 'ielm-mode-hook '(lambda () (set (make-local-variable 'company-backends) '(company-elisp))))
 
@@ -921,23 +934,24 @@ your recently and most frequently used commands.")
 ;; and show only the directory:
 
 (defvar filename-subs
-  '(("~/go/src/github.com/treetopllc/" . "[ttc]")
-	("/$" . "")
-	("~/go/src/github.com/treetopllc/gonoble/" . "[gonoble]/")
-	("~/go/src/github.com/treetopllc/batch-svc/" . "[batch-svc]/")
-	("~/go/src/github.com/treetopllc/gonoble/ext/cucumber/" . "[go-cuc]/")
-	("~/go/src/github.com/treetopllc/collaboratory-www/" . "[collaboratory-www]/")
-	("~/go/src/github.com/treetopllc/nobleweb/" . "[nobleweb]/")
-	("~/go/src/github.com/treetopllc/noble-go-sdk/" . "[sdk]/")))
+  '(("~/dev/chockstone/" . "[chockstone]/")
+    ("/$" . "")
+    ("~/bit-terraform/ACE/chockstone-dev/" . "[tf-chockstone]/")
+    ("~/go/src/github.com/treetopllc/gonoble/" . "[gonoble]/")
+    ("~/go/src/github.com/treetopllc/batch-svc/" . "[batch-svc]/")
+    ("~/go/src/github.com/treetopllc/gonoble/ext/cucumber/" . "[go-cuc]/")
+    ("~/go/src/github.com/treetopllc/collaboratory-www/" . "[collaboratory-www]/")
+    ("~/go/src/github.com/treetopllc/nobleweb/" . "[nobleweb]/")
+    ("~/go/src/github.com/treetopllc/noble-go-sdk/" . "[sdk]/")))
 
 (defvar absolute-filename-subs
   '(("/Users/ray/go/src/github.com/treetopllc/" . "[ttc]")
-	("/$" . "")
-	("/Users/ray/go/src/github.com/treetopllc/gonoble/" . "[gonoble]/")
-	("/Users/ray/go/src/github.com/treetopllc/gonoble/ext/cucumber/" . "[go-cuc]/")
-	("/Users/ray/go/src/github.com/treetopllc/collaboratory-www/" . "[collaboratory-www]/")
-	("/Users/ray/go/src/github.com/treetopllc/nobleweb/" . "[nobleweb]/")
-	("/Users/ray/go/src/github.com/treetopllc/noble-go-sdk/" . "[sdk]/")))
+    ("/$" . "")
+    ("/Users/ray/go/src/github.com/treetopllc/gonoble/" . "[gonoble]/")
+    ("/Users/ray/go/src/github.com/treetopllc/gonoble/ext/cucumber/" . "[go-cuc]/")
+    ("/Users/ray/go/src/github.com/treetopllc/collaboratory-www/" . "[collaboratory-www]/")
+    ("/Users/ray/go/src/github.com/treetopllc/nobleweb/" . "[nobleweb]/")
+    ("/Users/ray/go/src/github.com/treetopllc/noble-go-sdk/" . "[sdk]/")))
 
 (defun str-replace-all (str pats)
   (if (null pats)
@@ -996,25 +1010,25 @@ your recently and most frequently used commands.")
   (kill-buffer (current-buffer)))
 
 ;; customize mode-line-format
-;(defun modeline-dir-abbrev ()
-;  (str-replace-all default-directory absolute-filename-subs))
+(defun modeline-dir-abbrev ()
+  (str-replace-all default-directory absolute-filename-subs))
 
-;(setq-default mode-line-format
-;      (list ""
-;            'mode-line-modified
-;            "%25b--"
-;            " ["
-;            '(:eval (modeline-dir-abbrev))
-;            "] "
-;            "%[("
-;            'mode-name
-;            "%n"
-;            'mode-line-process
-;            ")%]--"
-;             "L%l--"
-;             "C%c--"
-;            '(-3 . "%P")
-                                        ;            "-%-"))
+(setq-default mode-line-format
+      (list ""
+            'mode-line-modified
+            "%25b--"
+            " ["
+            '(:eval (modeline-dir-abbrev))
+            "] "
+            "%[("
+            'mode-name
+            "%n"
+            'mode-line-process
+            ")%]--"
+             "L%l--"
+             "C%c--"
+            '(-3 . "%P")
+            "-%-"))
 
 ;(setq sml/theme 'powerline)
 ;(sml/setup)
@@ -1026,6 +1040,51 @@ your recently and most frequently used commands.")
  delete-old-versions t
  kept-new-versions 6
  kept-old-versions 2)
+
+;; BEGIN ESHELL SECTION
+(add-hook 'eshell-mode-hook
+  (lambda () 
+    (define-key eshell-mode-map (kbd "<tab>")
+      (lambda () (interactive) (pcomplete-std-complete)))))
+
+;; make history use ido
+;  ((kbd "C-c C-l") . ido-eshell-comint-history)
+;(defun ido-eshell-comint-history ()
+;  "eshell & comint history with ido."
+;  (interactive)
+;  (if (or (member major-mode '(eshell-mode sql-interactive-mode))
+;          (derived-mode-p 'comint-mode))
+;     (let ((ring (if (eq major-mode 'eshell-mode)
+;                   eshell-history-ring
+;                   comint-input-ring)))
+;       (insert
+;        (ido-completing-read "History: "
+;                             (delete-dups
+;                              (ring-elements ring)))))
+;    (message "Unsupported mode")))
+:
+
+;; this was really golden, but I moved this functionality into
+;; ~/.emacs.d/elpa/eshell-git-prompt-20200109.2250/eshell-git-prompt.el
+;;
+;(setq eshell-prompt-function
+;(lambda ()
+;  (concat
+;   (propertize "┌─[" 'face `(:foreground "green"))
+;   (propertize (user-login-name) 'face `(:foreground "red"))
+;   (propertize "@" 'face `(:foreground "green"))
+;   (propertize (git-branch) 'face `(:foreground "blue"))
+;   (propertize "]──[" 'face `(:foreground "green"))
+;   (propertize (format-time-string "%H:%M" (current-time)) 'face `(:foreground "yellow"))
+;   (propertize "]──[" 'face `(:foreground "green"))
+;   (propertize (concat (eshell/pwd)) 'face `(:foreground "white"))
+;   (propertize "]\n" 'face `(:foreground "green"))
+;   (propertize "└─>" 'face `(:foreground "green"))
+;   (propertize (if (= (user-uid) 0) " # " " $ ") 'face `(:foreground "green"))
+;   )))
+
+(eshell-git-prompt-use-theme "rays")
+;; END ESHELL SECTION
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Key bindings
@@ -1071,7 +1130,7 @@ your recently and most frequently used commands.")
 
   ((kbd "C-x k") . kill-this-buffer)
 
-										;  ((kbd "C-s") . swiper))
+					;  ((kbd "C-s") . swiper))
   ((kbd "C-s") . isearch-forward))
 
 ;; most useless function ever
@@ -1152,26 +1211,6 @@ your recently and most frequently used commands.")
 (use-package restclient
     :ensure t
     :mode (("\\.http\\'" . restclient-mode)))
-
-;; BEGIN ESHELL SECTION
-;(setq eshell-prompt-function
-;(lambda ()
-;  (concat
-;   (propertize "┌─[" 'face `(:foreground "green"))
-;   (propertize (user-login-name) 'face `(:foreground "red"))
-;   (propertize "@" 'face `(:foreground "green"))
-;   (propertize (git-branch) 'face `(:foreground "blue"))
-;   (propertize "]──[" 'face `(:foreground "green"))
-;   (propertize (format-time-string "%H:%M" (current-time)) 'face `(:foreground "yellow"))
-;   (propertize "]──[" 'face `(:foreground "green"))
-;   (propertize (concat (eshell/pwd)) 'face `(:foreground "white"))
-;   (propertize "]\n" 'face `(:foreground "green"))
-;   (propertize "└─>" 'face `(:foreground "green"))
-;   (propertize (if (= (user-uid) 0) " # " " $ ") 'face `(:foreground "green"))
-;   )))
-
-(eshell-git-prompt-use-theme "rays")
-;; END ESHELL SECTION
 
 (defun start-shells()
   "Do the things"
