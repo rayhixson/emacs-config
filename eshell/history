@@ -1,128 +1,128 @@
-ls
-ls
-ls
-cd
-cd dev
-ls
-history
-60  use-them 
-use-theme
-cd chockstone
-ll
-fish-completion-mode 
-ls
-cat pig > foo
-rm foo 
-cd
-cd demo/
+mkdir xref-svc
+cp -r vtt/* xref-svc/
 ls
 ll
-kubectl
-kubectl apply helm-consul-values.yaml 
-kubectl get pods
-curl https://shipyard.run/apply | bash -s github.com/shipyard-run/blueprints//learn-consul-service-mesh
-kubectl
-kubectl get
-kubectl get pod
-kubectl get pods
-kubectl run
-kubectl options
-echo $KUBECONFIG
-ls ~/.shipyard/
-ls
-kubectl version --client
-ll
-ls
-ls df
-cat /fdsadf
-cd chockstone
-ls
-ls
-ll
-ls
-ls
+ll xref-svc/
+ll xref-svc/templates/
 pwd
-git status
-eshell-git-prompt--git-root-dir
-$
-concat "a" "b " "c"
-cmake
-brew install cmake
+ls -l ~/xref-svc/
+ls -l ~/xref-svc/templates/
+mv ~/xref-svc/templates/xref-svc-* xref-svc/templates/
 cd
-cd dev/cho
-cd dev
+mkdir foo
+cd foo
 ll
+cd foo
 cd
-eshell-git-prompt--collect-status
-cd dev/chockstone
-eshell-git-prompt--collect-status
-h
-ll
-cd bit.heartlandcommerce.com/terraform/ACE/chockstone-dev/
-ll
-cd do
-cd 
-cd dotfiles/
+cd foo
 ls
-cd ../.emacs.d/
-ll elpa/vterm-20200613.1457/
-rm -rf elpa/vterm-20200613.1457/build/
-git unstage
-git status
-git restore --staged .cache
+mkdir foo
+rm foo
+mkdir foo
+cd foo
+javac Luhn.java
+java Luhn
+javac Luhn.java
+java Luhn
+cd
+cd dev/chockstone/master/
+cd ace-ceg-terraform/ACE/GSV/GCP/dev/
+ll
+cd dev-merlin/
+ll
+tf destroy
+tf delete
+history
+tf destroy --set="credentials-file="
+tf destroy -set="credentials-file="
+tf destroy -set "credentials-file="
+tf destroy -var="credentials-file=" -var="project-id=$PROJECT_ID"
+tf destroy -var="credentials-file=~/gcp/pid-gousgnad-aces-dev-ray-god-6522570c9132.json:" -var="project-id=$PROJECT_ID"
+tf destroy -var="credentials-file=~/gcp/pid-gousgnad-aces-dev-ray-god-6522570c9132.json" -var="project-id=$PROJECT_ID"
+ll
+mkdir service-accounts
+cd service-accounts/
+cp ../external-secrets/* .
+cd ..
+cd service-accounts/
+terraform apply -var="project-id=$PROJECT_ID" -var="credentials-file="`
+ll
+mv main.tf xref-main.tf
+rm outputs.tf
+rm variables.tf
+cd ..
+ls
+ls container-registry/
+cd container-registry/
+cd ../service-accounts/
+ll
+terraform apply -var="project-id=$PROJECT_ID" -var="credentials-file="`
+terraform apply -var="project-id=$PROJECT_ID" -var="credentials-file="` -f xref-main.tf
+tf apply -help
+terraform apply -var="project-id=$PROJECT_ID" -var="credentials-file="` xref-main.tf
+tf plan -help
+cd bit.heartlandcommerce.com/
+ls
+cd terraform/
+ll
+cd 
+cd bit-terraform/
 gs
 git status
-git push
-cd terra
+git list -a
+git show -a
+git config --all
+git config -a
+git config -l
 cd ..
-cd bit-terraform/
+rm -rf bit-terraform/
 ls
-ll
-cd ACE/
-ls
-type f
-which f
-find . "OMNI"
-find . "OMNI*"
+cd dev/ace-ceg-terraform/ACE/GSV/GCP/dev-engage/vpc/
 cd ..
-find . "OMNI*"
-find . -name "OMNI*" 
-zsh
-find . "OMNI*"
-find . -name "OMNI*" 
-cd XENIAL/OMNI/OMNI-dev/
 ll
-ls ..
-ls ../..
-cd ../bit-terraform/ACE/chockstone-dev/pub/
-rm -rf .terraform/
-tf init
-tf apply
-tf apply
-cd ../app/
+git pull
+ll
+ll ../
+ll
+ll gke/
+ll
+mkdir pubsub
+cd pubsub/
 ls
-cd
-cd ../bit-terraform/XENIAL/OMNI/OMNI-dev
-ll
-cd
-cd dev/chockstone
-cd
-cd -
+ll ../service-accounts/
+cp ../vpc/providers.tf .
+cp ../vpc/variables.tf .
+ll ../vpc/
+ls
+mv main.tf pubsub.tf
+mv module ../pubsub_module
+ls ../pubsub_module/pubsub.tf
 cd ..
+mv pubsub_module module_pubsub
+ll module_pubsub/
+cd module_pubsub/
+ll
+mv pubsub.tf main.tf
+cd ..
+ll
+ll service-accounts/
+ll
+cd ..
+cd dev-engage/
+ll
+ll vpc/
+cd vpc
+TF_LOG=DEBUG tf apply -var="project_id=$PROJECT_ID" -var="credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-god-6522570c9132.json"
+ll
+cd ../..cd vpc
+cd dev-r
+cd ../../
+cd dev-ray/vpc/
 ls
-ll
-cd chockstone-linux-ubuntu/
-vagrant destroy
-git co -branch mono-xenial
-git co -b mono-xenial
-vagrant up
-cd ../chockstone
+cd ..
+cd ..
+mv dev-ray ray
 ls
-ll
-ll
-ls
-ll
-pwd
-cd ../chockstone-linux-ubuntu/
-groovy version
-type groovy
+cd ray
+cp -r ../templates/* .
+cd

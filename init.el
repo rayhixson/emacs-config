@@ -27,89 +27,94 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(blink-cursor-mode nil)
- '(cgs-find-project-functions (quote (cgs-root)))
+ '(blink-cursor-delay 1)
+ '(blink-cursor-mode t)
+ '(cgs-find-project-functions '(cgs-root))
  '(cgs-step-search-path "cucumber/**/*.rb")
  '(column-number-mode nil)
- '(compilation-message-face (quote default))
+ '(compilation-message-face 'default)
  '(cua-global-mark-cursor-color "#2aa198")
  '(cua-normal-cursor-color "#839496")
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
- '(custom-enabled-themes (quote (yoshi)))
+ '(cursor-type 'box)
+ '(custom-enabled-themes '(yoshi))
  '(custom-safe-themes
-   (quote
-    ("0fffa9669425ff140ff2ae8568c7719705ef33b7a927a0ba7c5e2ffcfac09b75" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "c221703cc604312f6f72349704f7329f80ccc6a261af769332ec80171b728cc0" "e61752b5a3af12be08e99d076aedadd76052137560b7e684a8be2f8d2958edc3" "ae65ccecdcc9eb29ec29172e1bfb6cadbe68108e1c0334f3ae52414097c501d2" "1a5e62d03a1c0c0c1ff46e00acf9d3d42be0f43481f01faef752b5d309d82080" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "4318c8136e18752719d5df209ec2576f0559dd02b9bef6be334c2e6aff57a1e4" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" "6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "26d49386a2036df7ccbe802a06a759031e4455f07bda559dcf221f53e8850e69" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+   '("62b5c93e1dab499efc36ed0a1955d21d859efd8582da7bacc74a8f95a86f6c41" "0fffa9669425ff140ff2ae8568c7719705ef33b7a927a0ba7c5e2ffcfac09b75" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "c221703cc604312f6f72349704f7329f80ccc6a261af769332ec80171b728cc0" "e61752b5a3af12be08e99d076aedadd76052137560b7e684a8be2f8d2958edc3" "ae65ccecdcc9eb29ec29172e1bfb6cadbe68108e1c0334f3ae52414097c501d2" "1a5e62d03a1c0c0c1ff46e00acf9d3d42be0f43481f01faef752b5d309d82080" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "4318c8136e18752719d5df209ec2576f0559dd02b9bef6be334c2e6aff57a1e4" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" "6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "26d49386a2036df7ccbe802a06a759031e4455f07bda559dcf221f53e8850e69" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default))
  '(describe-char-unidata-list
-   (quote
-    (name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment)))
+   '(name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment))
  '(egg-enable-tooltip t)
+ '(erc-modules
+   '(autojoin button completion fill irccontrols list match menu move-to-prompt netsplit networks noncommands notifications readonly ring stamp track))
+ '(erc-nick "raydondo")
  '(fci-rule-color "#073642")
  '(flycheck-posframe-border-width 5)
- '(frame-background-mode (quote dark))
+ '(frame-background-mode 'dark)
  '(global-font-lock-mode t)
- '(groovy-indent-offset 8)
+ '(gradle-mode t)
  '(gud-gdb-command-name "gdb --annotate=1")
- '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
+ '(highlight-changes-colors '("#d33682" "#6c71c4"))
  '(highlight-symbol-colors
-   (quote
-    ("#3b6b40f432d6" "#07b9463c4d36" "#47a3341e358a" "#1d873c3f56d5" "#2d86441c3361" "#43b7362d3199" "#061d417f59d7")))
+   '("#3b6b40f432d6" "#07b9463c4d36" "#47a3341e358a" "#1d873c3f56d5" "#2d86441c3361" "#43b7362d3199" "#061d417f59d7"))
  '(highlight-symbol-foreground-color "#93a1a1")
  '(highlight-tail-colors
-   (quote
-    (("#073642" . 0)
+   '(("#073642" . 0)
      ("#546E00" . 20)
      ("#00736F" . 30)
      ("#00629D" . 50)
      ("#7B6000" . 60)
      ("#8B2C02" . 70)
      ("#93115C" . 85)
-     ("#073642" . 100))))
+     ("#073642" . 100)))
  '(hl-bg-colors
-   (quote
-    ("#866300" "#992700" "#a7020a" "#a00559" "#243e9b" "#0061a8" "#007d76" "#5b7300")))
+   '("#866300" "#992700" "#a7020a" "#a00559" "#243e9b" "#0061a8" "#007d76" "#5b7300"))
  '(hl-fg-colors
-   (quote
-    ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
- '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
+   '("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36"))
+ '(hl-paren-colors '("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900"))
  '(hydra-posframe-show-params
-   (quote
-    (:poshandler posframe-poshandler-frame-bottom-center :internal-border-width 15 :internal-border-color "#222222" :background-color "#222222")) t)
+   '(:poshandler posframe-poshandler-frame-bottom-center :internal-border-width 15 :internal-border-color "#222222" :background-color "#222222") t)
  '(ibuffer-saved-filter-groups
-   (quote
-    (("programming-mode"
+   '(("programming-mode"
       ("Terraform"
        (filename . ".*.tf"))
+      ("Google Deployment Manager"
+       (filename . ".*.py"))
+      ("YAML"
+       (or
+        (name . ".yaml")
+        (name . ".yml")))
+      ("XML"
+       (filename . ".*.xml"))
+      ("Java / Groovy"
+       (or
+        (filename . ".*.java")
+        (filename . ".*.groovy")))
+      ("HTML / JSON"
+       (or
+        (used-mode . html-mode)
+        (used-mode . js-mode)
+        (used-mode . js2-mode)
+        (filename . ".*.json")))
       ("Scripts"
        (filename . ".*.sh"))
       ("Text"
        (or
-	(used-mode . text-mode)
-	(used-mode . fundamental-mode)))
-      ("HTML / JSON"
-       (or
-	(used-mode . html-mode)
-	(used-mode . js-mode)
-	(used-mode . js2-mode)
-	(filename . ".*.json")))
+        (used-mode . text-mode)
+        (used-mode . fundamental-mode)))
       ("Shells"
        (or
-	(used-mode . shell-mode)
-	(used-mode . eshell-mode)))
+        (used-mode . shell-mode)
+        (used-mode . eshell-mode)))
       ("Magit"
        (name . ".*magit.*"))
+      ("Go"
+       (or
+        (used-mode . go-mode)
+        (used-mode . protobuf-mode)))
       ("Star Buffers"
-       (name . "^\\*"))))))
- ;; these groupings are not used currently
-;      ("Go"
-;       (used-mode . go-mode))
-;      ("Test"
-;       (or
-;	(filename . ".*.feature")
-;	(filename . ".*.rb")))
+       (name . "^\\*")))))
  '(ibuffer-saved-filters
-   (quote
-    (("crown"
+   '(("crown"
       ((filename . ".*/crown/*")))
      ("collab"
       (filename . ".*/collaboratory-www/*"))
@@ -119,114 +124,97 @@
       ((not name . "^*$*")))
      ("gnus"
       ((or
-	(mode . message-mode)
-	(mode . mail-mode)
-	(mode . gnus-group-mode)
-	(mode . gnus-summary-mode)
-	(mode . gnus-article-mode))))
+        (mode . message-mode)
+        (mode . mail-mode)
+        (mode . gnus-group-mode)
+        (mode . gnus-summary-mode)
+        (mode . gnus-article-mode))))
      ("programming"
       ((or
-	(mode . emacs-lisp-mode)
-	(mode . cperl-mode)
-	(mode . c-mode)
-	(mode . java-mode)
-	(mode . idl-mode)
-	(mode . lisp-mode)))))))
+        (mode . emacs-lisp-mode)
+        (mode . cperl-mode)
+        (mode . c-mode)
+        (mode . java-mode)
+        (mode . idl-mode)
+        (mode . lisp-mode))))))
+ '(indent-tabs-mode nil)
  '(ivy-posframe-border-width 15)
- '(ivy-posframe-style (quote frame-bottom-window-center))
+ '(ivy-posframe-style 'frame-bottom-window-center)
  '(js-indent-level 2)
  '(large-file-warning-threshold nil)
+ '(lsp-keymap-prefix "M-l")
  '(lsp-ui-doc-border "#93a1a1")
  '(magit-stash-arguments nil)
+ '(markdown-command "/usr/local/bin/Markdown.pl")
  '(nrepl-message-colors
-   (quote
-    ("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4")))
+   '("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4"))
  '(org-fontify-whole-heading-line t)
  '(org-startup-truncated nil)
  '(package-selected-packages
-   (quote
-    (ido-at-point ac-helm company-fuzzy company-web helm-company powerline vterm eshell-git-prompt eshell-prompt-extras fuzzy fuzzy-match fzf esh-autosuggest esh-buf-stack esh-help eshell-autojump eshell-fringe-status eshell-toggle fish-completion load-bash-alias multi-eshell starter-kit-eshell smart-mode-line smart-mode-line-powerline-theme unicode-fonts meghanada groovy-imports groovy-mode gradle-mode company-terraform terraform-doc terraform-mode multi-term let-alist company-go restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme swiper all-the-icons-dired all-the-icons git-link go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode)))
+   '(groovy-mode kubernetes kubernetes-helm kubernetes-tramp protobuf-mode all-the-icons-ibuffer yasnippet dap-mode lsp-java lsp-mode lsp-ui ido-at-point ac-helm company-fuzzy company-web powerline vterm eshell-git-prompt eshell-prompt-extras fuzzy fuzzy-match fzf esh-autosuggest esh-buf-stack esh-help eshell-autojump eshell-fringe-status eshell-toggle fish-completion load-bash-alias multi-eshell starter-kit-eshell smart-mode-line smart-mode-line-powerline-theme unicode-fonts groovy-imports gradle-mode company-terraform terraform-doc terraform-mode multi-term let-alist company-go restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme swiper all-the-icons-dired all-the-icons git-link go-direx go-dlv go-eldoc go-errcheck go-fill-struct go-gen-test go-guru go-imports go-mode go-playground go-rename go-stacktracer go-tag magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
- '(sml/mode-width
-   (if
-       (eq
-	(powerline-current-separator)
-	(quote arrow))
-       (quote right)
-     (quote full)))
+ '(sml/mode-width (if (eq (powerline-current-separator) 'arrow) 'right 'full))
  '(sml/pos-id-separator
-   (quote
-    (""
+   '(""
      (:propertize " " face powerline-active1)
      (:eval
-      (propertize " "
-		  (quote display)
-		  (funcall
-		   (intern
-		    (format "powerline-%s-%s"
-			    (powerline-current-separator)
-			    (car powerline-default-separator-dir)))
-		   (quote powerline-active1)
-		   (quote powerline-active2))))
-     (:propertize " " face powerline-active2))))
+      (propertize " " 'display
+                  (funcall
+                   (intern
+                    (format "powerline-%s-%s"
+                            (powerline-current-separator)
+                            (car powerline-default-separator-dir)))
+                   'powerline-active1 'powerline-active2)))
+     (:propertize " " face powerline-active2)))
  '(sml/pos-minor-modes-separator
-   (quote
-    (""
+   '(""
      (:propertize " " face powerline-active1)
      (:eval
-      (propertize " "
-		  (quote display)
-		  (funcall
-		   (intern
-		    (format "powerline-%s-%s"
-			    (powerline-current-separator)
-			    (cdr powerline-default-separator-dir)))
-		   (quote powerline-active1)
-		   (quote sml/global))))
-     (:propertize " " face sml/global))))
+      (propertize " " 'display
+                  (funcall
+                   (intern
+                    (format "powerline-%s-%s"
+                            (powerline-current-separator)
+                            (cdr powerline-default-separator-dir)))
+                   'powerline-active1 'sml/global)))
+     (:propertize " " face sml/global)))
  '(sml/pre-id-separator
-   (quote
-    (""
+   '(""
      (:propertize " " face sml/global)
      (:eval
-      (propertize " "
-		  (quote display)
-		  (funcall
-		   (intern
-		    (format "powerline-%s-%s"
-			    (powerline-current-separator)
-			    (car powerline-default-separator-dir)))
-		   (quote sml/global)
-		   (quote powerline-active1))))
-     (:propertize " " face powerline-active1))))
+      (propertize " " 'display
+                  (funcall
+                   (intern
+                    (format "powerline-%s-%s"
+                            (powerline-current-separator)
+                            (car powerline-default-separator-dir)))
+                   'sml/global 'powerline-active1)))
+     (:propertize " " face powerline-active1)))
  '(sml/pre-minor-modes-separator
-   (quote
-    (""
+   '(""
      (:propertize " " face powerline-active2)
      (:eval
-      (propertize " "
-		  (quote display)
-		  (funcall
-		   (intern
-		    (format "powerline-%s-%s"
-			    (powerline-current-separator)
-			    (cdr powerline-default-separator-dir)))
-		   (quote powerline-active2)
-		   (quote powerline-active1))))
-     (:propertize " " face powerline-active1))))
- '(sml/pre-modes-separator (propertize " " (quote face) (quote sml/modes)))
- '(solarized-contrast (quote normal))
+      (propertize " " 'display
+                  (funcall
+                   (intern
+                    (format "powerline-%s-%s"
+                            (powerline-current-separator)
+                            (cdr powerline-default-separator-dir)))
+                   'powerline-active2 'powerline-active1)))
+     (:propertize " " face powerline-active1)))
+ '(sml/pre-modes-separator (propertize " " 'face 'sml/modes))
+ '(solarized-contrast 'normal)
  '(split-height-threshold 100)
- '(sql-mode-hook (quote (sqlind-minor-mode)))
+ '(sql-mode-hook '(sqlind-minor-mode))
  '(sublimity-mode t)
+ '(tab-always-indent 'complete)
  '(term-default-bg-color "#002b36")
  '(term-default-fg-color "#839496")
  '(tool-bar-mode nil)
  '(unicode-fonts-block-font-mapping
-   (quote
-    (("Aegean Numbers"
+   '(("Aegean Numbers"
       ("Noto Sans Symbols" "Aegean" "Symbola" "Quivira" "Code2001" "Everson Mono:weight=bold" "ALPHABETUM Unicode"))
      ("Ahom"
       ("AhomUnicode"))
@@ -691,12 +679,11 @@
      ("Yi Syllables"
       ("Noto Sans Yi" "Nuosu SIL" "Microsoft Yi Baiti" "STFangsong" "Code2000"))
      ("Yijing Hexagram Symbols"
-      ("WenQuanYi Zen Hei Mono" "Noto Sans Symbols" "Segoe UI Symbol" "Apple Symbols" "DejaVu Sans:width=condensed" "BabelStone Han" "Symbola" "Quivira" "BabelStone Modern" "Code2000" "Everson Mono:weight=bold")))))
+      ("WenQuanYi Zen Hei Mono" "Noto Sans Symbols" "Segoe UI Symbol" "Apple Symbols" "DejaVu Sans:width=condensed" "BabelStone Han" "Symbola" "Quivira" "BabelStone Modern" "Code2000" "Everson Mono:weight=bold"))))
  '(vc-annotate-background "#93a1a1")
  '(vc-annotate-background-mode nil)
  '(vc-annotate-color-map
-   (quote
-    ((20 . "#990A1B")
+   '((20 . "#990A1B")
      (40 . "#FF6E64")
      (60 . "#cb4b16")
      (80 . "#7B6000")
@@ -713,11 +700,10 @@
      (300 . "#00629D")
      (320 . "#268bd2")
      (340 . "#69B7F0")
-     (360 . "#d33682"))))
+     (360 . "#d33682")))
  '(vc-annotate-very-old-color "#93115C")
  '(weechat-color-list
-   (quote
-    (unspecified "#002b36" "#073642" "#a7020a" "#dc322f" "#5b7300" "#859900" "#866300" "#b58900" "#0061a8" "#268bd2" "#a00559" "#d33682" "#007d76" "#2aa198" "#839496" "#657b83")))
+   '(unspecified "#002b36" "#073642" "#a7020a" "#dc322f" "#5b7300" "#859900" "#866300" "#b58900" "#0061a8" "#268bd2" "#a00559" "#d33682" "#007d76" "#2aa198" "#839496" "#657b83"))
  '(window-divider-default-right-width 1)
  '(window-divider-mode t)
  '(xterm-color-names
@@ -726,12 +712,31 @@
    ["#002b36" "#cb4b16" "#586e75" "#657b83" "#839496" "#6c71c4" "#93a1a1" "#fdf6e3"]))
 
 ;miscellaneous stuff I like
-(setq tab-always-indent 'complete)
 (add-to-list 'completion-styles 'initials t)
+
+;; TABS CONFIG
+(setq tab-always-indent 'complete)
 ;; don't insert tabs for spaces
 (setq indent-tabs-mode nil)
 
+;; using whitespace mode
+;; (OPTIONAL) Visualize tabs as a pipe character - "|"
+;; This will also show trailing characters as they are useful to spot.
+(setq whitespace-style '(face tabs tab-mark trailing))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(whitespace-tab ((t (:foreground "#636363")))))
+(setq whitespace-display-mappings
+      '((tab-mark 9 [124 9] [92 9]))) ; 124 is the ascii ID for '\|'
+(global-whitespace-mode) ; Enable whitespace mode everywhere
+;; END TABS CONFIG
+
+
 (setq menu-bar-mode t)
+(scroll-bar-mode -1)
 (setq ring-bell-function 'ignore)
 (desktop-save-mode 1)
 (setq-default indicate-empty-lines t)
@@ -740,7 +745,7 @@
 (recentf-mode 1)
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; default tabs display width
-;; (setq-default tab-width 8)
+(setq-default tab-width 2)
 
 ;; browse-kill-ring
 (when (require 'browse-kill-ring nil 'noerror)
@@ -808,10 +813,13 @@
 (require 'company)
 (require 'company-go)
 
+;; (add-to-list 'auto-mode-alist '("\\.proto\\'" . go-mode))
+
 (defun my-go-mode-hook ()
   (set (make-local-variable 'company-backends) '(company-go))
   (company-mode)
-  
+
+  (setq tab-width 4)
   ;; Use goimports instead of go-fmt
   (setq gofmt-command "goimports")
   ;; Call Gofmt before saving
@@ -824,24 +832,36 @@
   (go-eldoc-setup))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
+(add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))
+
 ;; Customize compile command to run go build
 (setq compile-command "/usr/local/go/bin/go install -v")
 
 ;; End Go Lang -------------------
 
+;; -----BEGIN ------- THIS SECTION WORKS GREAT FOR JAVA but Requires 11 --------------------
 ;; Java Setup
-(require 'meghanada)
-(add-hook 'java-mode-hook
-          (lambda ()
-            ;; meghanada-mode on
-            (meghanada-mode t)
-            (flycheck-mode +1)
-            ;(setq c-basic-offset 2)
-            ;; use code format
-            ;(add-hook 'before-save-hook 'meghanada-code-beautify-before-save)
-	    ))
-(setq meghanada-java-path "java")
-(setq meghanada-maven-path "mvn")
+;(use-package lsp-mode
+;  :init
+;  (setq lsp-prefer-flymake nil)
+;  :demand t
+;  :after jmi-init-platform-paths)
+
+;(use-package lsp-ui
+;  :config
+;  (setq lsp-ui-doc-enable t
+;        lsp-ui-sideline-enable t
+;        lsp-ui-flycheck-enable t)
+;  :after lsp-mode)
+
+;(use-package dap-mode
+;  :config
+;  (dap-mode t)
+;  (dap-ui-mode t))
+;(require 'lsp-java)
+;(add-hook 'java-mode-hook #'lsp)
+
+;; ------------ END JAVA SETUP ----------------
 
 
 ;; Terraform
@@ -1090,6 +1110,13 @@ your recently and most frequently used commands.")
 ;;; Key bindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+;; most useless function ever
+(global-unset-key (kbd "C-t"))
+
+;; also not used
+(global-unset-key (kbd "M-l"))
+
 (setq mac-command-modifier 'meta) ;; Sets the command (Apple) key as Meta
 
 (require 'bind-key)
@@ -1132,9 +1159,6 @@ your recently and most frequently used commands.")
 
 					;  ((kbd "C-s") . swiper))
   ((kbd "C-s") . isearch-forward))
-
-;; most useless function ever
-(global-unset-key (kbd "C-t"))
 
 ;; paganini is ok but a little too harsh in contrasts
 ;;(load-theme 'paganini :no-confirm)
@@ -1180,8 +1204,8 @@ your recently and most frequently used commands.")
 (save-place-mode)
 
 ;;
-(require 'window-purpose)
-(purpose-mode)
+;(require 'window-purpose)
+;(purpose-mode)
 
 ;; Need these two lines to get aliases working with M-x !
 (setq shell-file-name "zsh")
@@ -1229,12 +1253,7 @@ your recently and most frequently used commands.")
 
 ;; this is not working, what if we do it last?
 (setq-default save-place-mode t)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
 
 ;; Custom macros
 (fset 'go-err-block
