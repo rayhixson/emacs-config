@@ -1,105 +1,3 @@
-mkdir xref-svc
-cp -r vtt/* xref-svc/
-ls
-ll
-ll xref-svc/
-ll xref-svc/templates/
-pwd
-ls -l ~/xref-svc/
-ls -l ~/xref-svc/templates/
-mv ~/xref-svc/templates/xref-svc-* xref-svc/templates/
-cd
-mkdir foo
-cd foo
-ll
-cd foo
-cd
-cd foo
-ls
-mkdir foo
-rm foo
-mkdir foo
-cd foo
-javac Luhn.java
-java Luhn
-javac Luhn.java
-java Luhn
-cd
-cd dev/chockstone/master/
-cd ace-ceg-terraform/ACE/GSV/GCP/dev/
-ll
-cd dev-merlin/
-ll
-tf destroy
-tf delete
-history
-tf destroy --set="credentials-file="
-tf destroy -set="credentials-file="
-tf destroy -set "credentials-file="
-tf destroy -var="credentials-file=" -var="project-id=$PROJECT_ID"
-tf destroy -var="credentials-file=~/gcp/pid-gousgnad-aces-dev-ray-god-6522570c9132.json:" -var="project-id=$PROJECT_ID"
-tf destroy -var="credentials-file=~/gcp/pid-gousgnad-aces-dev-ray-god-6522570c9132.json" -var="project-id=$PROJECT_ID"
-ll
-mkdir service-accounts
-cd service-accounts/
-cp ../external-secrets/* .
-cd ..
-cd service-accounts/
-terraform apply -var="project-id=$PROJECT_ID" -var="credentials-file="`
-ll
-mv main.tf xref-main.tf
-rm outputs.tf
-rm variables.tf
-cd ..
-ls
-ls container-registry/
-cd container-registry/
-cd ../service-accounts/
-ll
-terraform apply -var="project-id=$PROJECT_ID" -var="credentials-file="`
-terraform apply -var="project-id=$PROJECT_ID" -var="credentials-file="` -f xref-main.tf
-tf apply -help
-terraform apply -var="project-id=$PROJECT_ID" -var="credentials-file="` xref-main.tf
-tf plan -help
-cd bit.heartlandcommerce.com/
-ls
-cd terraform/
-ll
-cd 
-cd bit-terraform/
-gs
-git status
-git list -a
-git show -a
-git config --all
-git config -a
-git config -l
-cd ..
-rm -rf bit-terraform/
-ls
-cd dev/ace-ceg-terraform/ACE/GSV/GCP/dev-engage/vpc/
-cd ..
-ll
-git pull
-ll
-ll ../
-ll
-ll gke/
-ll
-mkdir pubsub
-cd pubsub/
-ls
-ll ../service-accounts/
-cp ../vpc/providers.tf .
-cp ../vpc/variables.tf .
-ll ../vpc/
-ls
-mv main.tf pubsub.tf
-mv module ../pubsub_module
-ls ../pubsub_module/pubsub.tf
-cd ..
-mv pubsub_module module_pubsub
-ll module_pubsub/
 cd module_pubsub/
 ll
 mv pubsub.tf main.tf
@@ -125,4 +23,106 @@ mv dev-ray ray
 ls
 cd ray
 cp -r ../templates/* .
+ll
+ls
+ll
+cd deployment/
+./bin/port-forward-gke.sh 
+echo $PATH
 cd
+cd dev/engage-infra/
+ll
+ll
+oll
+ll
+ll
+ll
+git status dev-engage-template
+cd ../..
+mkdir foo
+cd foo
+cd ..
+rmdir foo
+git clone https://github.globalpay.com/ACES/engage-infra
+ll engage-infra/
+ll dev/engage-infra/
+ll dev/engage-infra/dev-engage-template/
+rm -rf dev/engage-infra/dev-engage-template/pubsub/.terraform*
+cd dev/engage-infra/
+ll
+cd dev-ray/
+ll
+ll gke/
+mv gke/.terraform* ../developers-infra/dev-ray/gke/
+mv pubsub/.terraform* ../developers-infra/dev-ray/pubsub/
+mv vpc/.terraform ../developers-infra/dev-ray/vpc/
+cd ..
+ll
+rm -rf dev-ray/
+ll dev-engage-template/
+ll dev-engage-template/pubsub/
+rmdir dev-engage-template/pubsub/
+rmdir dev-engage-template/
+ll
+cd developers-infra/dev-ray/
+tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+cd gke
+tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+la
+ll
+rm .terraform.lock.hcl
+tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+ll
+rm -rf .terraform/
+tf init
+cd ../../dev-engage-template
+./create-dev.sh dev-ray
+cd ../dev-ray
+ls
+cd gke
+tf init
+tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+cd
+cd dev/engage-infra/
+cd developers-infra/dev-ray/gke/
+tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
+cd ../go/
+ll
+cd port-forwarder/
+ls
+gopls
+type gopls
+cd
+cd go
+ll
+cd port-forwarder/
+ll
+cd ..
+go get   golang.org/x/tools/cmd/guru
+go get   golang.org/x/tools/cmd/guru@latest
+go install golang.org/x/tools/cmd/guru@latest
+go build golang.org/x/tools/cmd/guru
+go help modules
+cd port-forwarder/
+go mod init
+go mod init gpn.com/connector
+cd ..
+mv port-forwarder connector
+go build golang.org/x/tools/cmd/guru
+go env -w GO111MODULE=off
+go build golang.org/x/tools/cmd/guru
+ls 
+mv guru bin/
+guru -help
+ls bin/
+ls bin/godoc
+ll bin/gocode
+go get -u github.com/nsf/gocode
