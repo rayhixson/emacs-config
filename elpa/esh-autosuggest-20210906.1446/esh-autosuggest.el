@@ -1,10 +1,10 @@
 ;;; esh-autosuggest.el --- History autosuggestions for eshell -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2017 Diego A. Mundo
-;; Author: Diego A. Mundo <diegoamundo@gmail.com>
+;; Author: Diego A. Mundo <dieggsy@pm.me>
 ;; URL: http://github.com/dieggsy/esh-autosuggest
-;; Package-Version: 20190228.401
-;; Package-Commit: 972094808d231a86dc6e43862191167b1997d840
+;; Package-Version: 20210906.1446
+;; Package-Commit: bf676b137d35553debe32ff134dbec25f3978ae7
 ;; Git-Repository: git://github.com/dieggsy/esh-autosuggest.git
 ;; Created: 2017-10-28
 ;; Version: 2.0.1
@@ -119,8 +119,10 @@ respectively."
     (interactive (company-begin-backend 'esh-autosuggest))
     (prefix (and (eq major-mode 'eshell-mode)
                  (esh-autosuggest--prefix)))
-    (candidates (esh-autosuggest-candidates arg))))
+    (candidates (esh-autosuggest-candidates arg))
+    (require-match 'never)))
 
+;;;###autoload
 (define-minor-mode esh-autosuggest-mode
   "Enable fish-like autosuggestions in eshell.
 

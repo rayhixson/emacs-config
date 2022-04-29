@@ -1,8 +1,23 @@
-alias h history
-alias f bar
-alias ll ls -la $*
-alias ff find-file $*
-alias d dired $*
+alias ls eshell/ls $*
 alias tf terraform $*
-alias tg terragrunt $*
+alias kc kubectl $*
 alias clean find . \( -name "\.#*" -o -name "*~" \) -exec rm {} \;
+alias tg terragrunt $*
+alias ff find-file $*
+alias la eshell/ls -lAhF $*
+alias h history $*
+alias gs git status $*
+alias gd git dump $*
+alias grep grep --color auto $*
+alias giv /usr/local/go/bin/go install -v
+alias ecr-login aws ecr get-login --no-include-email --region us-east-1 |sh
+alias docker-debug docker run -P -i -t --rm --env OPENV dev --env CONSUL_PARAMS "-retry-join 192.168.2.6" batch-svc:latest
+alias d docker $*
+alias dc docker container $*
+alias meghanada-server java -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB 50 -Xverify:none -Xms256m -Dfile.encoding UTF-8 -jar dev/meghanada-server/server/build/libs/meghanada-1.3.0.jar
+alias tv terraform -var "credentials_file ~/gcp/pid-gousgnad-aces-dev-ray-god-6522570c9132.json"
+alias tfdebug TF_LOG TRACE terraform nil
+alias gbs gcloud beta services
+alias sk skaffold
+alias ssh-onprem gcloud beta compute ssh chockstone-onprem-test --zone us-east1-b --tunnel-through-iap -- -o "ServerAliveInterval 120"
+alias ll eshell/ls -la $*

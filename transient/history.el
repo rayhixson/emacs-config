@@ -1,8 +1,9 @@
 ((magit-blame
   ("-w"))
  (magit-branch nil)
- (magit-cherry-pick nil
-                    ("--ff"))
+ (magit-cherry-pick
+  ("--ff")
+  nil)
  (magit-commit nil)
  (magit-diff
   ("--no-ext-diff" "--stat"))
@@ -16,14 +17,17 @@
  (magit-log:-G "port-forward")
  (magit-merge nil)
  (magit-pull nil)
- (magit-push nil
-             ("--force-with-lease"))
- (magit-rebase nil)
+ (magit-push
+  ("--force-with-lease"))
+ (magit-rebase
+  ("--autostash")
+  nil)
  (magit-reset nil)
  (magit-revert
   ("--edit"))
  (magit-stash nil
-              ("--include-untracked"))
+              ("--include-untracked")
+              ("--all"))
  (magit-submodule nil)
  (magit-tag nil)
  (magit-worktree nil)

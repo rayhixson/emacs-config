@@ -1,99 +1,3 @@
-cd module_pubsub/
-ll
-mv pubsub.tf main.tf
-cd ..
-ll
-ll service-accounts/
-ll
-cd ..
-cd dev-engage/
-ll
-ll vpc/
-cd vpc
-TF_LOG=DEBUG tf apply -var="project_id=$PROJECT_ID" -var="credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-god-6522570c9132.json"
-ll
-cd ../..cd vpc
-cd dev-r
-cd ../../
-cd dev-ray/vpc/
-ls
-cd ..
-cd ..
-mv dev-ray ray
-ls
-cd ray
-cp -r ../templates/* .
-ll
-ls
-ll
-cd deployment/
-./bin/port-forward-gke.sh 
-echo $PATH
-cd
-cd dev/engage-infra/
-ll
-ll
-oll
-ll
-ll
-ll
-git status dev-engage-template
-cd ../..
-mkdir foo
-cd foo
-cd ..
-rmdir foo
-git clone https://github.globalpay.com/ACES/engage-infra
-ll engage-infra/
-ll dev/engage-infra/
-ll dev/engage-infra/dev-engage-template/
-rm -rf dev/engage-infra/dev-engage-template/pubsub/.terraform*
-cd dev/engage-infra/
-ll
-cd dev-ray/
-ll
-ll gke/
-mv gke/.terraform* ../developers-infra/dev-ray/gke/
-mv pubsub/.terraform* ../developers-infra/dev-ray/pubsub/
-mv vpc/.terraform ../developers-infra/dev-ray/vpc/
-cd ..
-ll
-rm -rf dev-ray/
-ll dev-engage-template/
-ll dev-engage-template/pubsub/
-rmdir dev-engage-template/pubsub/
-rmdir dev-engage-template/
-ll
-cd developers-infra/dev-ray/
-tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-cd gke
-tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-la
-ll
-rm .terraform.lock.hcl
-tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-ll
-rm -rf .terraform/
-tf init
-cd ../../dev-engage-template
-./create-dev.sh dev-ray
-cd ../dev-ray
-ls
-cd gke
-tf init
-tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-cd
-cd dev/engage-infra/
-cd developers-infra/dev-ray/gke/
-tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
 cd ../go/
 ll
 cd port-forwarder/
@@ -126,3 +30,99 @@ ls bin/
 ls bin/godoc
 ll bin/gocode
 go get -u github.com/nsf/gocode
+curl localhost:9090
+curl -v localhost:9090
+curl -v localhost:9090
+curl -v localhost:9090
+curl localhost:9090
+curl localhost:9090
+curl localhost:9090
+curl localhost:9090
+curl localhost:9090
+cd
+cd go/connector/
+ls
+ls
+cd
+cd chockstone/
+ls
+javac LuhnTest.java
+ll
+javac  LuhnTest.java
+ls
+mv luhn-svc.db.patch ~/
+cd engage-infra/
+cd developers-infra/
+ls
+cd dev-engage-template/
+./create-dev.sh dev-ray
+cd ../dev-ray/
+cd gke
+ls
+tf destroy
+cd -
+cd ../dev-engage-template/
+./create-dev.sh dev-ray
+cd ../dev-ray/gke/
+tf apply
+cd ..
+l
+ll
+ltf init
+tf init
+cd gke
+tf init
+tf apply
+tf apply
+cd ../..
+cd dev-engage-template/
+./c
+./create-dev.sh dev-ray
+cd ../dev-ray/gke/
+tf init
+tf app
+tf apply
+tf destroy
+tf apply
+tf destroy
+cd ../..
+./create-dev.sh dev-ray
+cd dev-engage-template/
+./create-dev.sh dev-ray
+cd chockstone/
+ls ~/skaffold-cs-local.yaml
+cd ~/sk
+kc config get-contexts
+echo $DOCKER_REPO
+ls 
+Welcome to the Emacs shell
+cd deployment/
+kc config get-contexts
+cdkc config get-contexts
+cd
+mv values-local.yaml values-east1.yaml
+mv values-east1.yaml values-primary.yaml
+cp values-secondary.yaml
+cp values-primary.yaml values-secondary.yaml
+cd -
+cd
+cp values-primary.yaml values-secondary.yaml
+cd -
+mv ~/sk-port-test.yaml skaffold-port-forward.yaml
+mv ~/bin/skaffold.all.sh bin
+cd ../..
+git clone https://bit.xenial.com/scm/choc/homedepot.git
+cd homedepot/
+mkdir ray
+cd ray
+mv ~/dev/chockstone/deployment/bin/skaffold.all.sh .
+mkdir bin
+mv skaffold.all.sh bin
+mv ~/skaffold-cs-local.yaml .
+mv ~/values-* .
+ls ~/
+. ~/.zshrc
+cd ..
+la
+git clone https://bit.xenial.com/scm/choc/chockstone.git cs-tester
+cd cs-tester/
