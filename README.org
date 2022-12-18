@@ -1,0 +1,10 @@
+* .emacs.d
+  My personal emacs settings.
+
+  #+BEGIN_SRC shell
+  git clone https://github.com/rayhixson/emacs-configs.git ~/.emacs.d
+  emacs
+  #+END_SRC
+
+  For customization add your =*.el= files to =init.d= and it will be loaded by =load-dir= extension.
+
