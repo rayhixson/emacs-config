@@ -1,2 +1,0 @@
-;;; Generated package description from /Users/ray/.emacs.d/elpa/kubernetes-helm-20210902.2232/kubernetes-helm.el  -*- no-byte-compile: t -*-
-(define-package "kubernetes-helm" "20210902.2232" "extension for helm, the package manager for kubernetes" '((yaml-mode "0.0.13") (emacs "25.3")) :commit "95cf92600436f67bd7bfe650763e68635f5ecc8e" :authors '(("Adrien Brochard")) :maintainer '("Adrien Brochard") :keywords '("kubernetes" "helm" "k8s" "tools" "processes") :url "https://github.com/abrochard/kubernetes-helm")

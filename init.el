@@ -1,5 +1,9 @@
 ;; historically I liked: yoshi-theme and paganini-theme was what I was using???
 
+;; this fixes:
+;; error in process sentinel: Error retrieving: https://marmalade-repo.org/packages/archive-contents "incomprehensible buffer" [2 times]
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -51,9 +55,9 @@
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
  '(cursor-type 'box)
- '(custom-enabled-themes '(yoshi))
+ '(custom-enabled-themes '(wheatgrass))
  '(custom-safe-themes
-   '("62b5c93e1dab499efc36ed0a1955d21d859efd8582da7bacc74a8f95a86f6c41" "0fffa9669425ff140ff2ae8568c7719705ef33b7a927a0ba7c5e2ffcfac09b75" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "c221703cc604312f6f72349704f7329f80ccc6a261af769332ec80171b728cc0" "e61752b5a3af12be08e99d076aedadd76052137560b7e684a8be2f8d2958edc3" "ae65ccecdcc9eb29ec29172e1bfb6cadbe68108e1c0334f3ae52414097c501d2" "1a5e62d03a1c0c0c1ff46e00acf9d3d42be0f43481f01faef752b5d309d82080" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "4318c8136e18752719d5df209ec2576f0559dd02b9bef6be334c2e6aff57a1e4" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" "6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "26d49386a2036df7ccbe802a06a759031e4455f07bda559dcf221f53e8850e69" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default))
+   '("8d412c0ed46b865312d6df5c1dfd1821d349dd3cba00049cf88c4ad34403597e" "833ddce3314a4e28411edf3c6efde468f6f2616fc31e17a62587d6a9255f4633" "d89e15a34261019eec9072575d8a924185c27d3da64899905f8548cbd9491a36" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" "d537a9d42c6f5349d1716ae9be9a0645cc168f7aff2a8353819d570e5d02c0b3" "3e200d49451ec4b8baa068c989e7fba2a97646091fd555eca0ee5a1386d56077" "51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773" "12ce08742ff8678a6c716f3dcafff508c5df6a408eb91b5c0a04a9cb9671dde3" "62b5c93e1dab499efc36ed0a1955d21d859efd8582da7bacc74a8f95a86f6c41" "0fffa9669425ff140ff2ae8568c7719705ef33b7a927a0ba7c5e2ffcfac09b75" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "c221703cc604312f6f72349704f7329f80ccc6a261af769332ec80171b728cc0" "e61752b5a3af12be08e99d076aedadd76052137560b7e684a8be2f8d2958edc3" "ae65ccecdcc9eb29ec29172e1bfb6cadbe68108e1c0334f3ae52414097c501d2" "1a5e62d03a1c0c0c1ff46e00acf9d3d42be0f43481f01faef752b5d309d82080" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "4318c8136e18752719d5df209ec2576f0559dd02b9bef6be334c2e6aff57a1e4" "1e67765ecb4e53df20a96fb708a8601f6d7c8f02edb09d16c838e465ebe7f51b" "6c7db7fdf356cf6bde4236248b17b129624d397a8e662cf1264e41dab87a4a9a" "26d49386a2036df7ccbe802a06a759031e4455f07bda559dcf221f53e8850e69" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default))
  '(describe-char-unidata-list
    '(name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment))
  '(egg-enable-tooltip t)
@@ -86,46 +90,7 @@
  '(hl-paren-colors '("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900"))
  '(hydra-posframe-show-params
    '(:poshandler posframe-poshandler-frame-bottom-center :internal-border-width 15 :internal-border-color "#222222" :background-color "#222222") t)
- '(ibuffer-saved-filter-groups
-   '(("programming-mode"
-      ("Terraform"
-       (filename . ".*.tf"))
-      ("Google Deployment Manager"
-       (filename . ".*.py"))
-      ("YAML"
-       (or
-        (name . ".yaml")
-        (name . ".yml")))
-      ("XML"
-       (filename . ".*.xml"))
-      ("Java / Groovy"
-       (or
-        (filename . ".*.java")
-        (filename . ".*.groovy")))
-      ("HTML / JSON"
-       (or
-        (used-mode . html-mode)
-        (used-mode . js-mode)
-        (used-mode . js2-mode)
-        (filename . ".*.json")))
-      ("Scripts"
-       (filename . ".*.sh"))
-      ("Text"
-       (or
-        (used-mode . text-mode)
-        (used-mode . fundamental-mode)))
-      ("Shells"
-       (or
-        (used-mode . shell-mode)
-        (used-mode . eshell-mode)))
-      ("Magit"
-       (name . ".*magit.*"))
-      ("Go"
-       (or
-        (used-mode . go-mode)
-        (used-mode . protobuf-mode)))
-      ("Star Buffers"
-       (name . "^\\*")))))
+ '(ibuffer-saved-filter-groups nil t)
  '(ibuffer-saved-filters
    '(("crown"
       ((filename . ".*/crown/*")))
@@ -164,9 +129,12 @@
  '(org-fontify-whole-heading-line t)
  '(org-startup-truncated nil)
  '(package-selected-packages
-   '(go-eldoc go-guru which-key lsp-treemacs magit-gh-pulls magit-gitflow exec-path-from-shell git-link browse-at-remote groovy-mode kubernetes kubernetes-helm kubernetes-tramp protobuf-mode all-the-icons-ibuffer yasnippet lsp-mode lsp-ui ido-at-point ac-helm company-fuzzy company-web powerline vterm eshell-git-prompt eshell-prompt-extras fuzzy fuzzy-match fzf esh-autosuggest esh-buf-stack esh-help eshell-autojump eshell-fringe-status eshell-toggle fish-completion load-bash-alias multi-eshell starter-kit-eshell smart-mode-line smart-mode-line-powerline-theme unicode-fonts groovy-imports gradle-mode company-terraform terraform-doc terraform-mode multi-term let-alist company-go restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme swiper all-the-icons-dired all-the-icons magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode))
+   '(projectile all-the-icons-completion lsp-treemacs treemacs treemacs-all-the-icons treemacs-icons-dired treemacs-magit treemacs-tab-bar nginx-mode direx rcirc-notify circe go-errcheck go-rename go-gen-test go-imenu go-impl go-mode sly vertico vertico-posframe vertico-prescient w3m go-eldoc go-guru which-key magit-gh-pulls magit-gitflow exec-path-from-shell git-link browse-at-remote groovy-mode kubernetes kubernetes-helm kubernetes-tramp protobuf-mode all-the-icons-ibuffer yasnippet ido-at-point ac-helm company-fuzzy company-web powerline vterm eshell-git-prompt eshell-prompt-extras fuzzy fuzzy-match fzf esh-autosuggest esh-buf-stack esh-help eshell-autojump eshell-fringe-status eshell-toggle fish-completion load-bash-alias multi-eshell starter-kit-eshell smart-mode-line smart-mode-line-powerline-theme unicode-fonts groovy-imports gradle-mode company-terraform terraform-doc terraform-mode multi-term let-alist company-go restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme swiper all-the-icons-dired all-the-icons magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
+ '(rcirc-authinfo '(("libera.chat" nickserv "raydondo" "Lr#4CmIZg#hbDaj@")))
+ '(rcirc-default-nick "raydondo")
+ '(rcirc-default-user-name "raydondo")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(sml/mode-width (if (eq (powerline-current-separator) 'arrow) 'right 'full))
  '(sml/pos-id-separator
@@ -223,8 +191,8 @@
  '(sql-mode-hook '(sqlind-minor-mode))
  '(sublimity-mode t)
  '(tab-always-indent 'complete)
- '(term-default-bg-color "#002b36")
- '(term-default-fg-color "#839496")
+ '(term-default-bg-color "#103c48")
+ '(term-default-fg-color "#adbcbc")
  '(tool-bar-mode nil)
  '(unicode-fonts-block-font-mapping
    '(("Aegean Numbers"
@@ -764,9 +732,9 @@
 (when (require 'browse-kill-ring nil 'noerror)
   (browse-kill-ring-default-keybindings))
 
-(global-set-key "\C-cy" '(lambda ()
-                           (interactive)
-                           (popup-menu 'yank-menu)))
+(global-set-key "\C-cy" #'(lambda ()
+                         (interactive)
+                         (popup-menu 'yank-menu)))
 
 ;; auto revert buffers when a file changes outside the buffer
 (global-auto-revert-mode 1)
@@ -781,13 +749,6 @@
   (let ((tramp-file-name (concat "/sudo::" (expand-file-name file-name))))
     (find-file tramp-file-name)))
 
-(make-hippie-expand-function 
- '(try-expand-dabbrev-visible
-   try-expand-dabbrev-from-kill 
-   try-expand-dabbrev-all-buffers 
-   try-complete-file-name-partially 
-   try-complete-file-name))
-
 ;; match parenthesis
 (show-paren-mode t)
 ;;(global-set-key "%" 'match-paren)
@@ -801,7 +762,7 @@
 (global-company-mode t)
 
 ;; IELM Mode
-(add-hook 'ielm-mode-hook '(lambda () (set (make-local-variable 'company-backends) '(company-elisp))))
+(add-hook 'ielm-mode-hook #'(lambda () (set (make-local-variable 'company-backends) '(company-elisp))))
 
 ;; Making unicode work
 (require 'unicode-fonts)
@@ -833,6 +794,7 @@
   (company-mode)
 
   (setq tab-width 4)
+  (go-eldoc-setup)
  ;; Use goimports instead of go-fmt
   (setq gofmt-command "goimports")
  ;; Call Gofmt before saving
@@ -841,15 +803,12 @@
   (if (not (string-match "go" compile-command))
       (set (make-local-variable 'compile-command)
           ;;"go build -v && go test -v && go vet"))
-           "go install -v"))
-  (go-eldoc-setup))
+           "go install -v")))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
 ;(; Customize compile command to run go build
 (setq compile-command "/usr/local/go/bin/go install -v")
 
-(require 'go-eldoc) ;; Don't need to require, if you install by package.el
-(add-hook 'go-mode-hook 'go-eldoc-setup)
 
 
 ;; End Go Lang -------------------
@@ -970,19 +929,13 @@ your recently and most frequently used commands.")
 ;; and show only the directory:
 
 (defvar filename-subs
-  '(("~/dev/chockstone/" . "[chockstone]/")
-    ("/$" . "")
-    ("~/dev/spectre-api/" . "[spectre]/")
+  '(("~/go/src/github.com/" . "[github]/")
     ("~/dev/engage-infra/" . "[tf]/")))
 
 (defvar absolute-filename-subs
-  '(("/Users/ray/go/src/github.com/treetopllc/" . "[ttc]")
-    ("/$" . "")
-    ("/Users/ray/go/src/github.com/treetopllc/gonoble/" . "[gonoble]/")
-    ("/Users/ray/go/src/github.com/treetopllc/gonoble/ext/cucumber/" . "[go-cuc]/")
-    ("/Users/ray/go/src/github.com/treetopllc/collaboratory-www/" . "[collaboratory-www]/")
-    ("/Users/ray/go/src/github.com/treetopllc/nobleweb/" . "[nobleweb]/")
-    ("/Users/ray/go/src/github.com/treetopllc/noble-go-sdk/" . "[sdk]/")))
+  '(("/Users/ray/go/src/github.com/" . "[github]/")
+    ("/Users/ray/go/src/github.com/rayhixson/" . "[github/rh]/")
+    ("/Users/ray/go/src/github.com/rayhixson/zenfoo/" . "[zenfoo]/")))
 
 (defun str-replace-all (str pats)
   (if (null pats)
@@ -1036,6 +989,50 @@ your recently and most frequently used commands.")
               " "
               (mode 16 16 :left :elide)
               " " filename-and-process)))
+
+(setq ibuffer-saved-filter-groups
+      '(("programming-mode"
+         ("Terraform"
+          (filename . ".+\\.tf"))
+         ("YAML"
+          (or
+           (name . ".+\\.yaml")
+           (name . ".+\\.yml")))
+         ("Java / Groovy"
+          (or
+           (filename . ".+\\.java")
+           (filename . ".+\\.groovy")))
+         ("HTML / JSON"
+          (or
+           (used-mode . html-mode)
+           (used-mode . mhtml-mode)
+           (used-mode . css-mode)
+           (used-mode . js-mode)
+           (used-mode . js2-mode)
+           (filename . ".+\\.json")))
+         ("Scripts"
+          (filename . ".+\\.sh"))
+         ("Text"
+          (or
+           (used-mode . text-mode)))
+         ("Shells"
+          (or
+           (used-mode . shell-mode)
+           (used-mode . eshell-mode)))
+         ("Magit"
+          (name . ".*magit.*"))
+         ("Go"
+          (or
+           (used-mode . go-mode)
+           (used-mode . protobuf-mode)))
+         ("DIR"
+          (used-mode . dired-mode))
+         ("Star Buffers"
+          (name . "^\\*")))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; END Customize ibuffer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun killmylandlord ()
   (kill-buffer (current-buffer)))
@@ -1114,8 +1111,9 @@ your recently and most frequently used commands.")
                                         ;   (propertize (if (= (user-uid) 0) " # " " $ ") 'face `(:foreground "green"))
                                         ;   )))
 
-(eshell-git-prompt-use-theme "rays")
+;; (eshell-git-prompt-use-theme "rays")
 ;; END ESHELL SECTION
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Key bindings
@@ -1149,7 +1147,7 @@ your recently and most frequently used commands.")
  ("C-j" . goto-line)
  ;; iBuffer is subborn about this key:
  ;;(define-key ibuffer-mode-map (kbd "M-o") nil)
- ("M-o" . other-window)
+ ("M-o" . ace-window)
  ("M-m" . ag-regexp)
  ("C-o" . recentf-open-files)
  ("M-i" . ibuffer)
@@ -1174,38 +1172,17 @@ your recently and most frequently used commands.")
 ;; paganini is ok but a little too harsh in contrasts
 ;;(load-theme 'paganini :no-confirm)
 ;;(load-theme 'yoshi :no-confirm)
+;;(load-theme 'wheatgrass 'no-confirm)
+;;(load-theme 'deeper-blue 'no-confirm)
+;;(load-theme 'manoj-dark 'no-confirm) ;; very high contrast
 
-;;;;;;;;;  Solarized:
-;; make the fringe stand out from the background
-                                        ;(setq solarized-distinct-fringe-background t)
 
-;; Don't change the font for some headings and titles
-;;(setq solarized-use-variable-pitch nil)
+;;;;;;;;;;;;;;;;;;;; Begin ERC
 
-;; make the modeline high contrast
-                                        ;(setq solarized-high-contrast-mode-line t)
+;; enable notifications
+(rcirc-track-minor-mode 1)
 
-;; Use less bolding
-;;(setq solarized-use-less-bold t)
-
-;; Use more italics
-                                        ;(setq solarized-use-more-italic t)
-
-;; Use less colors for indicators such as git:gutter, flycheck and similar
-                                        ; (setq solarized-emphasize-indicators nil)
-
-;; Don't change size of org-mode headlines (but keep other size-changes)
-;;(setq solarized-scale-org-headlines nil)
-
-;; Avoid all font-size changes
-;;(setq solarized-height-minus-1 1.0)
-;;(setq solarized-height-plus-1 1.0)
-;;(setq solarized-height-plus-2 1.0)
-;;(setq solarized-height-plus-3 1.0)
-;;(setq solarized-height-plus-4 1.0)
-
-                                        ;(load-theme 'solarized-dark t)
-;;;;;;;;;;;;;;;;;;;; End Solarized
+;;;;;;;;;;;;;;;;;;;; End ERC
 
 (require 'git-link)
 (eval-after-load 'git-link
@@ -1257,19 +1234,8 @@ your recently and most frequently used commands.")
   :ensure t
   :mode (("\\.http\\'" . restclient-mode)))
 
-(defun start-shells()
-  "Do the things"
-  (interactive)
-  (split-window-right)
-  (eshell)
-  (rename-buffer "shell-tf")
-  (eshell)
-  (rename-buffer "shell-spectre")
-  (eshell)
-  (rename-buffer "shell-main"))
-
-(cd "~/dev/")
-(start-shells)
+;; svg is broken, use this until emacs 29 comes out - soon!
+(add-to-list 'image-types 'svg)
 
 ;; this is not working, what if we do it last?
 (setq-default save-place-mode t)
@@ -1278,4 +1244,16 @@ your recently and most frequently used commands.")
 ;; Custom macros
 (fset 'go-err-block
       [?i ?f ?  ?e ?r ?r ?  ?! ?= ?  ?n ?i ?l ?  ?\{ return ?r ?e ?t ?u ?r ?n ?  ?e ?r ?r return ?\} return])
+
+(defun start-shells()
+  "Do the things"
+  (interactive)
+  (split-window-right)
+  (eshell)
+  (rename-buffer "shell-e")
+  (shell)
+  (rename-buffer "shell-main"))
+
+(cd "~/dev/")
+(start-shells)
 
