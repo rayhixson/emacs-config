@@ -47,7 +47,6 @@
      ("^github\\.globalpay\\.com$" . "github")
      ("^bit\\.xenial\\.com$" . "bitbucket")))
  '(cgs-find-project-functions '(cgs-root))
- '(cgs-step-search-path "cucumber/**/*.rb")
  '(column-number-mode nil)
  '(compilation-message-face 'default)
  '(cua-global-mark-cursor-color "#2aa198")
@@ -68,70 +67,45 @@
  '(flycheck-posframe-border-width 5)
  '(frame-background-mode 'dark)
  '(global-font-lock-mode t)
- '(gradle-mode t)
- '(gud-gdb-command-name "gdb --annotate=1")
- '(highlight-changes-colors '("#d33682" "#6c71c4"))
- '(highlight-symbol-colors
-   '("#3b6b40f432d6" "#07b9463c4d36" "#47a3341e358a" "#1d873c3f56d5" "#2d86441c3361" "#43b7362d3199" "#061d417f59d7"))
- '(highlight-symbol-foreground-color "#93a1a1")
- '(highlight-tail-colors
-   '(("#073642" . 0)
-     ("#546E00" . 20)
-     ("#00736F" . 30)
-     ("#00629D" . 50)
-     ("#7B6000" . 60)
-     ("#8B2C02" . 70)
-     ("#93115C" . 85)
-     ("#073642" . 100)))
- '(hl-bg-colors
-   '("#866300" "#992700" "#a7020a" "#a00559" "#243e9b" "#0061a8" "#007d76" "#5b7300"))
- '(hl-fg-colors
-   '("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36"))
- '(hl-paren-colors '("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900"))
+; '(gradle-mode t)
+; '(gud-gdb-command-name "gdb --annotate=1")
+; '(highlight-changes-colors '("#d33682" "#6c71c4"))
+; '(highlight-symbol-colors
+;   '("#3b6b40f432d6" "#07b9463c4d36" "#47a3341e358a" "#1d873c3f56d5" "#2d86441c3361" "#43b7362d3199" "#061d417f59d7"))
+; '(highlight-symbol-foreground-color "#93a1a1")
+; '(highlight-tail-colors
+;   '(("#073642" . 0)
+;     ("#546E00" . 20)
+;     ("#00736F" . 30)
+;     ("#00629D" . 50)
+;     ("#7B6000" . 60)
+;     ("#8B2C02" . 70)
+;     ("#93115C" . 85)
+;     ("#073642" . 100)))
+; '(hl-bg-colors
+;   '("#866300" "#992700" "#a7020a" "#a00559" "#243e9b" "#0061a8" "#007d76" "#5b7300"))
+; '(hl-fg-colors
+;   '("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36"))
+; '(hl-paren-colors '("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900"))
  '(hydra-posframe-show-params
    '(:poshandler posframe-poshandler-frame-bottom-center :internal-border-width 15 :internal-border-color "#222222" :background-color "#222222") t)
- '(ibuffer-saved-filter-groups nil t)
- '(ibuffer-saved-filters
-   '(("crown"
-      ((filename . ".*/crown/*")))
-     ("collab"
-      (filename . ".*/collaboratory-www/*"))
-     ("gonoble-models"
-      ((filename . ".*/gonoble/models/*")))
-     ("No Star Files"
-      ((not name . "^*$*")))
-     ("gnus"
-      ((or
-        (mode . message-mode)
-        (mode . mail-mode)
-        (mode . gnus-group-mode)
-        (mode . gnus-summary-mode)
-        (mode . gnus-article-mode))))
-     ("programming"
-      ((or
-        (mode . emacs-lisp-mode)
-        (mode . cperl-mode)
-        (mode . c-mode)
-        (mode . java-mode)
-        (mode . idl-mode)
-        (mode . lisp-mode))))))
  '(indent-tabs-mode nil)
  '(ivy-posframe-border-width 15)
  '(ivy-posframe-style 'frame-bottom-window-center)
  '(js-indent-level 2)
  '(large-file-warning-threshold nil)
  '(lsp-keymap-prefix "M-l")
- '(lsp-ui-doc-border "#93a1a1")
+; '(lsp-ui-doc-border "#93a1a1")
  '(magit-stash-arguments nil)
  '(markdown-command "/usr/local/bin/Markdown.pl")
- '(nrepl-message-colors
-   '("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4"))
+; '(nrepl-message-colors
+;   '("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4"))
  '(org-fontify-whole-heading-line t)
  '(org-startup-truncated nil)
  '(package-selected-packages
    '(projectile all-the-icons-completion lsp-treemacs treemacs treemacs-all-the-icons treemacs-icons-dired treemacs-magit treemacs-tab-bar nginx-mode direx rcirc-notify circe go-errcheck go-rename go-gen-test go-imenu go-impl go-mode sly vertico vertico-posframe vertico-prescient w3m go-eldoc go-guru which-key magit-gh-pulls magit-gitflow exec-path-from-shell git-link browse-at-remote groovy-mode kubernetes kubernetes-helm kubernetes-tramp protobuf-mode all-the-icons-ibuffer yasnippet ido-at-point ac-helm company-fuzzy company-web powerline vterm eshell-git-prompt eshell-prompt-extras fuzzy fuzzy-match fzf esh-autosuggest esh-buf-stack esh-help eshell-autojump eshell-fringe-status eshell-toggle fish-completion load-bash-alias multi-eshell starter-kit-eshell smart-mode-line smart-mode-line-powerline-theme unicode-fonts groovy-imports gradle-mode company-terraform terraform-doc terraform-mode multi-term let-alist company-go restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme swiper all-the-icons-dired all-the-icons magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode))
- '(pos-tip-background-color "#073642")
- '(pos-tip-foreground-color "#93a1a1")
+; '(pos-tip-background-color "#073642")
+; '(pos-tip-foreground-color "#93a1a1")
  '(rcirc-authinfo '(("libera.chat" nickserv "raydondo" "Lr#4CmIZg#hbDaj@")))
  '(rcirc-default-nick "raydondo")
  '(rcirc-default-user-name "raydondo")
@@ -191,8 +165,6 @@
  '(sql-mode-hook '(sqlind-minor-mode))
  '(sublimity-mode t)
  '(tab-always-indent 'complete)
- '(term-default-bg-color "#103c48")
- '(term-default-fg-color "#adbcbc")
  '(tool-bar-mode nil)
  '(unicode-fonts-block-font-mapping
    '(("Aegean Numbers"
