@@ -1,11 +1,3 @@
-./create-dev.sh dev-ray
-cd ../dev-ray
-ls
-cd gke
-tf init
-tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "config_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
-tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
 tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
 tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
 tf apply -var "credentials_file=~/gcp/pid-gousgnad-aces-dev-ray-44bcee93ab5e.json"
@@ -126,3 +118,11 @@ cd ex1/
 ll ../app/
 ll ../app/src/
 ll ../app/
+ll
+cd dev/
+ll
+ll Chockstone/
+cd rayhixson
+ll
+cd ../agw/
+ll

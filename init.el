@@ -67,26 +67,6 @@
  '(flycheck-posframe-border-width 5)
  '(frame-background-mode 'dark)
  '(global-font-lock-mode t)
-; '(gradle-mode t)
-; '(gud-gdb-command-name "gdb --annotate=1")
-; '(highlight-changes-colors '("#d33682" "#6c71c4"))
-; '(highlight-symbol-colors
-;   '("#3b6b40f432d6" "#07b9463c4d36" "#47a3341e358a" "#1d873c3f56d5" "#2d86441c3361" "#43b7362d3199" "#061d417f59d7"))
-; '(highlight-symbol-foreground-color "#93a1a1")
-; '(highlight-tail-colors
-;   '(("#073642" . 0)
-;     ("#546E00" . 20)
-;     ("#00736F" . 30)
-;     ("#00629D" . 50)
-;     ("#7B6000" . 60)
-;     ("#8B2C02" . 70)
-;     ("#93115C" . 85)
-;     ("#073642" . 100)))
-; '(hl-bg-colors
-;   '("#866300" "#992700" "#a7020a" "#a00559" "#243e9b" "#0061a8" "#007d76" "#5b7300"))
-; '(hl-fg-colors
-;   '("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36"))
-; '(hl-paren-colors '("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900"))
  '(hydra-posframe-show-params
    '(:poshandler posframe-poshandler-frame-bottom-center :internal-border-width 15 :internal-border-color "#222222" :background-color "#222222") t)
  '(indent-tabs-mode nil)
@@ -95,17 +75,12 @@
  '(js-indent-level 2)
  '(large-file-warning-threshold nil)
  '(lsp-keymap-prefix "M-l")
-; '(lsp-ui-doc-border "#93a1a1")
  '(magit-stash-arguments nil)
  '(markdown-command "/usr/local/bin/Markdown.pl")
-; '(nrepl-message-colors
-;   '("#dc322f" "#cb4b16" "#b58900" "#5b7300" "#b3c34d" "#0061a8" "#2aa198" "#d33682" "#6c71c4"))
  '(org-fontify-whole-heading-line t)
  '(org-startup-truncated nil)
  '(package-selected-packages
-   '(projectile all-the-icons-completion lsp-treemacs treemacs treemacs-all-the-icons treemacs-icons-dired treemacs-magit treemacs-tab-bar nginx-mode direx rcirc-notify circe go-errcheck go-rename go-gen-test go-imenu go-impl go-mode sly vertico vertico-posframe vertico-prescient w3m go-eldoc go-guru which-key magit-gh-pulls magit-gitflow exec-path-from-shell git-link browse-at-remote groovy-mode kubernetes kubernetes-helm kubernetes-tramp protobuf-mode all-the-icons-ibuffer yasnippet ido-at-point ac-helm company-fuzzy company-web powerline vterm eshell-git-prompt eshell-prompt-extras fuzzy fuzzy-match fzf esh-autosuggest esh-buf-stack esh-help eshell-autojump eshell-fringe-status eshell-toggle fish-completion load-bash-alias multi-eshell starter-kit-eshell smart-mode-line smart-mode-line-powerline-theme unicode-fonts groovy-imports gradle-mode company-terraform terraform-doc terraform-mode multi-term let-alist company-go restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose moe-theme material-theme swiper all-the-icons-dired all-the-icons magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit solarized-theme paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump ido-ubiquitous ido-better-flex smex ag ido-vertical-mode flycheck-yamllint yaml-mode))
-; '(pos-tip-background-color "#073642")
-; '(pos-tip-foreground-color "#93a1a1")
+   '(icomplete-vertical ido-ubiquitous ido-at-point ido-better-flex ido-vertical-mode fish-mode projectile all-the-icons-completion lsp-treemacs treemacs treemacs-all-the-icons treemacs-icons-dired treemacs-magit treemacs-tab-bar nginx-mode direx rcirc-notify circe go-errcheck go-rename go-gen-test go-imenu go-impl go-mode sly go-eldoc go-guru which-key magit-gh-pulls magit-gitflow exec-path-from-shell git-link browse-at-remote groovy-mode protobuf-mode all-the-icons-ibuffer powerline eshell-git-prompt eshell-prompt-extras fuzzy fuzzy-match fzf esh-autosuggest esh-buf-stack esh-help eshell-autojump eshell-fringe-status eshell-toggle fish-completion load-bash-alias starter-kit-eshell smart-mode-line smart-mode-line-powerline-theme unicode-fonts groovy-imports gradle-mode terraform-doc terraform-mode let-alist restclient-helm rjsx-mode sql-indent db-pg docker hcl-mode window-purpose swiper all-the-icons-dired all-the-icons magit-filenotify magit-find-file magithub use-package enh-ruby-mode magit paganini-theme yoshi-theme eagle-eye lexbind-mode browse-kill-ring feature-mode dumb-jump smex ag flycheck-yamllint yaml-mode))
  '(rcirc-authinfo '(("libera.chat" nickserv "raydondo" "Lr#4CmIZg#hbDaj@")))
  '(rcirc-default-nick "raydondo")
  '(rcirc-default-user-name "raydondo")
@@ -731,7 +706,10 @@
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
-(global-company-mode t)
+;; company does text completion everywhere
+;; it does file completion in the shell
+;; combined with fish it does a popup I think
+;(global-company-mode t)
 
 ;; IELM Mode
 (add-hook 'ielm-mode-hook #'(lambda () (set (make-local-variable 'company-backends) '(company-elisp))))
@@ -756,27 +734,27 @@
 
 ;; Go Lang ---------------------
 
-(require 'company)
-(require 'company-go)
+;(require 'company)
+;(require 'company-go)
 
 ;; (add-to-list 'auto-mode-alist '("\\.proto\\'" . go-mode))
 
-(defun my-go-mode-hook ()
-  (set (make-local-variable 'company-backends) '(company-go))
-  (company-mode)
+;(defun my-go-mode-hook ()
+;  (set (make-local-variable 'company-backends) '(company-go))
+;  (company-mode)
 
-  (setq tab-width 4)
-  (go-eldoc-setup)
+;  (setq tab-width 4)
+;  (go-eldoc-setup)
  ;; Use goimports instead of go-fmt
-  (setq gofmt-command "goimports")
+;  (setq gofmt-command "goimports")
  ;; Call Gofmt before saving
-  (add-hook 'before-save-hook 'gofmt-before-save)
+;  (add-hook 'before-save-hook 'gofmt-before-save)
  ;; Customize compile command to run go build
-  (if (not (string-match "go" compile-command))
-      (set (make-local-variable 'compile-command)
+;  (if (not (string-match "go" compile-command))
+;      (set (make-local-variable 'compile-command)
           ;;"go build -v && go test -v && go vet"))
-           "go install -v")))
-(add-hook 'go-mode-hook 'my-go-mode-hook)
+;           "go install -v")))
+;(add-hook 'go-mode-hook 'my-go-mode-hook)
 
 ;(; Customize compile command to run go build
 (setq compile-command "/usr/local/go/bin/go install -v")
@@ -811,14 +789,6 @@
 ;; ------------ END JAVA SETUP ----------------
 
 
-;; Terraform
-(require 'company)
-(require 'company-terraform)
-(defun my-terraform-mode-hook ()
-  ;; Call terraform fmt before saving
-  (add-hook 'before-save-hook 'terraform-format-buffer))
-(add-hook 'terraform-mode-hook 'my-terraform-mode-hook)
-
 ;; Ruby etal support for finding definitions
 (dumb-jump-mode)
 
@@ -829,40 +799,40 @@
 (setq ruby-indent-level 2)
 
 ;; IDO mode
-(require 'ido)
-(ido-mode t)
+;(require 'ido)
+;(ido-mode t)
 
-(global-set-key
+;(global-set-key
  "\M-x"
- (lambda ()
-   (interactive)
-   (call-interactively
-    (intern
-     (ido-completing-read
-      "M-x "
-      (all-completions "" obarray 'commandp))))))
+; (lambda ()
+;   (interactive)
+;   (call-interactively
+;    (intern
+;     (ido-completing-read
+;      "M-x "
+;      (all-completions "" obarray 'commandp))))))
 
-(ido-vertical-mode t)
-(setq ido-vertical-define-keys 'C-n-and-C-p-only)
+;(ido-vertical-mode t)
+;(setq ido-vertical-define-keys 'C-n-and-C-p-only)
 
 ;; Use ido to find files in ibuffer
-(defun ibuffer-ido-find-file (file &optional wildcards)
-  "Like `ido-find-file', but default to the directory of the buffer at point."
-  (interactive
-   (let ((default-directory
-           (let ((buf (ibuffer-current-buffer)))
-             (if (buffer-live-p buf)
-                 (with-current-buffer buf
-                   default-directory)
-               default-directory))))
-     (list (ido-read-file-name "Find file: " default-directory) t)))
-  (find-file file wildcards))
+;(defun ibuffer-ido-find-file (file &optional wildcards)
+;  "Like `ido-find-file', but default to the directory of the buffer at point."
+;  (interactive
+;   (let ((default-directory
+;           (let ((buf (ibuffer-current-buffer)))
+;             (if (buffer-live-p buf)
+;                 (with-current-buffer buf
+;                   default-directory)
+;               default-directory))))
+;     (list (ido-read-file-name "Find file: " default-directory) t)))
+;  (find-file file wildcards))
 
-(add-hook 'ibuffer-mode-hook
-          (lambda ()
-            (define-key ibuffer-mode-map "\C-x\C-f"
-              'ibuffer-ido-find-file)
-            (ibuffer-switch-to-saved-filter-groups "programming-mode")))
+;(add-hook 'ibuffer-mode-hook
+;          (lambda ()
+;            (define-key ibuffer-mode-map "\C-x\C-f"
+;              'ibuffer-ido-find-file)
+;            (ibuffer-switch-to-saved-filter-groups "programming-mode")))
 
 ;;; Smex - enhances IDO
 (autoload 'smex "smex"
@@ -1138,8 +1108,10 @@ your recently and most frequently used commands.")
 
  ((kbd "C-x k") . kill-this-buffer)
 
-                                        ;  ((kbd "C-s") . swiper))
- ((kbd "C-s") . isearch-forward))
+ ((kbd "C-s") . swiper-isearch)
+ ((kbd "C-r") . swiper-backward)
+ )
+; ((kbd "C-s") . isearch-forward))
 
 ;; paganini is ok but a little too harsh in contrasts
 ;;(load-theme 'paganini :no-confirm)
@@ -1147,6 +1119,27 @@ your recently and most frequently used commands.")
 ;;(load-theme 'wheatgrass 'no-confirm)
 ;;(load-theme 'deeper-blue 'no-confirm)
 ;;(load-theme 'manoj-dark 'no-confirm) ;; very high contrast
+
+;;;;;;;;;;;;;;;;;
+;; package notes
+
+;; Completions related
+;; company
+;; ido
+;; vertico
+;; fish
+
+;; notes
+;; I just deleted company-fuzzy - may want it back
+
+;; I just deleted these idos:
+;;  ido-better-flex                0.2            installed             A better flex (fuzzy) algorithm for Ido.
+;;  ido-ubiquitous                 20180122.1340  installed             Use ido (nearly) everywhere.
+
+;; I just deleted these:
+;  vertico                        1.4            installed             VERTical Interactive COmpletion
+;  vertico-posframe               0.7.2          installed             Using posframe to show Vertico
+;  vertico-prescient              20230221.1257  installed             prescient.el + Vertico
 
 
 ;;;;;;;;;;;;;;;;;;;; Begin ERC
