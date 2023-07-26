@@ -1,7 +1,19 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/Users/ray/go/src/github.com/treetopllc/gonoble/api/router.go" . 306)
- ("/Users/ray/go/src/github.com/treetopllc/gonoble/graph/project/authz_service.go" . 343)
- ("/Users/ray/.emacs.d/init.el" . 49621)
+(("/Users/ray/go/src/github.com/treetopllc/gonoble/graph/project/authz_service.go" . 343)
+ ("/Users/ray/dev/agw/webcrawler/getvids.go" . 13)
+ ("/Users/ray/.emacs.d/"
+  (dired-filename . "/Users/ray/.emacs.d/.cache"))
+ ("/Users/ray/go/src/github.com/treetopllc/gonoble/api/router.go" . 306)
+ ("/Users/ray/.emacs.d/init.el" . 8940)
+ ("/Users/ray/.emacs.d/elpa/amx-20230413.1210/amx-autoloads.el" . 2157)
+ ("/Users/ray/.emacs.d/elpa/all-the-icons-ivy-20190508.1803/all-the-icons-ivy-autoloads.el" . 674)
+ ("/Users/ray/.emacs.d/elpa/all-the-icons-ivy-rich-20230420.1234/all-the-icons-ivy-rich-autoloads.el" . 1822)
+ ("/Users/ray/go/src/github.com/rayhixson/zenfoo/internal/config/"
+  (dired-filename . "/Users/ray/go/src/github.com/rayhixson/zenfoo/internal/config/config.go"))
+ ("/Users/ray/go/"
+  (dired-filename . "/Users/ray/go/.DS_Store"))
+ ("/Users/ray/.emacs.d/elpa/ivy-rich-20230425.1422/ivy-rich-autoloads.el" . 2655)
+ ("/Users/ray/.emacs.d/elpa/counsel-20230619.1623/counsel-autoloads.el" . 17175)
  ("/Users/ray/.emacs.d/elpa/icomplete-vertical-20220418.2119/icomplete-vertical-autoloads.el" . 1766)
  ("/Users/ray/.emacs.d/elpa/ido-at-point-20151113.1508/ido-at-point-autoloads.el" . 1007)
  ("/Users/ray/.emacs.d/elpa/ido-vertical-mode-20210205.436/ido-vertical-mode-autoloads.el" . 1570)
@@ -31,7 +43,6 @@
  ("/Users/ray/.emacs.d/elpa/flycheck-20230306.414/flycheck-autoloads.el" . 11131)
  ("/Users/ray/.emacs.d/elpa/flycheck-yamllint-20170326.1309/flycheck-yamllint-autoloads.el" . 559)
  ("/Users/ray/.emacs.d/elpa/font-utils-20210405.1149/font-utils-autoloads.el" . 3553)
- ("/Users/ray/.emacs.d/elpa/fuzzy-20221231.1634/fuzzy-autoloads.el" . 448)
  ("/Users/ray/.emacs.d/elpa/fzf-20230403.1304/fzf-autoloads.el" . 8480)
  ("/Users/ray/.emacs.d/elpa/gh-20221204.1817/gh-autoloads.el" . 2859)
  ("/Users/ray/.emacs.d/elpa/ghub-20230513.1619/ghub-autoloads.el" . 1754)
