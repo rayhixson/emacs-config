@@ -1,7 +1,12 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
 (("/Users/ray/go/src/github.com/treetopllc/gonoble/api/router.go" . 306)
  ("/Users/ray/go/src/github.com/treetopllc/gonoble/graph/project/authz_service.go" . 343)
- ("/Users/ray/.emacs.d/init.el" . 49621)
+ ("/Users/ray/.emacs.d/init.el" . 3832)
+ ("/Users/ray/.emacs.d/elpa/marginalia-20230704.1551/marginalia-autoloads.el" . 1623)
+ ("/Users/ray/.emacs.d/elpa/orderless-20230219.1648/orderless-autoloads.el" . 1879)
+ ("/Users/ray/.emacs.d/elpa/embark-20230716.2345/embark-autoloads.el" . 8789)
+ ("/Users/ray/.emacs.d/elpa/embark-consult-20230616.2243/embark-consult-autoloads.el" . 510)
+ ("/Users/ray/.emacs.d/elpa/consult-0.35/consult-autoloads.el" . 17951)
  ("/Users/ray/.emacs.d/elpa/icomplete-vertical-20220418.2119/icomplete-vertical-autoloads.el" . 1766)
  ("/Users/ray/.emacs.d/elpa/ido-at-point-20151113.1508/ido-at-point-autoloads.el" . 1007)
  ("/Users/ray/.emacs.d/elpa/ido-vertical-mode-20210205.436/ido-vertical-mode-autoloads.el" . 1570)
