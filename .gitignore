@@ -6,3 +6,6 @@ recentf
 smex-items
 .cache
 elpa/*
+straight/*
+saveplace
+var/pcache/*

@@ -11,7 +11,8 @@
 
 (setq mac-command-modifier 'meta) ;; Sets the command (Apple) key as Meta
 
-(use-package bind-key)
+(use-package bind-key
+	:straight t)
 (bind-keys*
  ("C-M-b" . ido-switch-buffer)
  ([\M-up] . scroll-down-line)

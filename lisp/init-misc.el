@@ -23,7 +23,7 @@
 
 ;; browse-kill-ring
 (use-package browse-kill-ring
-	:ensure t
+	:straight t
 	:config
 	;; M-y to invoke
   (browse-kill-ring-default-keybindings))
@@ -67,24 +67,28 @@
    try-complete-file-name))
 
 (use-package dumb-jump
-	:ensure t
+	:straight t
 	;; Ruby etal support for finding definitions
 	:config
 	(dumb-jump-mode))
 
-(use-package swiper)
+(use-package swiper
+	:straight t)
 
-(use-package ag)
+(use-package ag
+	:straight t)
 
 ;; open file to last known location
-(use-package saveplace)
+(use-package saveplace
+	:straight t)
 (setq save-place-file "~/.emacs.d/saveplace")
 (save-place-mode)
 
 ;; performance improvment that breaks some of vc?
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
-(use-package window-purpose)
+(use-package window-purpose
+	:straight t)
 (purpose-mode)
 
 

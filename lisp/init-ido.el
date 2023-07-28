@@ -1,5 +1,6 @@
 ;; IDO mode
-(use-package ido)
+(use-package ido
+	:straight t)
 (ido-mode t)
 
 (global-set-key
@@ -14,7 +15,7 @@
       (all-completions "" obarray 'commandp))))))
 
 (use-package ido-vertical-mode
-	:ensure t
+	:straight t
 	:config
 	(ido-vertical-mode t)
 	(setq ido-vertical-define-keys 'C-n-and-C-p-only))
@@ -39,12 +40,15 @@
 						(ibuffer-switch-to-saved-filter-groups "programming-mode")))
 
 ;;; Smex - enhances IDO - replaces M-x with better regex matching
-(use-package smex)
+(use-package smex
+	:straight t)
 (global-set-key (kbd "M-x") 'smex)
 
-;; ido-better-flex: to have a 'better' fuzzy match algorithm for smex. Uninstall if not likey.
-;https://github.com/vic/ido-better-flex
-;;(use-package ido-better-flex
+;; ido-better-flex: to have a 'better' fuzzy match algorithm for smex.
+;; this enables find-file to match "init-misc.el" when you type "inmis"
+(use-package ido-better-flex
+	:straight (ido-better-flex :type git :host github :repo "vic/ido-better-flex"))
+
 
 ;; ido-ubiquitous: how is that showing up?
 ;(use-package ido-ubiquitous)

@@ -1,8 +1,8 @@
 ;; BEGIN ESHELL SECTION
 (use-package eshell-git-prompt
-	:ensure t)
+	:straight t)
 (use-package eshell-prompt-extras
-	:ensure t)
+	:straight t)
 
 (add-hook 'eshell-mode-hook
           (lambda () 
@@ -47,7 +47,6 @@
 
 
 (use-package rays-eshell-prompt
-  :ensure nil
   :after eshell-git-prompt ;; This is a dependency
 ;  :load-path "lisp/themes/powerline-with-venv" ;; path to where I saved the file
   :config
