@@ -54,3 +54,4 @@ It looks like:
 
 (defconst eshell-git-prompt-rays-regexp "^[^$\n]*\\\$ ")
 
+(provide 'rays-eshell-prompt)

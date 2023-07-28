@@ -1,29 +1,32 @@
 ((magit-blame
-  ("-w"))
+	("-w"))
  (magit-branch nil)
  (magit-cherry-pick nil
-                    ("--ff"))
+										("--ff"))
  (magit-commit nil)
  (magit-diff
-  ("--no-ext-diff" "--stat"))
+	("--no-ext-diff" "--stat"))
  (magit-dispatch nil)
  (magit-fetch nil
-              ("--prune" "--tags"))
+							("--prune" "--tags"))
  (magit-gitignore nil)
  (magit-log
-  ("-n256" "--graph" "--decorate")
-  ("-n256" "-Gport-forward" "--graph" "--decorate"))
+	("-n256" "--graph" "--decorate")
+	("-n256" "-Gport-forward" "--graph" "--decorate"))
  (magit-log:-G "port-forward")
  (magit-merge nil)
  (magit-pull nil)
- (magit-push nil
-             ("--force-with-lease"))
- (magit-rebase nil)
+ (magit-push
+	("--force-with-lease")
+	nil)
+ (magit-rebase
+	("--autostash")
+	nil)
  (magit-reset nil)
  (magit-revert
-  ("--edit"))
+	("--edit"))
  (magit-stash nil
-              ("--include-untracked"))
+							("--include-untracked"))
  (magit-submodule nil)
  (magit-tag nil)
  (magit-worktree nil)
