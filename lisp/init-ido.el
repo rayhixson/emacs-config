@@ -49,6 +49,8 @@
 (use-package ido-better-flex
 	:straight (ido-better-flex :type git :host github :repo "vic/ido-better-flex"))
 
+(use-package ido-completing-read+
+	:straight t)
 
 ;; ido-ubiquitous: how is that showing up?
 ;(use-package ido-ubiquitous)
