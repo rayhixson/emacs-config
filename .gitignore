@@ -7,3 +7,4 @@ smex-items
 .cache
 elpa/*
 straight/*
+saveplace
