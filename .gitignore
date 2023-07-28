@@ -8,3 +8,4 @@ smex-items
 elpa/*
 straight/*
 saveplace
+var/pcache/*
