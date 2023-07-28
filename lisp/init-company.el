@@ -1,11 +1,13 @@
 (use-package company
-  :hook
+	:straight t
+	:hook
 	(company-mode . company-box-mode)
   :config
   ;(global-company-mode t)
 	)
 
-(use-package company-box)
+(use-package company-box
+	:straight t)
 
 
 (provide 'init-company)

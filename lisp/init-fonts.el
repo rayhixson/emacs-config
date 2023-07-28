@@ -1,6 +1,7 @@
 
 ;; Making unicode work
-(use-package unicode-fonts)
+(use-package unicode-fonts
+	:straight t)
 (unicode-fonts-setup)
 (when (member "DejaVu Sans Mono" (font-family-list))
   (set-face-attribute 'default nil :font "DejaVu Sans Mono-11"))

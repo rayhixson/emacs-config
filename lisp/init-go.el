@@ -1,7 +1,8 @@
 (use-package go-eldoc
-	:ensure t)
+	:straight t)
 
 (use-package company-go
+	:straight t
 	:config
 	;; (add-to-list 'auto-mode-alist '("\\.proto\\'" . go-mode))
 	(defun my-go-mode-hook ()
