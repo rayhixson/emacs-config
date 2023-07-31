@@ -11,6 +11,8 @@
 
 (setq mac-command-modifier 'meta) ;; Sets the command (Apple) key as Meta
 
+
+
 (use-package bind-key
 	:straight t)
 (bind-keys*

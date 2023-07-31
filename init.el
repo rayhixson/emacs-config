@@ -33,12 +33,22 @@
 (require 'init-ibuffer)
 (require 'init-modeline)
 
+;; use lsp-mode for all languages:
+(use-package lsp-mode
+	:straight t
+  :init
+  (setq lsp-prefer-flymake nil)
+  :demand t
+  :after jmi-init-platform-paths)
+
 (require 'init-eshell)
 (require 'init-git)
 (require 'init-go)
 (require 'init-java)
 (require 'init-terraform)
 (require 'init-guess-style)
+
+(require 'init-experimental)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ------------------------ Refactor all below this
 

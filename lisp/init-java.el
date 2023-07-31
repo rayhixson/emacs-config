@@ -1,15 +1,10 @@
 ;;;;; ---------------------------------------------------
 ;; -----BEGIN ------- THIS SECTION WORKS GREAT FOR JAVA but Requires 11 --------------------
 ;; Java Setup
+(require 'lsp-mode)
+
 (use-package lsp-java
 	:straight t)
-
-(use-package lsp-mode
-	:straight t
-  :init
-  (setq lsp-prefer-flymake nil)
-  :demand t
-  :after jmi-init-platform-paths)
 
 (use-package lsp-ui
 	:straight t

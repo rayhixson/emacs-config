@@ -1,4 +1,4 @@
-;; miscellaneous stuff I like
+<;; miscellaneous stuff I like
 
 (add-to-list 'completion-styles 'initials t)
 
