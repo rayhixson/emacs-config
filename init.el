@@ -33,12 +33,16 @@
 (require 'init-ibuffer)
 (require 'init-modeline)
 
+(require 'init-lsp)
 (require 'init-eshell)
 (require 'init-git)
 (require 'init-go)
 (require 'init-java)
 (require 'init-terraform)
 (require 'init-guess-style)
+(require 'init-yaml)
+
+(require 'init-experimental)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ------------------------ Refactor all below this
 

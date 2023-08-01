@@ -2,6 +2,11 @@
 (use-package ido
 	:straight t)
 (ido-mode t)
+(ido-everywhere t)
+
+(use-package ido-completing-read+
+	:straight t)
+(ido-ubiquitous-mode 1)
 
 (global-set-key
  "\M-x"
@@ -49,6 +54,8 @@
 (use-package ido-better-flex
 	:straight (ido-better-flex :type git :host github :repo "vic/ido-better-flex"))
 
+(use-package ido-completing-read+
+	:straight t)
 
 ;; ido-ubiquitous: how is that showing up?
 ;(use-package ido-ubiquitous)

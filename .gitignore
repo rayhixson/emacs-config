@@ -9,3 +9,4 @@ elpa/*
 straight/*
 saveplace
 var/pcache/*
+transient/*
