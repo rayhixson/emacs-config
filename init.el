@@ -40,6 +40,7 @@
 (require 'init-java)
 (require 'init-terraform)
 (require 'init-guess-style)
+(require 'init-yaml)
 
 (require 'init-experimental)
 
