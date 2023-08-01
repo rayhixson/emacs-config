@@ -6,21 +6,13 @@
 (use-package lsp-java
 	:straight t)
 
-(use-package lsp-ui
-	:straight t
-  :config
-  (setq lsp-ui-doc-enable t
-        lsp-ui-sideline-enable t
-        lsp-ui-flycheck-enable t)
-  :after lsp-mode)
+(add-hook 'java-mode-hook #'lsp-deferred)
 
 (use-package dap-mode
 	:straight t
   :config
   (dap-mode t)
   (dap-ui-mode t))
-(require 'lsp-java)
-(add-hook 'java-mode-hook #'lsp)
 
 ;; ------------ END JAVA SETUP ----------------
 

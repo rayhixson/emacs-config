@@ -33,14 +33,7 @@
 (require 'init-ibuffer)
 (require 'init-modeline)
 
-;; use lsp-mode for all languages:
-(use-package lsp-mode
-	:straight t
-  :init
-  (setq lsp-prefer-flymake nil)
-  :demand t
-  :after jmi-init-platform-paths)
-
+(require 'init-lsp)
 (require 'init-eshell)
 (require 'init-git)
 (require 'init-go)

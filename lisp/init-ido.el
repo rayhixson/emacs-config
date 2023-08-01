@@ -2,6 +2,11 @@
 (use-package ido
 	:straight t)
 (ido-mode t)
+(ido-everywhere t)
+
+(use-package ido-completing-read+
+	:straight t)
+(ido-ubiquitous-mode 1)
 
 (global-set-key
  "\M-x"

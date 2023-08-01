@@ -2,8 +2,8 @@
 
 (add-hook 'go-mode-hook #'lsp-deferred)
 
-(use-package go-eldoc
-	:straight t)
+;(use-package go-eldoc
+;	:straight t)
 
 (use-package company-go
 	:straight t
@@ -29,14 +29,16 @@
 			(set (make-local-variable 'compile-command)
 					 "go build -v && go test -v && go vet"))
 					 ;;"go install -v"))
-
-	(go-eldoc-setup))
+	)
+;	(go-eldoc-setup))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
 
-;; Customize compile command to run go build
-;;(setq compile-command "/usr/local/go/bin/go install -v")
+;; experimental modes via lsp-register-custom-settings
 
+(lsp-register-custom-settings
+ '(("gopls.completeUnimported" t t)
+   ("gopls.staticcheck" t t)))
 
 (provide 'init-go)
 ;;; init-go.el ends here
