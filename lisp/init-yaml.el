@@ -1,4 +1,4 @@
 (use-package yaml-mode
-	straight: t)
+	:straight t)
 
 (provide 'init-yaml)
