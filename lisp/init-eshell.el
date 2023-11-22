@@ -1,30 +1,34 @@
 ;; BEGIN ESHELL SECTION
 (use-package eshell-git-prompt
 	:straight t)
+
 (use-package eshell-prompt-extras
 	:straight t)
 
+(with-eval-after-load "esh-opt"
+  (autoload 'epe-theme-lambda "eshell-prompt-extras")
+  (setq eshell-highlight-prompt nil
+        eshell-prompt-function 'epe-theme-lambda))
 (add-hook 'eshell-mode-hook
           (lambda () 
             (define-key eshell-mode-map (kbd "<tab>")
               (lambda () (interactive) (pcomplete-std-complete)))))
 
 ;; make history use ido
-                                        ;  ((kbd "C-c C-l") . ido-eshell-comint-history)
-                                        ;(defun ido-eshell-comint-history ()
-                                        ;  "eshell & comint history with ido."
-                                        ;  (interactive)
-                                        ;  (if (or (member major-mode '(eshell-mode sql-interactive-mode))
-                                        ;          (derived-mode-p 'comint-mode))
-                                        ;     (let ((ring (if (eq major-mode 'eshell-mode)
-                                        ;                   eshell-history-ring
-                                        ;                   comint-input-ring)))
-                                        ;       (insert
-                                        ;        (ido-completing-read "History: "
-                                        ;                             (delete-dups
-                                        ;                              (ring-elements ring)))))
-                                        ;    (message "Unsupported mode")))
-:
+;((kbd "C-c C-l") . ido-eshell-comint-history)
+;(defun ido-eshell-comint-history ()
+;  "eshell & comint history with ido."
+;  (interactive)
+;  (if (or (member major-mode '(eshell-mode sql-interactive-mode))
+;          (derived-mode-p 'comint-mode))
+;      (let ((ring (if (eq major-mode 'eshell-mode)
+;                      eshell-history-ring
+;                    comint-input-ring)))
+;        (insert
+;         (ido-completing-read "History: "
+;                              (delete-dups
+;                               (ring-elements ring)))))
+;    (message "Unsupported mode")))
 
 ;; this was really golden, but I moved this functionality into
 ;; ~/.emacs.d/elpa/eshell-git-prompt-20200109.2250/eshell-git-prompt.el
@@ -45,15 +49,6 @@
                                         ;   (propertize (if (= (user-uid) 0) " # " " $ ") 'face `(:foreground "green"))
                                         ;   )))
 
-
-(use-package rays-eshell-prompt
-  :after eshell-git-prompt ;; This is a dependency
-;  :load-path "lisp/themes/powerline-with-venv" ;; path to where I saved the file
-  :config
-  ;; Allow me to add this to the possible eshell prompt selections
-  (add-to-list 'eshell-git-prompt-themes
-               '(rays eshell-git-prompt-rays eshell-git-prompt-rays-regexp)))
-  ;; Automatically set this as the default theme to use
 
 (setq eshell-git-prompt-use-theme "robbyrussell")
 
