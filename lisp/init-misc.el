@@ -5,9 +5,12 @@
 ;; TABS CONFIG
 (setq tab-always-indent 'complete)
 ;; don't insert tabs for spaces
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 ;; default tabs display width
 (setq-default tab-width 2)
+
+;; tab setting for shell-script mode
+(setq sh-basic-offset 2)
 
 (menu-bar-mode 1)
 (tool-bar-mode -1)
@@ -38,6 +41,10 @@
  delete-old-versions t
  kept-new-versions 6
  kept-old-versions 2)
+
+;; when to split windows automatically?
+(setq
+ split-height-threshold 120)
 
 ;; hide passwords
 (add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt )
@@ -78,6 +85,14 @@
 (use-package ag
 	:straight t)
 
+(use-package markdown-mode
+	:straight t
+	:config
+	;; use this one for markdown-preview
+	(setq markdown-command '("code" "-"))
+	;; use this for 'markdown-open
+	(setq markdown-open-command "code"))
+
 ;; open file to last known location
 (use-package saveplace
 	:straight t)
@@ -87,10 +102,31 @@
 ;; performance improvment that breaks some of vc?
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
-(use-package window-purpose
-	:straight t)
-(purpose-mode)
+;(use-package window-purpose
+;	:straight t)
+;(purpose-mode)
 
+(use-package fzf
+	:straight t
+  :bind
+    ;; Don't forget to set keybinds!
+  :config
+  (setq fzf/args "-x --color bw --print-query --margin=1,0 --no-hscroll"
+        fzf/executable "fzf"
+        fzf/git-grep-args "-i --line-number %s"
+        ;; command used for `fzf-grep-*` functions
+        ;; example usage for ripgrep:
+        ;; fzf/grep-command "rg --no-heading -nH"
+        fzf/grep-command "grep -nrH"
+        ;; If nil, the fzf buffer will appear at the top of the window
+        fzf/position-bottom t
+        fzf/window-height 15))
+
+(use-package org
+	:straight t)
+
+;; silver searcher flags
+(setq ag-arguments '("--smart-case" "--stats" "--hidden" "--all-types"))
 
 (provide 'init-misc)
 ;;; init-misc.el ends here

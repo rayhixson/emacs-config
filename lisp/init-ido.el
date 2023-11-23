@@ -38,12 +38,6 @@
 		 (list (ido-read-file-name "Find file: " default-directory) t)))
 	(find-file file wildcards))
 
-(add-hook 'ibuffer-mode-hook
-					(lambda ()
-						(define-key ibuffer-mode-map "\C-x\C-f"
-							'ibuffer-ido-find-file)
-						(ibuffer-switch-to-saved-filter-groups "programming-mode")))
-
 ;;; Smex - enhances IDO - replaces M-x with better regex matching
 (use-package smex
 	:straight t)

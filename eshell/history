@@ -1,61 +1,3 @@
-cd ../go/
-ll
-cd port-forwarder/
-ls
-gopls
-type gopls
-cd
-cd go
-ll
-cd port-forwarder/
-ll
-cd ..
-go get   golang.org/x/tools/cmd/guru
-go get   golang.org/x/tools/cmd/guru@latest
-go install golang.org/x/tools/cmd/guru@latest
-go build golang.org/x/tools/cmd/guru
-go help modules
-cd port-forwarder/
-go mod init
-go mod init gpn.com/connector
-cd ..
-mv port-forwarder connector
-go build golang.org/x/tools/cmd/guru
-go env -w GO111MODULE=off
-go build golang.org/x/tools/cmd/guru
-ls 
-mv guru bin/
-guru -help
-ls bin/
-ls bin/godoc
-ll bin/gocode
-go get -u github.com/nsf/gocode
-cd agw/
-cd webgen/
-ll
-go run gen.go
-cd ../webcrawler/
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-for f in `cat list`; do echo $f; done
-cd ../webgen/
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run clean.go
-go run clean.go
-go run clean.go
 go run clean.go
 go run clean.go
 go run clean.go
@@ -126,3 +68,61 @@ ll
 pwd
 ll
 mv  init-rays-eshell-prompt init-rays-eshell-prompt.el
+cd
+cd poo/
+ll
+cd iam-control-allowances/
+git co main
+gs
+git status
+git branch -l
+cd wanda-api/
+ls
+aws-login 291642996024-GR_GG_COF_AWS_NP_CoreAdmin
+echo $PATH
+export PATH=$PATH:$HOME/bin
+echo $PATH
+aws-login 291642996024-GR_GG_COF_AWS_NP_CoreAdmin
+~/bin/aws-login 291642996024-GR_GG_COF_AWS_NP_CoreAdmin
+. ~/.bashrc
+cut -d \" -f 1 a
+cut -d \" -f 2 a
+cut -d \" -f 2 a | sort -u
+cut -d \" -f 2 a | sort -u > a.sorted && cut -d \" -f 2 b | sort -u > b.sorted && diff a.sorted b.sorted
+bash
+bash
+~/bin/diff-two-inputs.sh
+~/bin/diff-two-inputs.sh a.txt b.txt
+~/bin/diff-two-inputs.sh a.txt b.txt
+use-theme
+use-theme
+use-theme
+use-theme
+use-theme rays
+ls
+pwd
+ls
+ll
+use-theme
+cd dev/wanda-api/
+use-theme robbyrussell
+cd ../iam-control-allowances
+ll
+cd iam-assets/
+use-theme multiline2
+use-theme git-radar
+cd ..
+use-theme powerline
+cd iam-assets/
+ll
+use-theme robbyrussell
+pwd
+use-theme multiline
+ll
+ls
+ll
+ls
+use-theme powerline
+ll
+cd wanda-api/
+ll

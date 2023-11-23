@@ -19,4 +19,15 @@
 	:config
 	(lsp-treemacs-sync-mode 1))
 
+(use-package flycheck-inline
+	:straight t
+	:config
+	(with-eval-after-load 'flycheck
+		(add-hook 'flycheck-mode-hook #'flycheck-inline-mode)))
+
+;(use-package flycheck-pos-tip
+;	:straight t
+;	:config
+;	(with-evel-after-load 'flycheck
+;												(flycheck-pos-tip-mode)))
 (provide 'init-lsp)

@@ -7,7 +7,7 @@ It looks like:
 ┌─[ray@MacBook-Pro.local]──[15:13]──[/Users/ray/dev]
 └─> $ "
   ;; Prompt components
-  (let (beg dir git-branch git-dirty end)
+  (let (beg dir epe-git-branch git-dirty end)
     ;; Beg: start symbol
     (setq beg
           (with-face "➜" (if (eshell-git-prompt-exit-success-p)
@@ -21,7 +21,7 @@ It looks like:
     (when (eshell-git-prompt--git-root-dir)
       (setq eshell-git-prompt-branch-name (eshell-git-prompt--branch-name))
 
-      (setq git-branch
+      (setq epe-git-branch
             (concat
              (with-face "git:(" 'eshell-git-prompt-robyrussell-git-face)
              (with-face (eshell-git-prompt--readable-branch-name) 'eshell-git-prompt-robyrussell-branch-face)
@@ -35,13 +35,13 @@ It looks like:
     (setq end (propertize "$" 'invisible t))
 
     ;; Build prompt
-    ;(concat (mapconcat #'identity (-non-nil (list beg dir git-branch git-dirty)) " ")
+    ;(concat (mapconcat #'identity (-non-nil (list beg dir epe-git-branch git-dirty)) " ")
             ;end
     (concat
      (propertize "┌─[" 'face `(:foreground "green"))
      (propertize (user-login-name) 'face `(:foreground "red"))
      (propertize "@" 'face `(:foreground "green"))
-     (propertize (git-branch) 'face `(:foreground "blue"))
+     (propertize (epe-git-branch) 'face `(:foreground "blue"))
      (propertize "]──[" 'face `(:foreground "green"))
      (propertize (format-time-string "%H:%M" (current-time)) 'face `(:foreground "yellow"))
      (propertize "]──[" 'face `(:foreground "green"))

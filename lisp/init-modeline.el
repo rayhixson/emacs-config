@@ -1,4 +1,11 @@
 ;; customize mode-line-format
+
+(defvar absolute-filename-subs
+  '(("/Users/rln692/" . "[~]")
+		("/Users/rln692/dev" . "[dev]")
+    ("/$" . "")
+    ("/Users/rln692/dev/iam-control-allowances-test/" . "[shield]/")))
+
 (defun modeline-dir-abbrev ()
   (str-replace-all default-directory absolute-filename-subs))
 

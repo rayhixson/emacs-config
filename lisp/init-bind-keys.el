@@ -2,12 +2,14 @@
 ;;; Key bindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
 ;; most useless function ever
 (global-unset-key (kbd "C-t"))
 
 ;; also not used
 (global-unset-key (kbd "M-l"))
+
+;; rebind these below
+;;(global-unset-key (
 
 (setq mac-command-modifier 'meta) ;; Sets the command (Apple) key as Meta
 
@@ -37,26 +39,20 @@
  ([\S-f8] . rename-buffer)
 
  ("C-j" . goto-line)
- ;; iBuffer is subborn about this key:
- ;;(define-key ibuffer-mode-map (kbd "M-o") nil)
- ("M-o" . other-window)
- ("M-m" . ag-regexp)
  ("C-o" . recentf-open-files)
- ("M-i" . ibuffer)
-
+ ("C-s" . isearch-forward)
+ ("M-o" . other-window)
+ ("M-k" . windmove-right)
+ ("M-j" . windmove-left)
  ("M-`" . other-frame)
-
- ((kbd "<M-right>") . next-buffer)
- ((kbd "<M-left>") . previous-buffer)
-
- ;; this used to be default
  ("M-*" . pop-tag-mark)
+ ("M-i" . ibuffer)
+ ("M-m" . ag-regexp)
+ ("<M-right>" . next-buffer)
+ ("<M-left>" . previous-buffer)
+ ("C-M-f" . find-file)
+ ("C-x k" . kill-this-buffer))
 
- ((kbd "C-M-f") . find-file)
-
- ((kbd "C-x k") . kill-this-buffer)
-
- ((kbd "C-s") . swiper))
 
 (provide 'init-bind-keys)
 
