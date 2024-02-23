@@ -1,128 +1,127 @@
-go run clean.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-df -h /
-df -h .
-go run gen.go
-go run gen.go
-cd ../webcrawler
-find . -name "__"
-find . -name "\_\_*"
-find . -name "\_\_*" -exec rm {} \;
-find . -name "\_\_*" -exec rm {} \;
-find . -name "\_\_*" -exec rmdir {} \;
-find . -name "\_\_*" -exec rmdir {} \;
-go run gen.go
-cd -
-go run gen.go
-go run gen.go
-j
-go run gen.go
-go run gen.go
-sbcl
-cd containerize/
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+mv test-input-4 test-input-4.txt
+mv test-input-4 test-input-4.txt
+mv test-input-4 test-input-4.txt
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
 ll
+mkdir wanda-ui
+cd wanda-ui/
+mkdir templates
+mkdir html
+mkdir assets
+mkdir bootstrap
+mv assets/ bootstrap/
+mkdir -p bootstrap/dist/js
+rm -rf bootstrap/*
+rmdir bootstrap/
+cp -r ~/Downloads/bootstrap-4.0.0 bootstrap-4.0.0
+ls bootstrap-4.0.0/assets/js/vendor/
 ll
+go gen.go
+go run gen.go
 ll
-ll ex1/
-cd ex1/
-ll ../app/
-ll ../app/src/
-ll ../app/
+ll html/
+open html/index.html
+open html/index.html
+go run gen.go && open html/index.html
 ll
-cd dev/
+cd templates/
 ll
-ll Chockstone/
-cd rayhixson
-ll
-cd ../agw/
-ll
-use-theme
-use-theme powerline
-use-theme multiline
-ll
-use-theme multiline2
-ll
-pwd
-ll
-mv  init-rays-eshell-prompt init-rays-eshell-prompt.el
-cd
-cd poo/
-ll
-cd iam-control-allowances/
-git co main
-gs
-git status
-git branch -l
-cd wanda-api/
-ls
-aws-login 291642996024-GR_GG_COF_AWS_NP_CoreAdmin
-echo $PATH
-export PATH=$PATH:$HOME/bin
-echo $PATH
-aws-login 291642996024-GR_GG_COF_AWS_NP_CoreAdmin
-~/bin/aws-login 291642996024-GR_GG_COF_AWS_NP_CoreAdmin
-. ~/.bashrc
-cut -d \" -f 1 a
-cut -d \" -f 2 a
-cut -d \" -f 2 a | sort -u
-cut -d \" -f 2 a | sort -u > a.sorted && cut -d \" -f 2 b | sort -u > b.sorted && diff a.sorted b.sorted
-bash
-bash
-~/bin/diff-two-inputs.sh
-~/bin/diff-two-inputs.sh a.txt b.txt
-~/bin/diff-two-inputs.sh a.txt b.txt
-use-theme
-use-theme
-use-theme
-use-theme
-use-theme rays
-ls
-pwd
-ls
-ll
-use-theme
-cd dev/wanda-api/
-use-theme robbyrussell
-cd ../iam-control-allowances
-ll
-cd iam-assets/
-use-theme multiline2
-use-theme git-radar
-cd ..
-use-theme powerline
-cd iam-assets/
-ll
-use-theme robbyrussell
-pwd
-use-theme multiline
-ll
-ls
-ll
-ls
-use-theme powerline
-ll
-cd wanda-api/
-ll
+mv index.html.tmpl layout.html.tmpl
+mkdir pages

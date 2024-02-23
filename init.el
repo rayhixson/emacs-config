@@ -42,7 +42,6 @@
 (require 'init-terraform)
 (require 'init-yaml)
 (require 'init-web-things)
-(require 'init-javascript)
 (require 'init-guess-style)
 
 (require 'init-experimental)
