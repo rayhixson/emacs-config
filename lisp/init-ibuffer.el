@@ -30,6 +30,14 @@
       ("Scripting"
        (or
         (used-mode . Shell-script)
+        (used-mode . sh-mode)
+        (used-mode . make-mode)
+        (used-mode . makefile-mode)
+        (used-mode . makefile-automake-mode)
+        (used-mode . makefile-gmake-mode)
+        (used-mode . makefile-makepp-mode)
+        (used-mode . makefile-bsdmake-mode)
+        (used-mode . makefile-imake-mode)
         (used-mode . shell-script)))
       ("Text"
 			 (or
