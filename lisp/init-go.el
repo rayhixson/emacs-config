@@ -34,6 +34,8 @@
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
 
+(setq lsp-gopls-use-placeholders nil)
+
 ;; experimental modes via lsp-register-custom-settings
 
 (lsp-register-custom-settings

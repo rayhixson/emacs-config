@@ -17,23 +17,81 @@
    ((> (buffer-size) 1000) (format "%7.0fk" (/ (buffer-size) 1000.0)))
    (t (format "%8d" (buffer-size)))))
 
+(setq ibuffer-saved-filter-groups
+   (quote
+    (("programming-mode"
+      ("Go"
+       (used-mode . go-mode))
+      ("Markup"
+			 (or
+				(used-mode . markdown-mode)
+				(used-mode . yaml-mode)
+				(used-mode . json-mode)))
+      ("Scripting"
+       (or
+        (used-mode . Shell-script)
+        (used-mode . sh-mode)
+        (used-mode . make-mode)
+        (used-mode . makefile-mode)
+        (used-mode . makefile-automake-mode)
+        (used-mode . makefile-gmake-mode)
+        (used-mode . makefile-makepp-mode)
+        (used-mode . makefile-bsdmake-mode)
+        (used-mode . makefile-imake-mode)
+        (used-mode . shell-script)))
+      ("Text"
+			 (or
+				(used-mode . org-mode)
+				(used-mode . text-mode)))
+      ("Emacs / Lisp"
+			 (or
+				(used-mode . emacs-lisp-mode)
+				(used-mode . elisp-mode)))
+      ("Test"
+       (or
+        (filename . ".*.feature")
+        (filename . ".*.rb")))
+      ("Javascript"
+       (used-mode . js2-mode))
+      ("HTML"
+       (used-mode . html-mode))
+      ("Shells"
+       (used-mode . shell-mode))
+      ("Star Buffers"
+       (name . "^\\*"))))))
+(setq ibuffer-saved-filters
+   (quote
+    (("wanda-api"
+      ((filename . ".*/wanda-api/*")))
+     ("shield"
+      (filename . ".*/iam-control-allowances-test/*"))
+     ("No Star Files"
+      ((not name . "^*$*")))
+     ("gnus"
+      (or
+       (mode . message-mode)
+       (mode . mail-mode)
+       (mode . gnus-group-mode)
+       (mode . gnus-summary-mode)
+       (mode . gnus-article-mode)))
+     ("programming"
+      (or
+       (mode . emacs-lisp-mode)
+       (mode . cperl-mode)
+       (mode . c-mode)
+       (mode . go-mode)
+       (mode . yaml-mode)
+       (mode . json-mode)
+       (mode . java-mode)
+       (mode . idl-mode)
+       (mode . lisp-mode))))))
 ;; The following code adds a ‘dirname’ format to ibuffer to shorten the filename
 ;; and show only the directory:
 
 (defvar filename-subs
-  '(("~/dev/chockstone/" . "[chockstone]/")
+  '(("~/dev/iam-control-allowances-test/" . "[shield]/")
     ("/$" . "")
-    ("~/dev/spectre-api/" . "[spectre]/")
-    ("~/dev/engage-infra/" . "[tf]/")))
-
-(defvar absolute-filename-subs
-  '(("/Users/ray/go/src/github.com/treetopllc/" . "[ttc]")
-    ("/$" . "")
-    ("/Users/ray/go/src/github.com/treetopllc/gonoble/" . "[gonoble]/")
-    ("/Users/ray/go/src/github.com/treetopllc/gonoble/ext/cucumber/" . "[go-cuc]/")
-    ("/Users/ray/go/src/github.com/treetopllc/collaboratory-www/" . "[collaboratory-www]/")
-    ("/Users/ray/go/src/github.com/treetopllc/nobleweb/" . "[nobleweb]/")
-    ("/Users/ray/go/src/github.com/treetopllc/noble-go-sdk/" . "[sdk]/")))
+    ("~/dev/wanda-api/" . "[wanda]/")))
 
 (defun str-replace-all (str pats)
   (if (null pats)
@@ -88,5 +146,10 @@
               (mode 16 16 :left :elide)
               " " filename-and-process)))
 
+(add-hook 'ibuffer-mode-hook
+          (lambda ()
+            (define-key ibuffer-mode-map "\C-x\C-f"
+              'ibuffer-ido-find-file)
+            (ibuffer-switch-to-saved-filter-groups "programming-mode")))
 
 (provide 'init-ibuffer)

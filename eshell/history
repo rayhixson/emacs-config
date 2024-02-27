@@ -1,128 +1,127 @@
-cd ../go/
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+mv test-input-4 test-input-4.txt
+mv test-input-4 test-input-4.txt
+mv test-input-4 test-input-4.txt
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
+/opt/homebrew/bin/emacs --script main.el                             
 ll
-cd port-forwarder/
-ls
-gopls
-type gopls
-cd
-cd go
+mkdir wanda-ui
+cd wanda-ui/
+mkdir templates
+mkdir html
+mkdir assets
+mkdir bootstrap
+mv assets/ bootstrap/
+mkdir -p bootstrap/dist/js
+rm -rf bootstrap/*
+rmdir bootstrap/
+cp -r ~/Downloads/bootstrap-4.0.0 bootstrap-4.0.0
+ls bootstrap-4.0.0/assets/js/vendor/
 ll
-cd port-forwarder/
+go gen.go
+go run gen.go
 ll
-cd ..
-go get   golang.org/x/tools/cmd/guru
-go get   golang.org/x/tools/cmd/guru@latest
-go install golang.org/x/tools/cmd/guru@latest
-go build golang.org/x/tools/cmd/guru
-go help modules
-cd port-forwarder/
-go mod init
-go mod init gpn.com/connector
-cd ..
-mv port-forwarder connector
-go build golang.org/x/tools/cmd/guru
-go env -w GO111MODULE=off
-go build golang.org/x/tools/cmd/guru
-ls 
-mv guru bin/
-guru -help
-ls bin/
-ls bin/godoc
-ll bin/gocode
-go get -u github.com/nsf/gocode
-cd agw/
-cd webgen/
+ll html/
+open html/index.html
+open html/index.html
+go run gen.go && open html/index.html
 ll
-go run gen.go
-cd ../webcrawler/
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-go run getthumbs.go 
-for f in `cat list`; do echo $f; done
-cd ../webgen/
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run clean.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-go run gen.go
-df -h /
-df -h .
-go run gen.go
-go run gen.go
-cd ../webcrawler
-find . -name "__"
-find . -name "\_\_*"
-find . -name "\_\_*" -exec rm {} \;
-find . -name "\_\_*" -exec rm {} \;
-find . -name "\_\_*" -exec rmdir {} \;
-find . -name "\_\_*" -exec rmdir {} \;
-go run gen.go
-cd -
-go run gen.go
-go run gen.go
-j
-go run gen.go
-go run gen.go
-sbcl
-cd containerize/
+cd templates/
 ll
-ll
-ll
-ll ex1/
-cd ex1/
-ll ../app/
-ll ../app/src/
-ll ../app/
-ll
-cd dev/
-ll
-ll Chockstone/
-cd rayhixson
-ll
-cd ../agw/
-ll
-use-theme
-use-theme powerline
-use-theme multiline
-ll
-use-theme multiline2
-ll
-pwd
-ll
-mv  init-rays-eshell-prompt init-rays-eshell-prompt.el
+mv index.html.tmpl layout.html.tmpl
+mkdir pages

@@ -1,5 +1,13 @@
-
 ;; Making unicode work
+
+;; unicode-fonts wants these 3 packages:
+(use-package font-utils
+	:straight t)
+(use-package ucs-utils
+	:straight t)
+(use-package list-utils
+	:straight t)
+
 (use-package unicode-fonts
 	:straight t)
 (unicode-fonts-setup)

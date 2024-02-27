@@ -38,9 +38,11 @@
 (require 'init-git)
 (require 'init-go)
 (require 'init-java)
+(require 'init-groovy)
 (require 'init-terraform)
-(require 'init-guess-style)
 (require 'init-yaml)
+(require 'init-web-things)
+(require 'init-guess-style)
 
 (require 'init-experimental)
 

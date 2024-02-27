@@ -1,4 +1,7 @@
 .emacs.desktop*
+.lsp-session-v1
+.dap-breakpoints
+auto-save-list
 ac-comphist.dat
 ido.last
 network-security.data
