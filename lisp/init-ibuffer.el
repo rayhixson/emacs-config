@@ -24,6 +24,8 @@
        (used-mode . go-mode))
       ("Markup"
 			 (or
+        (used-mode . hcl-mode)
+        (used-mode . terraform-mode)
 				(used-mode . markdown-mode)
 				(used-mode . yaml-mode)
 				(used-mode . json-mode)))
@@ -51,20 +53,18 @@
        (or
         (filename . ".*.feature")
         (filename . ".*.rb")))
-      ("Javascript"
-       (used-mode . js2-mode))
-      ("HTML"
-       (used-mode . html-mode))
+      ("Web"
+       (or
+        (used-mode . js2-mode)
+        (used-mode . html-mode)))
       ("Shells"
        (used-mode . shell-mode))
       ("Star Buffers"
        (name . "^\\*"))))))
 (setq ibuffer-saved-filters
    (quote
-    (("wanda-api"
-      ((filename . ".*/wanda-api/*")))
-     ("shield"
-      (filename . ".*/iam-control-allowances-test/*"))
+    (("bf-terraform"
+      ((filename . ".*/dev/terraform/*")))
      ("No Star Files"
       ((not name . "^*$*")))
      ("gnus"

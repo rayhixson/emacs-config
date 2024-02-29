@@ -128,6 +128,12 @@
 ;; silver searcher flags
 (setq ag-arguments '("--smart-case" "--stats" "--hidden" "--all-types"))
 
+(use-package all-the-icons
+  :straight t)
+
+(when (display-graphic-p)
+  (require 'all-the-icons))
+
 (define-minor-mode sticky-buffer-mode
   "Make the current window always display this buffer."
   nil " sticky" nil

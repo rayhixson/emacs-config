@@ -5,8 +5,8 @@
 	:straight t)
 (use-package ucs-utils
 	:straight t)
-(use-package list-utils
-	:straight t)
+;(use-package list-utils
+;	:straight t)
 
 (use-package unicode-fonts
 	:straight t)
