@@ -44,6 +44,7 @@
 (require 'init-web-things)
 (require 'init-guess-style)
 
+(require 'init-copilot)
 (require 'init-experimental)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ------------------------ Refactor all below this
