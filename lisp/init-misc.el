@@ -12,6 +12,11 @@
 ;; tab setting for shell-script mode
 (setq sh-basic-offset 2)
 
+(use-package shfmt
+  :straight t
+  :config
+  (add-hook 'sh-mode-hook 'shfmt-on-save-mode))
+
 (menu-bar-mode 1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -133,11 +138,6 @@
 
 (when (display-graphic-p)
   (require 'all-the-icons))
-
-(define-minor-mode sticky-buffer-mode
-  "Make the current window always display this buffer."
-  nil " sticky" nil
-  (set-window-dedicated-p (selected-window) sticky-buffer-mode))
 
 (provide 'init-misc)
 ;;; init-misc.el ends here
