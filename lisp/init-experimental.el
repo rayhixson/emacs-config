@@ -3,4 +3,9 @@
 
 ;; https://github.com/bling/fzf.el
 
+(use-package casual-dired
+  :straight t
+  :ensure t
+  :bind (:map dired-mode-map ("C-o" . 'casual-dired-tmenu)))
+
 (provide 'init-experimental)
