@@ -29,6 +29,7 @@
 (require 'init-themes)
 
 (require 'init-ido)
+(require 'init-helm)  ;; experimenting with helm - what does it do on top of ido?
 (require 'init-company)
 (require 'init-ibuffer)
 (require 'init-modeline)
