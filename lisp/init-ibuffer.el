@@ -135,11 +135,11 @@
 ;; nearly all of this is the default layout
 (setq ibuffer-formats
       '((mark modified read-only " "
-			        (name 30 30 :left)
+			        (name 45 45 :left)
 			        " "
 			        my-filename-and-process)
 		    (mark modified read-only " "
-              (name 30 30 :left :elide) ; change: 30s were originally 18s
+              (name 70 70 :left) ; change: 30s were originally 18s
               " "
               (size 9 -1 :right)
               " "

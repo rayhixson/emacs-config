@@ -35,6 +35,7 @@
 
 (require 'init-lsp)
 (require 'init-eshell)
+(require 'init-tramp)
 (require 'init-git)
 (require 'init-go)
 (require 'init-java)

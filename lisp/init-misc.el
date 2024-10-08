@@ -12,11 +12,6 @@
 ;; tab setting for shell-script mode
 (setq sh-basic-offset 2)
 
-(use-package shfmt
-  :straight t
-  :config
-  (add-hook 'sh-mode-hook 'shfmt-on-save-mode))
-
 (menu-bar-mode 1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -131,7 +126,7 @@
 	:straight t)
 
 ;; silver searcher flags
-(setq ag-arguments '("--smart-case" "--stats" "--hidden" "--all-types"))
+(setq ag-arguments '("--smart-case" "--stats" "--hidden" "--all-types" "--path-to-ignore" "/Users/rhixson/dotfiles/.ignore"))
 
 (use-package all-the-icons
   :straight t)

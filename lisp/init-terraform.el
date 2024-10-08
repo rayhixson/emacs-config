@@ -44,9 +44,6 @@
 
 ;(require 'hcl-mode)
 
-(use-package terraform-mode
-  :straight t)
-
 (defun my-terraform-mode-hook ()
   ;; Call terraform fmt before saving
   (add-hook 'before-save-hook 'terraform-format-buffer))
