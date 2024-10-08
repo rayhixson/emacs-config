@@ -126,12 +126,13 @@
 	:straight t)
 
 ;; silver searcher flags
-(setq ag-arguments '("--smart-case" "--stats" "--hidden" "--all-types"))
+(setq ag-arguments '("--smart-case" "--stats" "--hidden" "--all-types" "--path-to-ignore" "/Users/rhixson/dotfiles/.ignore"))
 
-(define-minor-mode sticky-buffer-mode
-  "Make the current window always display this buffer."
-  nil " sticky" nil
-  (set-window-dedicated-p (selected-window) sticky-buffer-mode))
+(use-package all-the-icons
+  :straight t)
+
+(when (display-graphic-p)
+  (require 'all-the-icons))
 
 (provide 'init-misc)
 ;;; init-misc.el ends here

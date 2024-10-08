@@ -1,10 +1,12 @@
 ;; customize mode-line-format
 
 (defvar absolute-filename-subs
-  '(("/Users/rln692/" . "[~]")
-		("/Users/rln692/dev" . "[dev]")
+  '(("/Users/rhixson/" . "[~]")
+		("/Users/rhixson/dev" . "[dev]")
     ("/$" . "")
-    ("/Users/rln692/dev/iam-control-allowances-test/" . "[shield]/")))
+    ("/Users/rhixson/dev/terraform/squads/" . "[squads]/")
+    ("/Users/rhixson/dev/terraform/infra/" . "[infra]/")
+    ("/Users/rhixson/dev/terraform/modules/" . "[modules]/")))
 
 (defun modeline-dir-abbrev ()
   (str-replace-all default-directory absolute-filename-subs))

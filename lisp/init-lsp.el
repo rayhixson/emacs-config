@@ -1,6 +1,7 @@
 ;; use lsp-mode for all languages:
 (use-package lsp-mode
 	:straight t
+  :ensure t
   :init
   (setq lsp-prefer-flymake nil)
   :demand t

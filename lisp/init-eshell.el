@@ -2,13 +2,21 @@
 (use-package eshell-git-prompt
 	:straight t)
 
-(use-package eshell-prompt-extras
-	:straight t)
+;(use-package eshell-prompt-extras
+;	:straight t)
 
-(with-eval-after-load "esh-opt"
-  (autoload 'epe-theme-lambda "eshell-prompt-extras")
-  (setq eshell-highlight-prompt nil
-        eshell-prompt-function 'epe-theme-lambda))
+(use-package esh-autosuggest
+  :straight t
+  :hook (eshell-mode . esh-autosuggest-mode)
+  ;; If you have use-package-hook-name-suffix set to nil, uncomment and use the
+  ;; line below instead:
+  ;; :hook (eshell-mode-hook . esh-autosuggest-mode)
+  )
+
+;(with-eval-after-load "esh-opt"
+;  (autoload 'epe-theme-lambda "eshell-prompt-extras")
+;  (setq eshell-highlight-prompt nil
+;        eshell-prompt-function 'epe-theme-lambda))
 (add-hook 'eshell-mode-hook
           (lambda () 
             (define-key eshell-mode-map (kbd "<tab>")
