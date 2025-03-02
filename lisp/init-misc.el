@@ -134,5 +134,18 @@
 (when (display-graphic-p)
   (require 'all-the-icons))
 
+;; Highlight cursor postion after movement
+(use-package pulse
+  :straight t
+  :defer t
+  :init (defun pulse-line (&rest _)
+          (pulse-momentary-highlight-one-line (point)))
+  (dolist (command '(other-window
+                     windmove-do-window-select
+                     mouse-set-point
+                     mouse-select-window))
+    (advice-add command :after #'pulse-line)))
+
+
 (provide 'init-misc)
 ;;; init-misc.el ends here
