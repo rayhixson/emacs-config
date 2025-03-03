@@ -1,3 +1,6 @@
+;; WARNING RAY: Ido and Smex is slow according to a profiler report
+
+
 ;; IDO mode
 (use-package ido
 	:straight t)
@@ -43,15 +46,13 @@
 	:straight t)
 (global-set-key (kbd "M-x") 'smex)
 
+;;
+;;
+;; this is the slow fucker!@!!!
+;;
 ;; ido-better-flex: to have a 'better' fuzzy match algorithm for smex.
 ;; this enables find-file to match "init-misc.el" when you type "inmis"
-(use-package ido-better-flex
-	:straight (ido-better-flex :type git :host github :repo "vic/ido-better-flex"))
-
-(use-package ido-completing-read+
-	:straight t)
-
-;; ido-ubiquitous: how is that showing up?
-;(use-package ido-ubiquitous)
+;(use-package ido-better-flex
+;	:straight (ido-better-flex :type git :host github :repo "vic/ido-better-flex"))
 
 (provide 'init-ido)

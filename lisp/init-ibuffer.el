@@ -19,45 +19,28 @@
 (setq ibuffer-saved-filter-groups
    (quote
     (("programming-mode"
-      ("Go"
-       (used-mode . go-mode))
-      ("Markup"
-			 (or
-        (used-mode . hcl-mode)
-        (used-mode . terraform-mode)
-				(used-mode . markdown-mode)
-				(used-mode . yaml-mode)
-				(used-mode . json-mode)))
-      ("Scripting"
+      ("boulder"
+       (filename . "/dev/boulder/"))
+      ("platform-example-sql-app"
+       (filename . "/dev/platform-example-sql-app/"))
+      ("platform-bf-shared-gke-resources"
+       (filename . "/dev/platform-bf-shared-gke-resources/"))
+      ("bf-integration-core"
+       (filename . "/dev/bf-integration-core/"))
+      ("content-integration"
+       (filename . "/dev/content-integration/"))
+      ("terraform/infra/squads/platform"
+       (filename . "/dev/terraform/infra/squads/platform"))
+      ("terraform/modules"
        (or
-        (used-mode . Shell-script)
-        (used-mode . sh-mode)
-        (used-mode . make-mode)
-        (used-mode . makefile-mode)
-        (used-mode . makefile-automake-mode)
-        (used-mode . makefile-gmake-mode)
-        (used-mode . makefile-makepp-mode)
-        (used-mode . makefile-bsdmake-mode)
-        (used-mode . makefile-imake-mode)
-        (used-mode . shell-script)))
-      ("Text"
-			 (or
-				(used-mode . org-mode)
-				(used-mode . text-mode)))
+        (filename . "/dev/terraform/modules")
+        (filename . "/dev/terraform/squads/platform")))
+      ("other terraform"
+       (filename . "/dev/terraform/"))
       ("Emacs / Lisp"
 			 (or
 				(used-mode . emacs-lisp-mode)
 				(used-mode . elisp-mode)))
-      ("Test"
-       (or
-        (filename . ".*.feature")
-        (filename . ".*.rb")))
-      ("Web"
-       (or
-        (used-mode . js2-mode)
-        (used-mode . html-mode)))
-      ("Shells"
-       (used-mode . shell-mode))
       ("Star Buffers"
        (name . "^\\*"))))))
 (setq ibuffer-saved-filters

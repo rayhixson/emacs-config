@@ -32,9 +32,8 @@
  ([f3] . revert-buffer)
  ([f4] . menu-bar-next-tag)
  ([f6] . go-guru-referrers)
- ([\S-f7] . previous-error)
  ([f7] . next-error)
- ([f8] . shell)
+ ([f8] . previous-error)
  ([\S-f8] . rename-buffer)
 
  ("C-j" . goto-line)

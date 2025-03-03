@@ -35,6 +35,7 @@
 ;;; then enable ido-better-flex in init-ido
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.emacs.d/karthink/")
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
@@ -44,16 +45,21 @@
 (require 'init-themes)
 
 (require 'init-completion)
+
+;;; karthink experiment
+;(require 'k
+;;; end karthink
+
 (require 'init-ibuffer)
 (require 'init-modeline)
 
 (require 'init-lsp)
 (require 'init-eshell)
-(require 'init-tramp)
 (require 'init-git)
 (require 'init-go)
 ;;(require 'init-java)
 ;;(require 'init-groovy)
+(require 'init-ruby)
 (require 'init-terraform)
 (require 'init-yaml)
 (require 'init-web-things)

@@ -11,13 +11,13 @@
   :bind (("s-i" . blamer-show-commit-info))
   :custom
   (blamer-idle-time 0.3)
-  (blamer-min-offset 70)
+  (blamer-min-offset 50)
   :custom-face
   (blamer-face ((t :foreground "#7a88cf"
                     :background nil
-                    :height 140
+                    :height 110
                     :italic t)))
   :config
-  (global-blamer-mode 1))
+  (global-blamer-mode 0))
 
 (provide 'init-git)

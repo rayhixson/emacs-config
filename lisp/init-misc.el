@@ -17,7 +17,17 @@
 (scroll-bar-mode -1)
 
 (setq ring-bell-function 'ignore)
+
 (desktop-save-mode 1)
+;; Automatically load the saved desktop at startup
+(add-hook 'emacs-startup-hook 'desktop-read)
+;; Optionally, prevent confirmation when loading the desktop
+(setq desktop-load-locked-desktop t)
+;; Save the desktop automatically when quitting
+(add-hook 'kill-emacs-hook 'desktop-save-in-desktop-dir)
+(setq desktop-dirname "~/.emacs.d/desktop/"
+      desktop-path (list desktop-dirname))
+
 (setq-default indicate-empty-lines t)
 (setq bookmark-save-flag 1)
 (auto-save-mode -1)
