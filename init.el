@@ -1,5 +1,18 @@
+;; init.el --- My config -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+;; useful for quickly debugging Emacs
+(setq debug-on-error t)
+;; (setenv "LSP_USE_PLISTS" "true")
+;;; Startup
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (message "*** Emacs loaded in %s seconds with %d garbage collections."
+                     (emacs-init-time "%.2f")
+                     gcs-done)))
+
 ;; hack until emacs 29
-(setq image-types (cons 'svg image-types))
+;;(setq image-types (cons 'svg image-types))
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -28,9 +41,7 @@
 (require 'init-fonts)
 (require 'init-themes)
 
-(require 'init-ido)
-(require 'init-helm)  ;; experimenting with helm - what does it do on top of ido?
-(require 'init-company)
+(require 'init-completion)
 (require 'init-ibuffer)
 (require 'init-modeline)
 
@@ -60,7 +71,7 @@
   (rename-buffer "shell-main"))
 
 (cd "~/dev/")
-(start-shells)
+;;(start-shells)
 
 ;; this is not working, what if we do it last?
 (setq-default save-place-mode t)

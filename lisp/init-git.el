@@ -1,10 +1,9 @@
 (use-package magit
-	:straight t)
+	:straight t
+  :bind (
+  ("C-x g" . magit-status)))
 
-(setq magit-completing-read-function 'magit-ido-completing-read)
-
-(bind-keys*
- ((kbd "C-x g") . magit-status))
+;; (setq magit-completing-read-function 'magit-ido-completing-read)
 
 (use-package git-link
 	:straight t)

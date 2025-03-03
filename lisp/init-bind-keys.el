@@ -39,20 +39,25 @@
  ([\S-f8] . rename-buffer)
 
  ("C-j" . goto-line)
- ("C-o" . find-file-at-point)
- ("C-s" . isearch-forward)
+ ("C-o" . recentf-open-files)
+;; ("C-s" . isearch-forward)
  ("M-o" . other-window)
  ("M-k" . windmove-right)
  ("M-j" . windmove-left)
  ("M-`" . other-frame)
  ("M-*" . pop-tag-mark)
  ("M-i" . ibuffer)
- ("M-m" . ag-regexp)
+;; ("M-m" . ag-regexp)
  ("<M-right>" . next-buffer)
  ("<M-left>" . previous-buffer)
- ("C-M-f" . find-file)
- ("C-x k" . kill-this-buffer))
+ ("C-M-f" . find-file))
 
+(defun my-kill-this-buffer ()
+  "Kill the current buffer safely."
+  (interactive)
+  (kill-buffer (current-buffer)))
+
+(global-set-key (kbd "C-x k") #'my-kill-this-buffer)
 
 (provide 'init-bind-keys)
 

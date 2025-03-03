@@ -13,3 +13,7 @@ straight/*
 saveplace
 var/pcache/*
 transient/*
+eshell/history
+eshell/lastdir
+tramp
+projects
