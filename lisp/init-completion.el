@@ -109,7 +109,7 @@
   (embark-indicators
    '(embark-highlight-indicator
      embark-isearch-highlight-indicator
-     embark-minimal-indicator))
+     embark-default-indicator))
   :init
   ;; Optionally replace the key help with a completing-read interface
   (setq prefix-help-command #'embark-prefix-help-command)

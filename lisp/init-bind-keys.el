@@ -39,7 +39,7 @@
  ([\S-f8] . rename-buffer)
 
  ("C-j" . goto-line)
- ("C-o" . recentf-open-files)
+ ("C-o" . find-file-at-point)
 ;; ("C-s" . isearch-forward)
  ("M-o" . other-window)
  ("M-k" . windmove-right)
