@@ -136,9 +136,10 @@
 
 ;; Color the cursor line
 (global-hl-line-mode 1)  ;; Enable globally
-(set-face-background 'hl-line "#1E1E1E")  ;; Light gray color
+(set-face-background 'hl-line "#121212")  ;; Light gray color
 ;; other options
 ;; Very Dark Gray → #1E1E1E
+;; 	2.	Almost Black → #121212
 ;; Dim White: #333333 (Dark Gray)
 ;; Soft Blue: #224466 (Deep Blue)
 ;; Muted Cyan: #224455 (Dark Cyan-Blue)
