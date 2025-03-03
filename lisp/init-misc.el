@@ -134,11 +134,23 @@
 (when (display-graphic-p)
   (require 'all-the-icons))
 
+;; Color the cursor line
+(global-hl-line-mode 1)  ;; Enable globally
+(set-face-background 'hl-line "#1E1E1E")  ;; Light gray color
+;; other options
+;; Very Dark Gray → #1E1E1E
+;; Dim White: #333333 (Dark Gray)
+;; Soft Blue: #224466 (Deep Blue)
+;; Muted Cyan: #224455 (Dark Cyan-Blue)
+;; Dark Sepia: #3A2F2F (Warm Dark Brown)
+
 ;; Highlight cursor postion after movement
 (use-package pulse
   :straight t
   :defer t
-  :init (defun pulse-line (&rest _)
+  :init (setq pulse-delay 0.1
+              pulse-iterations 10)
+  (defun pulse-line (&rest _)
           (pulse-momentary-highlight-one-line (point)))
   (dolist (command '(other-window
                      windmove-do-window-select
