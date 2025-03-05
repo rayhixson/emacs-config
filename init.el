@@ -54,7 +54,6 @@
 (require 'init-modeline)
 
 (require 'init-lsp)
-(require 'init-eshell)
 (require 'init-git)
 (require 'init-go)
 ;;(require 'init-java)
