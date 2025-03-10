@@ -6,8 +6,7 @@
 (setq icon-title-format "%b")
 (setq frame-title-format "%b - %f")
 
-(use-package ibuffer
-	:straight t)
+(use-package ibuffer)
 ;; And then customize ibuffer
 ;; Use human readable Size column instead of original one
 (define-ibuffer-column size-h

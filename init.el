@@ -29,6 +29,7 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
+(setq straight-use-package-by-default t)
 
 ;;; TODO
 ;;; then enable ido-better-flex in init-ido
@@ -51,12 +52,14 @@
 (require 'init-tramp)
 (require 'init-git)
 (require 'init-go)
-(require 'init-java)
-(require 'init-groovy)
+;;(require 'init-java)
+;;(require 'init-groovy)
 (require 'init-terraform)
 (require 'init-yaml)
 (require 'init-web-things)
 (require 'init-guess-style)
+
+(require 'init-llm)
 
 (require 'init-experimental)
 

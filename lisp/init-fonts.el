@@ -1,15 +1,12 @@
 ;; Making unicode work
 
 ;; unicode-fonts wants these 3 packages:
-(use-package font-utils
-	:straight t)
-(use-package ucs-utils
-	:straight t)
+(use-package font-utils)
+(use-package ucs-utils)
 ;(use-package list-utils
 ;	:straight t)
 
-(use-package unicode-fonts
-	:straight t)
+(use-package unicode-fonts)
 (unicode-fonts-setup)
 (when (member "DejaVu Sans Mono" (font-family-list))
   (set-face-attribute 'default nil :font "DejaVu Sans Mono-11"))

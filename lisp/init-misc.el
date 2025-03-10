@@ -26,7 +26,6 @@
 
 ;; browse-kill-ring
 (use-package browse-kill-ring
-	:straight t
 	:config
 	;; M-y to invoke
   (browse-kill-ring-default-keybindings))
@@ -74,19 +73,15 @@
    try-complete-file-name))
 
 (use-package dumb-jump
-	:straight t
 	;; Ruby etal support for finding definitions
 	:config
 	(dumb-jump-mode))
 
-(use-package swiper
-	:straight t)
+(use-package swiper)
 
-(use-package ag
-	:straight t)
+(use-package ag)
 
 (use-package markdown-mode
-	:straight t
 	:config
 	;; use this one for markdown-preview
 	(setq markdown-command '("code" "-"))
@@ -94,20 +89,17 @@
 	(setq markdown-open-command "code"))
 
 ;; open file to last known location
-(use-package saveplace
-	:straight t)
+(use-package saveplace)
 (setq save-place-file "~/.emacs.d/saveplace")
 (save-place-mode)
 
 ;; performance improvment that breaks some of vc?
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
-;(use-package window-purpose
-;	:straight t)
+;(use-package window-purpose)
 ;(purpose-mode)
 
 (use-package fzf
-	:straight t
   :bind
     ;; Don't forget to set keybinds!
   :config
@@ -122,14 +114,12 @@
         fzf/position-bottom t
         fzf/window-height 15))
 
-(use-package org
-	:straight t)
+;;(use-package org)
 
 ;; silver searcher flags
 (setq ag-arguments '("--smart-case" "--stats" "--hidden" "--all-types" "--path-to-ignore" "/Users/rhixson/dotfiles/.ignore"))
 
-(use-package all-the-icons
-  :straight t)
+(use-package all-the-icons)
 
 (when (display-graphic-p)
   (require 'all-the-icons))
@@ -147,7 +137,6 @@
 
 ;; Highlight cursor postion after movement
 (use-package pulse
-  :straight t
   :defer t
   :init (setq pulse-delay 0.1
               pulse-iterations 10)

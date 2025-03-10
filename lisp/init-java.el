@@ -3,13 +3,11 @@
 ;; Java Setup
 (require 'lsp-mode)
 
-(use-package lsp-java
-	:straight t)
+(use-package lsp-java)
 
 (add-hook 'java-mode-hook #'lsp-deferred)
 
 (use-package dap-mode
-	:straight t
   :config
   (dap-mode t)
   (dap-ui-mode t))
