@@ -21,16 +21,10 @@
 
 
 ;; Terraform
-;(use-package company
-;	:straight t)
+;(use-package company)
 ;(use-package company-terraform
-;	:straight t)
 
 (use-package terraform-mode
-  :straight t
-
-  ;; if using package.el
-  ;; :ensure t
   :config
   (defun my-terraform-mode-init ()
     ;; if you want to use outline-minor-mode
@@ -40,7 +34,6 @@
   (add-hook 'terraform-mode-hook 'my-terraform-mode-init))
 
 (use-package hcl-mode
-  :straight t)
 
 ;(require 'hcl-mode)
 

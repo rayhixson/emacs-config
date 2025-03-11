@@ -1,5 +1,5 @@
-(use-package guess-style
-	:straight t)
+(use-package guess-style)
+
 ;; guess-style configs
 (autoload 'guess-style-set-variable "guess-style" nil t)
 (autoload 'guess-style-guess-variable "guess-style")

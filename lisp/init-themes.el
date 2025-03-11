@@ -4,10 +4,8 @@
 
 ;; historically I liked: yoshi-theme and paganini-theme was what I was using???
 
-(use-package color-theme-sanityinc-solarized
-	:straight t)
-(use-package color-theme-sanityinc-tomorrow
-	:straight t)
+(use-package color-theme-sanityinc-solarized)
+(use-package color-theme-sanityinc-tomorrow)
 
 ;; Don't prompt to confirm theme safety. This avoids problems with
 ;; first-time startup on Emacs > 26.3.
@@ -43,7 +41,6 @@
 
 
 (use-package dimmer
-	:straight t
 	:config
   (setq-default dimmer-fraction 0.15)
   (add-hook 'after-init-hook 'dimmer-mode)

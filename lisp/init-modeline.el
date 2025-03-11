@@ -15,7 +15,6 @@
   (str-replace-all default-directory absolute-filename-subs))
 
 ;; (use-package spacious-padding
-;;   :straight t
 ;;   :hook (after-init . spacious-padding-mode)
 ;;   :custom
 ;;   ;; make the modeline look minimal

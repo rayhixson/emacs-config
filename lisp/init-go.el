@@ -2,11 +2,9 @@
 
 (add-hook 'go-mode-hook #'lsp-deferred)
 
-;(use-package go-eldoc
-;	:straight t)
+;(use-package go-eldoc)
 
 (use-package company-go
-	:straight t
 	:config
 	;; (add-to-list 'auto-mode-alist '("\\.proto\\'" . go-mode))
 	)

@@ -21,8 +21,7 @@
  kept-new-versions 6
  kept-old-versions 2)
 
-(use-package bind-key
-	:straight t)
+(use-package bind-key)
 (bind-keys*
  ("C-M-b" . ido-switch-buffer)
  ([\M-up] . scroll-down-line)

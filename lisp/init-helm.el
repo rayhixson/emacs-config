@@ -1,4 +1,3 @@
-(use-package helm
-  :straight t)
+(use-package helm)
 
 (provide 'init-helm)
