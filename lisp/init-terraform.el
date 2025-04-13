@@ -33,7 +33,7 @@
 
   (add-hook 'terraform-mode-hook 'my-terraform-mode-init))
 
-(use-package hcl-mode
+(use-package hcl-mode)
 
 ;(require 'hcl-mode)
 

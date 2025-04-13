@@ -148,6 +148,9 @@
                      mouse-select-window))
     (advice-add command :after #'pulse-line)))
 
+;; Enable Vi DOT '.' command
+(use-package dot-mode
+  :config (global-dot-mode t))
 
 (provide 'init-misc)
 ;;; init-misc.el ends here
