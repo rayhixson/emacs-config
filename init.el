@@ -11,6 +11,8 @@
             (message "*** Emacs loaded in %s seconds with %d garbage collections."
                      (emacs-init-time "%.2f")
                      gcs-done)))
+;;(add-hook 'emacs-startup-hook
+;;          'desktop-read)
 
 ;; hack until emacs 29
 ;;(setq image-types (cons 'svg image-types))
@@ -35,6 +37,7 @@
 ;;; then enable ido-better-flex in init-ido
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.emacs.d/karthink/")
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
@@ -44,20 +47,27 @@
 (require 'init-themes)
 
 (require 'init-completion)
+
+;;; karthink experiment
+;(require 'k
+;;; end karthink
+
 (require 'init-ibuffer)
 (require 'init-modeline)
 
-(require 'init-lsp)
-(require 'init-eshell)
-(require 'init-tramp)
 (require 'init-git)
-(require 'init-go)
+(require 'init-yaml)
+(require 'init-ruby)
+(require 'init-web-things)
+(require 'init-guess-style)
+
+;; ---- lsp dependents
+(require 'init-lsp)
+;;(require 'init-go)
 ;;(require 'init-java)
 ;;(require 'init-groovy)
 (require 'init-terraform)
-(require 'init-yaml)
-(require 'init-web-things)
-(require 'init-guess-style)
+;; ---- lsp
 
 (require 'init-llm)
 
