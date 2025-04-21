@@ -11,6 +11,8 @@
             (message "*** Emacs loaded in %s seconds with %d garbage collections."
                      (emacs-init-time "%.2f")
                      gcs-done)))
+;;(add-hook 'emacs-startup-hook
+;;          'desktop-read)
 
 ;; hack until emacs 29
 ;;(setq image-types (cons 'svg image-types))
@@ -53,16 +55,19 @@
 (require 'init-ibuffer)
 (require 'init-modeline)
 
-(require 'init-lsp)
 (require 'init-git)
-(require 'init-go)
-;;(require 'init-java)
-;;(require 'init-groovy)
-(require 'init-ruby)
-(require 'init-terraform)
 (require 'init-yaml)
+(require 'init-ruby)
 (require 'init-web-things)
 (require 'init-guess-style)
+
+;; ---- lsp dependents
+(require 'init-lsp)
+;;(require 'init-go)
+;;(require 'init-java)
+;;(require 'init-groovy)
+(require 'init-terraform)
+;; ---- lsp
 
 (require 'init-llm)
 

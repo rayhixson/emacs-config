@@ -130,8 +130,6 @@
 
 (add-hook 'ibuffer-mode-hook
           (lambda ()
-            (define-key ibuffer-mode-map "\C-x\C-f"
-              'ibuffer-ido-find-file)
             (ibuffer-switch-to-saved-filter-groups "programming-mode")))
 
 (provide 'init-ibuffer)

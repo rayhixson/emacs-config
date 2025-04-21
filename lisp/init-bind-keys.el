@@ -38,7 +38,8 @@
 
  ("C-j" . goto-line)
  ("C-o" . find-file-at-point)
-;; ("C-s" . isearch-forward)
+ ;;("C-s" . isearch-forward)
+ ("C-s" . swiper)
  ("M-o" . other-window)
  ("M-k" . windmove-right)
  ("M-j" . windmove-left)
