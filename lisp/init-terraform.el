@@ -32,13 +32,15 @@
 
   (add-hook 'terraform-mode-hook 'my-terraform-mode-init))
 
-(use-package hcl-mode)
-
 ;(require 'hcl-mode)
 
 (defun my-terraform-mode-hook ()
   ;; Call terraform fmt before saving
   (add-hook 'before-save-hook 'terraform-format-buffer))
 (add-hook 'terraform-mode-hook 'my-terraform-mode-hook)
+
+(use-package hcl-mode
+  :config
+  (add-hook 'hcl-mode-hook 'my-terraform-mode-hook))
 
 (provide 'init-terraform)
