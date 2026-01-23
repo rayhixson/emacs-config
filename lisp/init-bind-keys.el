@@ -49,7 +49,7 @@
 ;; ("M-m" . ag-regexp)
  ("<M-right>" . next-buffer)
  ("<M-left>" . previous-buffer)
- ("C-M-f" . find-file))
+ ("C-M-f" . consult-find))
 
 (defun my-kill-this-buffer ()
   "Kill the current buffer safely."

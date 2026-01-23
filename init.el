@@ -63,13 +63,14 @@
 
 ;; ---- lsp dependents
 (require 'init-lsp)
-;;(require 'init-go)
+(require 'init-go)
 ;;(require 'init-java)
 ;;(require 'init-groovy)
 (require 'init-terraform)
 ;; ---- lsp
 
 (require 'init-llm)
+(require 'init-shell)
 
 (require 'init-experimental)
 
