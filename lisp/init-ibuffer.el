@@ -19,28 +19,23 @@
 (setq ibuffer-saved-filter-groups
    (quote
     (("programming-mode"
-      ("boulder"
-       (filename . "/dev/boulder/"))
-      ("platform-example-sql-app"
-       (filename . "/dev/platform-example-sql-app/"))
-      ("platform-bf-shared-gke-resources"
-       (filename . "/dev/platform-bf-shared-gke-resources/"))
-      ("bf-integration-core"
-       (filename . "/dev/bf-integration-core/"))
-      ("content-integration"
-       (filename . "/dev/content-integration/"))
-      ("terraform/infra/squads/platform"
-       (filename . "/dev/terraform/infra/squads/platform"))
-      ("terraform/modules"
+      ("File Library"
+       (filename . "/dev/file-library-api/"))
+      ("Attachment Architects"
+       (filename . "/dev/service-attachment/"))
+      ("Content Capabilities"
        (or
-        (filename . "/dev/terraform/modules")
+        (filename . "/dev/transcoding_renderer/")
+        (filename . "/dev/content-capabilities")))
+      ("Notes"
+       (or
+        (filename . "/Documents/")
         (filename . "/dev/terraform/squads/platform")))
-      ("other terraform"
-       (filename . "/dev/terraform/"))
       ("Emacs / Lisp"
 			 (or
 				(used-mode . emacs-lisp-mode)
-				(used-mode . elisp-mode)))
+				(used-mode . elisp-mode)
+        (filename . "/.emacs.d/")))
       ("Star Buffers"
        (name . "^\\*"))))))
 (setq ibuffer-saved-filters
